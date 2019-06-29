@@ -1,11 +1,11 @@
 package Algorithms.Sorting;
 
 
-class ArraySel {
+class ArrayBub {
     private long[] a;
     private int nElems;
 
-    ArraySel(int max){
+    public ArrayBub(int max){
         a = new long[max];
         nElems = 0;
     }
@@ -16,37 +16,36 @@ class ArraySel {
     }
 
     public void display(){
-        for (int i = 0; i < nElems; i++) {
-            System.out.println(a[i] + " " );
+        for (int i = 0; i <= nElems ; i++) {
+            System.out.println(a[i] + " ");
             System.out.println("");
         }
     }
 
-    public void SelectionSort(){
-        int min;
+    public void BubbleSort(){
 
-        for (int out = 0; out < nElems-1; out++) {  // outer loop
-            min = out;                              // minimum
-            for (int in = out+1; in < nElems; in++) {  // inner loop
-                if (a[in] < a[min]) {
-                    min = in;
-                    swap(out, in);
+        for (int out = nElems-1; out > 1; out--) { // outer loop (backward)
+            for (int in = 0; in < out; in++) { // inner loop (forward)
+                if (a[in] == a[in+1]) {  //out of order ?
+                    swap(in, in+1);  // swap them
                 }
             }
         }
     }
 
-    private void swap(int out, int in) {
-        long temp = a[out];
-        a[out] = a[in];
-        a[in] = temp;
+    private void swap (int one, int two){
+        long temp = a[one];
+        a[one] = a[two];
+        a[two] = temp;
     }
 }
-public class SelectionSort {
+
+
+public class BubbleSort {
     public static void main(String[] args) {
         int maxSize = 100;
-        ArraySel arr;
-        arr = new ArraySel(maxSize);
+        ArrayBub arr;
+        arr = new ArrayBub(maxSize);
 
         arr.insert(77);
         arr.insert(99);
@@ -61,7 +60,7 @@ public class SelectionSort {
 
         arr.display();
 
-        arr.SelectionSort();
+        arr.BubbleSort();
 
         arr.display();
     }

@@ -1,11 +1,10 @@
 package Algorithms.Sorting;
 
-
-class ArraySel {
+class ArrayIns{
     private long[] a;
     private int nElems;
 
-    ArraySel(int max){
+    public ArrayIns(int max){
         a = new long[max];
         nElems = 0;
     }
@@ -17,36 +16,33 @@ class ArraySel {
 
     public void display(){
         for (int i = 0; i < nElems; i++) {
-            System.out.println(a[i] + " " );
+            System.out.println(a[i] + " ");
             System.out.println("");
         }
     }
 
-    public void SelectionSort(){
-        int min;
+    public void insertionSort(){
+        int in;
 
-        for (int out = 0; out < nElems-1; out++) {  // outer loop
-            min = out;                              // minimum
-            for (int in = out+1; in < nElems; in++) {  // inner loop
-                if (a[in] < a[min]) {
-                    min = in;
-                    swap(out, in);
-                }
+        for (int out = 1; out < nElems; out++) { // out is the dividing line
+            long temp = a[out];                  // remove marked item
+            in = out;
+
+            while(in > 0 && a[in-1] >= temp){  // until one is smaller
+                a[in] = a[in-1];               // shift item to right
+                in--;                          // go left one position
             }
+            a[in] = temp;                      // insert marked item
         }
     }
-
-    private void swap(int out, int in) {
-        long temp = a[out];
-        a[out] = a[in];
-        a[in] = temp;
-    }
 }
-public class SelectionSort {
+
+public class InsertionSort {
     public static void main(String[] args) {
         int maxSize = 100;
-        ArraySel arr;
-        arr = new ArraySel(maxSize);
+        ArrayIns arr;
+
+        arr = new ArrayIns(maxSize);
 
         arr.insert(77);
         arr.insert(99);
@@ -61,7 +57,7 @@ public class SelectionSort {
 
         arr.display();
 
-        arr.SelectionSort();
+        arr.insertionSort();
 
         arr.display();
     }
