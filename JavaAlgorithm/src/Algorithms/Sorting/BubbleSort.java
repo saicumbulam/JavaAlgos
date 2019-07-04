@@ -26,7 +26,7 @@ class ArrayBub {
 
         for (int out = nElems-1; out > 1; out--) { // outer loop (backward)
             for (int in = 0; in < out; in++) { // inner loop (forward)
-                if (a[in] == a[in+1]) {  //out of order ?
+                if (a[in] > a[in+1]) {  //out of order ?
                     swap(in, in+1);  // swap them
                 }
             }

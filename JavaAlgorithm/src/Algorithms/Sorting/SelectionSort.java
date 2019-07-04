@@ -30,7 +30,7 @@ class ArraySel {
             for (int in = out+1; in < nElems; in++) {  // inner loop
                 if (a[in] < a[min]) {
                     min = in;
-                    swap(out, in);
+                    swap(out, min);
                 }
             }
         }
