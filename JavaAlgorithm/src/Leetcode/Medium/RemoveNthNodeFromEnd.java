@@ -1,0 +1,49 @@
+package Leetcode.Medium;
+
+import Leetcode.DataStructures.LinkedList.ListNode;
+import Leetcode.DataStructures.LinkedList.SingleLinkedList;
+
+public class RemoveNthNodeFromEnd {
+    public static void main(String[] args) {
+        SingleLinkedList list = new SingleLinkedList();
+        ListNode node = list.CreateListSample();
+        list.printList(Calculate(node, 2));
+    }
+
+    private static ListNode Calculate(ListNode node, int n)
+    {
+        int size = GetLength(node);
+        n = size-n;
+
+        ListNode curr = node, prev = null;
+
+        while (n > 0)
+        {
+            prev = curr;
+            curr = curr.next;
+            n--;
+        }
+
+        if (prev != null)
+        {
+            prev.next  = curr.next;
+        }
+        else {
+            node = node.next;
+        }
+
+        return node;
+    }
+
+    private static int GetLength(ListNode root)
+    {
+        int count = 0;
+        ListNode curr = root;
+        while (curr != null)
+        {
+            count++;
+            curr = curr.next;
+        }
+        return count;
+    }
+}
