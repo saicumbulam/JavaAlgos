@@ -1,43 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f960813a-8beb-4284-beb1-231ef18c34a5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Algorithms/Sorting/BubbleSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Algorithms/Sorting/InsertionSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/JavaAlgos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JavaAlgos.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Algorithms/Sorting/SelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Algorithms/Sorting/SelectionSort.java" afterDir="false" />
+    <list default="true" id="f960813a-8beb-4284-beb1-231ef18c34a5" name="Default Changelist" comment="Changed the position of old algorithmns and included a new leetcode ones">
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/GcdTwoStrings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/TwoSumIV.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/FlipAndInvertImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/BuyAndSellStockTwice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/CheckPermutation2Str.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/ComputeMaxProfit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/DeleteDupsfromSrtArr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/DutchFlag$Color.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/DutchFlag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/EvenOdd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/FindDuplicateinArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/MultiplyTwoIntegers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/PlusOne.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/ReArrangeArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/ReachEnd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/ReplaceAllSpaces.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/ReverseString.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/RunLengthEncoding.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/SetMatrixZeroes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/TwoSum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/ZeroSumSubarray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/findUniqueStrings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/rotateMatrix90.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/BinaryTree/BinaryTreeNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/BinaryTree/BinaryTreesIdentical.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/BinaryTree/HeightBinaryTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/BinaryTree/InorderTraversal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/BinaryTree/PathSum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/BinaryTree/PostOrderTraversal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/BinaryTree/PreOrderTraversal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/BinaryTree/SumRootLeaf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/BinaryTree/Symmentric.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/BinaryTree/Traversal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Hash/DataItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Hash/HashTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Hash/HashTableApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Hash/LRU_cache.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Hash/List.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Hash/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Hash/SparseArray.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Heaps/ComputeKClosestStars$Star.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Heaps/ComputeKClosestStars.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Heaps/KLargestElementsMaxHeap$HeapEntry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Heaps/KLargestElementsMaxHeap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Heaps/KLongestStrings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Heaps/MedianofOnlineData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Heaps/SetofSortedSequence$ArrayContainer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Heaps/SetofSortedSequence.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Heaps/SortApproximatelySortedData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/CheckforCycle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/DeleteNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/InsertNewNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/Merge2SortedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/OverLappingListNoCycle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/RemoveDuplcicatesSortedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/RemoveKthLastElement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/ReverseSubList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/SearchKey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/sample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/ParallelComputing/Semaphore.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Queue/MyQueue$QueueNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Queue/MyQueue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Search/BinarySearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Search/KMPAlgorithm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/ArrayBub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/ArrayInOb.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/ArrayIns.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/ArrayPar.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/ArraySel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/ArraySh.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/BubbleSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/InsertionSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/ObjectSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/Partition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/SelectionSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/ShellSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/AnimalShelter/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/AnimalShelter/AnimalQueue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/AnimalShelter/Cat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/AnimalShelter/Dog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/EvaluateExpression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/MaxApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/NodeWithMin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/QueueusingStacks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/Stack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/StackMin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/StackMin2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/StackUsingQueues$StackUsingQueuecls.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/StackUsingQueues.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/ThreeinOne.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/driver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/genericStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/sortStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/driver/BuilderDriver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/driver/Singletondriver.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/META-INF/JavaAlgos.kotlin_module" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/JavaAlgorithm/src/Algorithms/Sorting/InsertionSort.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JavaAlgorithm/src/Algorithms/Sorting/BubbleSort.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="45" selection-start-line="45" selection-end-line="46" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -46,114 +139,86 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>”</find>
+      <find>“</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>&quot;</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/practice/src/Algorithms/Array/TwoSum.java" />
-        <option value="$PROJECT_DIR$/JavaAlgorithm/src/Algorithms/Search/BubbleSort.java" />
-        <option value="$PROJECT_DIR$/JavaAlgorithm/src/Algorithms/Sorting/SelectionSort.java" />
-        <option value="$PROJECT_DIR$/JavaAlgorithm/src/Algorithms/Sorting/InsertionSort.java" />
-      </list>
-    </option>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
+  <component name="ProjectId" id="1cz43PO6DkyTUzBJHpFzditkH1G" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2101" />
-    <option name="y" value="157" />
-    <option name="width" value="1378" />
-    <option name="height" value="733" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="JavaAlgos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaAlgos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaAlgos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaAlgos" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaAlgorithm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaAlgos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaAlgos" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaAlgorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaAlgos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaAlgos" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaAlgorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Algorithms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaAlgos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaAlgos" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaAlgorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="Search" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JavaAlgos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JavaAlgos" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaAlgorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="Sorting" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/JavaAlgorithm/src" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\saicumbulam\Documents\Github\JavaAlgos\practice\src\Algorithms" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.InsertionSort">
-    <configuration name="InsertionSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Algorithms.Sorting.InsertionSort" />
+  <component name="RunManager" selected="Application.FlipAndInvertImage">
+    <configuration name="BestTimeBuySellStock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Leetcode.Easy.BestTimeBuySellStock" />
+      <module name="JavaAlgos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Leetcode.Easy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FlipAndInvertImage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Leetcode.FlipAndInvertImage" />
+      <module name="JavaAlgos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GcdTwoStrings" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Leetcode.Easy.GcdTwoStrings" />
+      <module name="JavaAlgos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Leetcode.Easy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Partition" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Algorithms.Sorting.Partition" />
       <module name="JavaAlgos" />
       <extension name="coverage">
         <pattern>
@@ -165,12 +230,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TwoSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Algorithms.Array.TwoSum" />
+    <configuration name="TwoSumIV" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Leetcode.Easy.TwoSumIV" />
       <module name="JavaAlgos" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Algorithms.Array.*" />
+          <option name="PATTERN" value="Leetcode.Easy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -180,8 +245,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.InsertionSort" />
-        <item itemvalue="Application.TwoSum" />
+        <item itemvalue="Application.FlipAndInvertImage" />
+        <item itemvalue="Application.GcdTwoStrings" />
+        <item itemvalue="Application.TwoSumIV" />
+        <item itemvalue="Application.BestTimeBuySellStock" />
+        <item itemvalue="Application.Partition" />
       </list>
     </recent_temporary>
   </component>
@@ -217,109 +285,90 @@
       <option name="project" value="LOCAL" />
       <updated>1561474086623</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Included new algorithms">
+      <created>1561775566009</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1561775566009</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Changed the position of old algorithmns and included a new leetcode ones">
+      <created>1591518450003</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1591518450004</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20042644" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.11121764" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32885906" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" weight="0.32980332" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="PlantUML" order="8" />
-    </layout>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Deleted old codes" />
     <MESSAGE value="Included new codes studied recently" />
-    <option name="LAST_COMMIT_MESSAGE" value="Included new codes studied recently" />
+    <MESSAGE value="Included new algorithms" />
+    <MESSAGE value="Changed the position of old algorithmns and included a new leetcode ones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the position of old algorithmns and included a new leetcode ones" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1394" y="429" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1591518324081">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1394" y="429" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591518324081" />
+    <state x="-1197" y="378" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1591518193931">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1197" y="378" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591518193931" />
+    <state x="-1233" y="215" key="FileChooserDialogImpl" timestamp="1591618754225">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1233" y="215" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591618754225" />
+    <state width="1225" height="97" key="GridCell.Tab.0.bottom" timestamp="1591591630995">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1225" height="97" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591591630995" />
+    <state width="1225" height="97" key="GridCell.Tab.0.center" timestamp="1591591630992">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1225" height="97" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1591591630992" />
+    <state width="1225" height="97" key="GridCell.Tab.0.left" timestamp="1591591630992">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1225" height="97" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1591591630992" />
+    <state width="1225" height="97" key="GridCell.Tab.0.right" timestamp="1591591630992">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1225" height="97" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1591591630992" />
+    <state x="-1468" y="187" key="Vcs.Push.Dialog.v2" timestamp="1591518495788">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1468" y="187" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591518495788" />
+    <state x="-1174" y="282" key="chooseDestDirectoryDialog" timestamp="1591518117220">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1174" y="282" key="chooseDestDirectoryDialog/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591518117220" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/JavaAlgorithm/src/Algorithms/Sorting/InsertionSort.java</url>
+          <url>file://$PROJECT_DIR$/JavaAlgorithm/src/Legacy/Algorithms/Sorting/InsertionSort.java</url>
           <line>26</line>
-          <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/practice/src/Algorithms/driver/BuilderDriver.java" />
-    <entry file="file://$PROJECT_DIR$/practice/src/Algorithms/BinaryTree/BinaryTreeNode.java" />
-    <entry file="file://$PROJECT_DIR$/practice/src/Algorithms/Stack/driver.java" />
-    <entry file="file://$PROJECT_DIR$/practice/practice.iml" />
-    <entry file="file://$PROJECT_DIR$/practice/src/Algorithms/Array/TwoSum.java" />
-    <entry file="file://$PROJECT_DIR$/practice/src/Algorithms/Search/BinarySearch.java" />
-    <entry file="file://$PROJECT_DIR$/practice/src/Algorithms/Hash/HashTableApp.java" />
-    <entry file="file://$PROJECT_DIR$/JavaAlgorithm/src/Algorithms/Sorting/SelectionSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaAlgorithm/src/Algorithms/Search/BinarySearch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaAlgorithm/src/Algorithms/BinarySearchTree/FindOptimalCost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaAlgorithm/src/Algorithms/Sorting/SelectionSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaAlgorithm/src/Algorithms/Sorting/BubbleSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="45" selection-start-line="45" selection-end-line="46" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaAlgorithm/src/Algorithms/Sorting/InsertionSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>
