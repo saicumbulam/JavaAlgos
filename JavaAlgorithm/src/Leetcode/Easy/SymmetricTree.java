@@ -22,7 +22,7 @@ public class SymmetricTree {
         }
 
         return (root1.getData() == root2.getData())
-                && Calculate(root1.getLeft(), root2.getRight())
+                && Calculate(root1.getLeft(), root2.getRight())  // alternative calling
                 && Calculate(root1.getRight(),root2.getLeft());
 
     }

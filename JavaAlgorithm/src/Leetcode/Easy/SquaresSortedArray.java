@@ -16,7 +16,7 @@ public class SquaresSortedArray {
         int[] result = new int[nums.length];
         int resultIndex = nums.length-1, left = 0, right = nums.length-1;
 
-        while (left <= right)
+        while (left < right)
         {
             int leftSquare = nums[left] * nums[left];
             int rightSquare = nums[right] * nums[right];

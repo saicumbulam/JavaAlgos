@@ -22,7 +22,6 @@ public class HouseRobber {
                 int steal = arr[currentIndex] + Calculate(arr, currentIndex+2, map);
                 int skip = Calculate(arr, currentIndex+1, map);
                 map.put(currentIndex, Math.max(steal, skip));
-
             }
         }
         return map.get(currentIndex);

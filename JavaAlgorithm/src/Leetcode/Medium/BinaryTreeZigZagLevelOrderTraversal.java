@@ -23,12 +23,12 @@ public class BinaryTreeZigZagLevelOrderTraversal {
 
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
+        boolean leftRight = false;
 
         while (!queue.isEmpty())
         {
             int n = queue.size();
             List<Integer> currentLevel = new ArrayList<>();
-            boolean leftRight = false;
 
             for (int i = 0; i < n; i++) {
                 TreeNode polled = queue.poll();

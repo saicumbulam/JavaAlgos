@@ -1,6 +1,6 @@
 package Leetcode.Easy;
 
-public class BestTimeBuySellStock {
+public class BestTimeBuySellStock1 {
     public static void main(String[] args) {
         int[] arr = new int[]{7,1,5,3,6,4};
 
@@ -8,7 +8,7 @@ public class BestTimeBuySellStock {
         int global_sell = arr[1];
         int global_profit = global_sell - current_buy;
 
-        int current_profit = Integer.MIN_VALUE;
+        int current_profit;
 
         for (int i = 1; i < arr.length; i++) {
             current_profit = arr[i] - current_buy;
