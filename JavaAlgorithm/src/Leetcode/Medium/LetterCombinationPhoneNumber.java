@@ -21,11 +21,6 @@ public class LetterCombinationPhoneNumber {
         hashMap.put("9", "wxyz");
         List<String> result = new ArrayList<>();
 
-        if (digit == null || digit.length() == 0)
-        {
-            System.out.println(result);
-        }
-
         Calculate(hashMap,"",result,digit);
         System.out.println(result);
     }
@@ -45,7 +40,7 @@ public class LetterCombinationPhoneNumber {
         for (char letter: letters.toCharArray()
              ) {
             Calculate(hashMap,
-                    combination + String.valueOf(letter), result, digit.substring(1));
+                    combination + letter, result, digit.substring(1));
         }
     }
 }

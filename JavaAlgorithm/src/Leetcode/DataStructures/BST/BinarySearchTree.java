@@ -217,6 +217,7 @@ public class BinarySearchTree {
 
     public TreeNode CreateBinaryTree()
     {
+        root = null;
         add(1);
         add(2);
         add(3);
@@ -224,6 +225,16 @@ public class BinarySearchTree {
         add(5);
         add(6);
         add(7);
+        return root;
+
+    }
+
+    public TreeNode CreateBinaryTree(int[] arr)
+    {
+        root = null;
+        for (int i = 0; i < arr.length; i++) {
+            add(arr[i]);
+        }
         return root;
 
     }

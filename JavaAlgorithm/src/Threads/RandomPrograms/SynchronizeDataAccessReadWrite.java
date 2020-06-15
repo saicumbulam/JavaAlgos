@@ -1,4 +1,4 @@
-package Threads;
+package Threads.RandomPrograms;
 
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;

@@ -7,17 +7,17 @@ public class FindKthLargestInArray {
         int[] arr = {3,2,1,5,6,4};
         int k = 2;
 
-        PriorityQueue<Integer> minHeap = new PriorityQueue<>((a, b) -> b - a);
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a);
 
         for (int i = 0; i < arr.length; i++) {
-            minHeap.add(arr[i]);
+            maxHeap.add(arr[i]);
         }
 
         while (k > 1)
         {
-            minHeap.poll();
+            maxHeap.poll();
             k--;
         }
-        System.out.println(minHeap.peek());
+        System.out.println(maxHeap.peek());
     }
 }

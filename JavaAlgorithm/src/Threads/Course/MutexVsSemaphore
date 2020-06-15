@@ -1,0 +1,25 @@
+Mutex:
+Mutex as the name hints implies mutual exclusion. A mutex is used to guard shared data
+such as a linked-list, an array or any primitive type.
+A mutex allows only a single thread to access a resource or critical section.
+
+
+Semaphore:
+Semaphore, on the other hand, is used for limiting access to a collection of resources.
+Think of semaphore as having a limited number of permits to give out.
+If a semaphore has given out all the permits it has, then any new thread that comes
+along requesting for a permit will be blocked,
+till an earlier thread with a permit returns it to the semaphore
+
+
+A semaphore with a single permit is called a binary semaphore and is
+often thought of as an equivalent of a mutex,
+which isn't completely correct as we'll shortly explain.
+Semaphores can also be used for signaling among threads.
+
+
+the most important difference between the two is that in case of a mutex the
+same thread must call acquire and subsequent release on the mutex
+whereas in case of a binary sempahore, different threads can
+call acquire and release on the semaphore.
+
