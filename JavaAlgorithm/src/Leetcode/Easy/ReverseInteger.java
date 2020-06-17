@@ -11,15 +11,17 @@ public class ReverseInteger {
         // no need to read the negative value, because getting the modulo itself will get the negative
         int pivot = 0;
 
-        while (num != 0)
+        while (num != 0) // != is the result of doing digit seperation
         {
             int digit = num %10;
             num = num/10;
-            if (pivot > Integer.MAX_VALUE/10 || (pivot == Integer.MAX_VALUE/10 && digit > 7 ))
+            if (pivot > Integer.MAX_VALUE/10 ||
+                    (pivot == Integer.MAX_VALUE/10 && digit > 7 ))
             {
                 return 0;
             }
-            if (pivot < Integer.MIN_VALUE/10 || (pivot == Integer.MIN_VALUE/10 && digit < -8 ))
+            if (pivot < Integer.MIN_VALUE/10 ||
+                    (pivot == Integer.MIN_VALUE/10 && digit < -8 ))
             {
                 return 0;
             }

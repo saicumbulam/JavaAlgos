@@ -19,108 +19,90 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f960813a-8beb-4284-beb1-231ef18c34a5" name="Default Changelist" comment="Changed the position of old algorithmns and included a new leetcode ones">
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/FlipAndInvertImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/GcdTwoStrings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/LeafBinaryTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/TwoSumIV.java" afterDir="false" />
+    <list default="true" id="f960813a-8beb-4284-beb1-231ef18c34a5" name="Default Changelist" comment="Added some more algorithms">
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/CanPlaceFlowers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/IsoMorphicStrings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/MaxStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/SameColorPixel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/SecondMinimumNodeBinaryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/ShortestWordDistance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Hard/FindNumberSmallerElementsRight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Hard/PalindromePairs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/FindAnagramIndices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/InsufficientNodesRootLeafPaths.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/MinimumWindowSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/ReorderList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/ZigZagPattern.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/AmandahlsMooresLaw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/BlockingQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/BlockingQueueSemaphore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/ConcurrencyVsParallelism" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/CooperativevsPremptiveMultiTasking" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/CriticalSectionRaceCondition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/DeadlockVsRentrantLocks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/FizzBuzzProblem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/Introduction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/IoCpuBound" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/MultiThreadMergeSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/MutexExample.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/MutexVsMonitor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/MutexVsSemaphore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/MutexWorking.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/OrderedPrinting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/ProcessVsThreads.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/ProgramVsProcessVsThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/RateLimitingUsingToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/ReadWriteLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/Semaphore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/SemaphoreWorking.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/SempaphoreVsMonitor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/SuperManProblem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/SynchronousAsynchronous" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/ThroughputLatency" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/concurrencyparallelism.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/RandomPrograms/ExtendingThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/RandomPrograms/ExtendsThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/RandomPrograms/InteruptingThreads.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/RandomPrograms/JoinExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/RandomPrograms/LongComputationTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/RandomPrograms/MainThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/RandomPrograms/RunnableThreads.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/RandomPrograms/ThreadCreation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/RandomPrograms/ThreadException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/RandomPrograms/VaultCaseStudy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/DataStructures/BST/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/DataStructures/BST/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/MinStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/MinStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Hard/TicTacToe.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/FindKthLargestInArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/FindKthLargestInArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/GroupAnagrams.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/GroupAnagrams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/LetterCombinationPhoneNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/LetterCombinationPhoneNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/LongestSubstringWithoutRepeatingCharac.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/MinimumSalesPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/MinimumSalesPath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/RemoveNthNodeFromEnd.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/RemoveNthNodeFromEnd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/SearchRotatedSortedArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/SearchRotatedSortedArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/UniquePaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/UniquePaths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/ValidSudoku.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/ValidSudoku.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/WiggleSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/SynchronizeDataAccessReadWrite.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Threads/RandomPrograms/SynchronizeDataAccessReadWrite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/BuyAndSellStockTwice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/CheckPermutation2Str.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/ComputeMaxProfit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/DeleteDupsfromSrtArr.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/DutchFlag$Color.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/DutchFlag.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/EvenOdd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/FindDuplicateinArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/MultiplyTwoIntegers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/PlusOne.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/ReArrangeArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/ReachEnd.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/ReplaceAllSpaces.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/ReverseString.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/RunLengthEncoding.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/SetMatrixZeroes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/TwoSum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/ZeroSumSubarray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/findUniqueStrings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Array/rotateMatrix90.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/BinaryTree/BinaryTreeNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/BinaryTree/BinaryTreesIdentical.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/BinaryTree/HeightBinaryTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/BinaryTree/InorderTraversal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/BinaryTree/PathSum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/BinaryTree/PostOrderTraversal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/BinaryTree/PreOrderTraversal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/BinaryTree/SumRootLeaf.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/BinaryTree/Symmentric.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/BinaryTree/Traversal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Hash/DataItem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Hash/HashTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Hash/HashTableApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Hash/LRU_cache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Hash/List.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Hash/Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Hash/SparseArray.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Heaps/ComputeKClosestStars$Star.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Heaps/ComputeKClosestStars.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Heaps/KLargestElementsMaxHeap$HeapEntry.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Heaps/KLargestElementsMaxHeap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Heaps/KLongestStrings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Heaps/MedianofOnlineData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Heaps/SetofSortedSequence$ArrayContainer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Heaps/SetofSortedSequence.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Heaps/SortApproximatelySortedData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/CheckforCycle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/DeleteNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/InsertNewNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/ListNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/Merge2SortedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/OverLappingListNoCycle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/RemoveDuplcicatesSortedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/RemoveKthLastElement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/ReverseSubList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/SearchKey.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/LinkedList/sample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/ParallelComputing/Semaphore.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Queue/MyQueue$QueueNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Queue/MyQueue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Search/BinarySearch.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Search/KMPAlgorithm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/ArrayBub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/ArrayInOb.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/ArrayIns.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/ArrayPar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/ArraySel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/ArraySh.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/BubbleSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/InsertionSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/ObjectSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/Partition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/SelectionSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Sorting/ShellSort.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/AnimalShelter/Animal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/AnimalShelter/AnimalQueue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/AnimalShelter/Cat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/AnimalShelter/Dog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/EvaluateExpression.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/MaxApi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/NodeWithMin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/QueueusingStacks.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/Stack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/StackMin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/StackMin2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/StackUsingQueues$StackUsingQueuecls.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/StackUsingQueues.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/ThreeinOne.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/driver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/genericStack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/Stack/sortStack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/driver/BuilderDriver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Algorithms/driver/Singletondriver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/META-INF/JavaAlgos.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/DataStructures/BST/BinarySearchTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/DataStructures/BST/BinarySearchTree.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Easy/MinStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Easy/MinStack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Hard/TicTacToe.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/BinaryTreeZigZagLevelOrderTraversal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/BinaryTreeZigZagLevelOrderTraversal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/FindKthLargestInArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/FindKthLargestInArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/GroupAnagrams.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/GroupAnagrams.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/LetterCombinationPhoneNumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/LetterCombinationPhoneNumber.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/LongestSubstringWithoutRepeatingCharac.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/MinimumSalesPath$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/MinimumSalesPath$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/MinimumSalesPath.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/MinimumSalesPath.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/RemoveNthNodeFromEnd.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/RemoveNthNodeFromEnd.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/UniquePaths.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/UniquePaths.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/WiggleSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Threads/PricesInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Threads/Reader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Threads/SynchronizeDataAccessReadWrite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Threads/Writer.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,27 +146,34 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/JavaAlgorithm/src" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\saicumbulam\Documents\Github\JavaAlgos\practice\src\Algorithms" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sadithya\Documents\Code\JavaAlgos\JavaAlgorithm\src\Threads\Course" />
+      <recent name="C:\Users\sadithya\Documents\Code\JavaAlgos\JavaAlgorithm\src\Leetcode\Easy" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.LeafBinaryTree">
-    <configuration name="BestTimeBuySellStock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Leetcode.Easy.BestTimeBuySellStock" />
+  <component name="RunManager" selected="Application.OrderedPrinting">
+    <configuration name="FizzBuzzProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Threads.Course.FizzBuzzProblem" />
       <module name="JavaAlgos" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Leetcode.Easy.*" />
+          <option name="PATTERN" value="Threads.Course.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -192,12 +181,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FlipAndInvertImage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Leetcode.Easy.FlipAndInvertImage" />
+    <configuration name="MultiThreadMergeSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Threads.Course.MultiThreadMergeSort" />
       <module name="JavaAlgos" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Leetcode.Easy.*" />
+          <option name="PATTERN" value="Threads.Course.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -205,12 +194,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GcdTwoStrings" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Leetcode.Easy.GcdTwoStrings" />
+    <configuration name="OrderedPrinting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Threads.Course.OrderedPrinting" />
       <module name="JavaAlgos" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Leetcode.Easy.*" />
+          <option name="PATTERN" value="Threads.Course.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -218,12 +207,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LeafBinaryTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Leetcode.Easy.LeafBinaryTree" />
+    <configuration name="RateLimitingUsingToken" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Threads.Course.RateLimitingUsingToken" />
       <module name="JavaAlgos" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Leetcode.Easy.*" />
+          <option name="PATTERN" value="Threads.Course.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -231,12 +220,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TwoSumIV" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Leetcode.Easy.TwoSumIV" />
+    <configuration name="Semaphore" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Threads.Course.Semaphore" />
       <module name="JavaAlgos" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Leetcode.Easy.*" />
+          <option name="PATTERN" value="Threads.Course.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -246,11 +235,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LeafBinaryTree" />
-        <item itemvalue="Application.FlipAndInvertImage" />
-        <item itemvalue="Application.GcdTwoStrings" />
-        <item itemvalue="Application.TwoSumIV" />
-        <item itemvalue="Application.BestTimeBuySellStock" />
+        <item itemvalue="Application.OrderedPrinting" />
+        <item itemvalue="Application.FizzBuzzProblem" />
+        <item itemvalue="Application.MultiThreadMergeSort" />
+        <item itemvalue="Application.Semaphore" />
+        <item itemvalue="Application.RateLimitingUsingToken" />
       </list>
     </recent_temporary>
   </component>
@@ -300,7 +289,21 @@
       <option name="project" value="LOCAL" />
       <updated>1591518450004</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Changed the position of old algorithmns and included a new leetcode ones">
+      <created>1591672910140</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1591672910140</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added some more algorithms">
+      <created>1591874702413</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1591874702413</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -316,53 +319,118 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Deleted old codes" />
     <MESSAGE value="Included new codes studied recently" />
     <MESSAGE value="Included new algorithms" />
     <MESSAGE value="Changed the position of old algorithmns and included a new leetcode ones" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed the position of old algorithmns and included a new leetcode ones" />
+    <MESSAGE value="Added some more algorithms" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some more algorithms" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1394" y="429" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1591518324081">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state x="634" y="302" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592181972686">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="634" y="302" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1592181972686" />
+    <state x="479" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1592164048630">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="479" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1592164048630" />
+    <state x="718" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1592156679874" />
+    <state x="526" y="429" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1592099389848">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1394" y="429" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591518324081" />
+    <state x="526" y="429" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592099389848" />
     <state x="-1197" y="378" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1591518193931">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1197" y="378" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591518193931" />
-    <state x="-1233" y="215" key="FileChooserDialogImpl" timestamp="1591618754225">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="475" height="582" key="DebuggerActiveHint" timestamp="1592188113670">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1233" y="215" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591618754225" />
-    <state width="1225" height="182" key="GridCell.Tab.0.bottom" timestamp="1591672346703">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="475" height="582" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1592188113670" />
+    <state x="687" y="110" key="FileChooserDialogImpl" timestamp="1592135704185">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1233" y="215" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591792992754" />
+    <state x="458" y="72" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1591901481584" />
+    <state x="687" y="110" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592135704185" />
+    <state width="1865" height="257" key="GridCell.Tab.0.bottom" timestamp="1592191146195">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1865" height="182" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591654137410" />
-    <state width="1225" height="182" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1591672346703" />
-    <state width="1225" height="182" key="GridCell.Tab.0.center" timestamp="1591672346703">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1225" height="123" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1591889090578" />
+    <state width="1225" height="267" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1592164913243" />
+    <state width="1865" height="257" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592191146195" />
+    <state width="1865" height="257" key="GridCell.Tab.0.center" timestamp="1592191146195">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1865" height="182" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591654137410" />
-    <state width="1225" height="182" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1591672346703" />
-    <state width="1225" height="182" key="GridCell.Tab.0.left" timestamp="1591672346703">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1225" height="123" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1591889090578" />
+    <state width="1225" height="267" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1592164913243" />
+    <state width="1865" height="257" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592191146195" />
+    <state width="1865" height="257" key="GridCell.Tab.0.left" timestamp="1592191146195">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1865" height="182" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591654137410" />
-    <state width="1225" height="182" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1591672346703" />
-    <state width="1225" height="182" key="GridCell.Tab.0.right" timestamp="1591672346703">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1225" height="123" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1591889090578" />
+    <state width="1225" height="267" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1592164913243" />
+    <state width="1865" height="257" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592191146195" />
+    <state width="1865" height="257" key="GridCell.Tab.0.right" timestamp="1592191146195">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1865" height="182" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591654137410" />
-    <state width="1225" height="182" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1591672346703" />
-    <state x="-1468" y="187" key="Vcs.Push.Dialog.v2" timestamp="1591518495788">
-      <screen x="-1920" y="0" width="1920" height="1040" />
+    <state width="1225" height="123" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1591889090578" />
+    <state width="1225" height="267" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1592164913243" />
+    <state width="1865" height="257" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592191146195" />
+    <state width="1865" height="325" key="GridCell.Tab.1.bottom" timestamp="1592191146189">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1865" height="327" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1592103352617" />
+    <state width="1865" height="325" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592191146189" />
+    <state width="1865" height="325" key="GridCell.Tab.1.center" timestamp="1592191146189">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1865" height="327" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1592103352617" />
+    <state width="1865" height="325" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592191146189" />
+    <state width="1865" height="325" key="GridCell.Tab.1.left" timestamp="1592191146189">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1865" height="327" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1592103352617" />
+    <state width="1865" height="325" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592191146189" />
+    <state width="1865" height="325" key="GridCell.Tab.1.right" timestamp="1592191146189">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1865" height="327" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1592103352617" />
+    <state width="1865" height="325" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592191146189" />
+    <state x="703" y="0" key="SettingsEditor" timestamp="1592153770809">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1569" y="0" key="SettingsEditor/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591889148783" />
+    <state x="703" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1592153770809" />
+    <state x="266" y="16" key="Vcs.Push.Dialog.v2" timestamp="1591672920867">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="-1468" y="187" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591518495788" />
+    <state x="266" y="16" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1591672920867" />
+    <state x="294" y="10" key="VcsDiffUtil.ChangesDialog" timestamp="1591965981980">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="294" y="10" key="VcsDiffUtil.ChangesDialog/0.0.1280.680@0.0.1280.680" timestamp="1591965981980" />
     <state x="-1174" y="282" key="chooseDestDirectoryDialog" timestamp="1591518117220">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1174" y="282" key="chooseDestDirectoryDialog/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591518117220" />
+    <state x="532" y="237" key="run.anything.popup" timestamp="1592171832642">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="532" y="237" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592171832642" />
+    <state x="355" y="-3" width="840" height="675" key="search.everywhere.popup" timestamp="1592164044077">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="355" y="-3" width="840" height="675" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1592164044077" />
+    <state x="532" y="-5" width="840" height="1032" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592153669186" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -372,91 +440,72 @@
           <line>26</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/SameColorPixel.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/SameColorPixel.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/FindAnagramIndices.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/ReorderList.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaAlgorithm/src/Threads/RandomPrograms/RunnableThreads.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaAlgorithm/src/Threads/RandomPrograms/ThreadCreation.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaAlgorithm/src/Threads/RandomPrograms/VaultCaseStudy.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/ProgramVsProcessVsThread.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/BlockingQueue.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/BlockingQueue.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/BlockingQueue.java</url>
+          <line>106</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/BlockingQueue.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaAlgorithm/src/Threads/Course/BlockingQueueSemaphore.java</url>
+          <line>101</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>JavaAlgos</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

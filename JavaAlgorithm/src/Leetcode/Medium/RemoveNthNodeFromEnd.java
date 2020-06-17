@@ -10,12 +10,12 @@ public class RemoveNthNodeFromEnd {
         list.printList(Calculate(node, 2));
     }
 
-    private static ListNode Calculate(ListNode node, int n)
+    private static ListNode Calculate(ListNode head, int n)
     {
-        int size = GetLength(node);
+        int size = GetLength(head);
         n = size-n;
 
-        ListNode curr = node, prev = null;
+        ListNode curr = head, prev = null;
 
         while (n > 0)
         {
@@ -29,10 +29,10 @@ public class RemoveNthNodeFromEnd {
             prev.next  = curr.next;
         }
         else {
-            node = node.next;
+            head = head.next;
         }
 
-        return node;
+        return head;
     }
 
     private static int GetLength(ListNode root)

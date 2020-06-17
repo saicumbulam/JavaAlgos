@@ -1,0 +1,10 @@
+Throughput:
+Throughput is defined as the rate of doing work or how much work gets done per unit of time.
+
+Latency:
+Latency is defined as the time required to complete a task or produce a result.
+
+Throughput vs Latency:
+The throughput can be defined as the number of files processed by the program in a minute.
+And latency can be defined as the total time taken to completely process all the files.
+

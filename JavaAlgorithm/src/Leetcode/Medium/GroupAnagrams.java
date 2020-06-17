@@ -17,7 +17,6 @@ public class GroupAnagrams {
             }
             hashMap.get(str).add(arr[i]);
         }
-
         for (Map.Entry<String, List<String>> map : hashMap.entrySet()) {
             System.out.println(map.getValue());
         }

@@ -22,7 +22,7 @@ public class SearchRotatedSortedArray {
                 return mid;
             }
 
-            if (nums[left] <= nums[mid])
+            if (nums[left] <= nums[mid]) // ascending part
             {
                 if (target >= nums[left] && target < nums[mid])
                 {

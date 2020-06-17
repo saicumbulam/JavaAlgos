@@ -8,10 +8,10 @@ public class MinStack {
         stack.add(-2);
         stack.add(0);
         stack.add(-3);
-        System.out.println(stack.min());
+        System.out.println(stack.peek());
         System.out.println(stack.pop());
         System.out.println(stack.peek());
-        System.out.println(stack.min());
+        System.out.println(stack.peek());
     }
 }
 

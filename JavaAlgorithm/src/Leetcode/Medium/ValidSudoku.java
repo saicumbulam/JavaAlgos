@@ -2,7 +2,7 @@ package Leetcode.Medium;
 
 import java.util.HashSet;
 
-public class ValidSudoku {
+public class  ValidSudoku {
     public static void main(String[] args) {
         String[][] board = {
                 {"5", "3", ".", ".", "7", ".", ".", ".", "."},

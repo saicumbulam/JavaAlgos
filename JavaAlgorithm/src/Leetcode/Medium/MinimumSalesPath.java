@@ -6,7 +6,6 @@ import java.util.*;
 
 public class MinimumSalesPath {
     static class Node {
-
         int cost;
         Node[] children;
         Node parent;

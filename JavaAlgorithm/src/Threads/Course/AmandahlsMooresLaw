@@ -1,0 +1,28 @@
+Amandahl's Law:
+The law specifies the cap on the maximum speedup that can be achieved when parallelizing the execution of a program.
+Amdahl's law describes the theoretical speedup a program can achieve at best by using
+additional computing resources. We'll skip the mathematical derivation and go straight to
+the simplified equation expressing Amdahl's law:
+
+
+S(n)=1/((1-P) + P/n)
+
+S(n) is the speed-up achieved by using n cores or threads.
+
+P is the fraction of the program that is parallelizable
+
+(1 - P) is the fraction of the program that must be executed serially.
+
+As the dataset size grows, the parallelizable portion of the program
+grows faster than the serial portion and a more realistic assessment of
+performance is given by Gustafson's law
+
+
+Moore's Law:
+It states that the number of transistors per square inch on a
+chip will double every two years.
+This exponential growth has been going on since the 70’s and is only now starting to slow down.
+
+In 10 years from 2000 to 2009, clock speed just increased from 1.3 GHz to 2.8 GHz
+merely doubling in a decade rather than
+increasing 32 times as expected by Moore's law.
