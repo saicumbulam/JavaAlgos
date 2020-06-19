@@ -9,7 +9,7 @@ public class ValidMountainArray {
     private static boolean Calculate(int[] nums)
     {
         int i = 0, n = nums.length;
-        while (i+1 < n && nums[i] < nums[i+1])
+        while (i < n-1 && nums[i] < nums[i+1])
         {
             i++;
         }
@@ -19,7 +19,7 @@ public class ValidMountainArray {
             return false;
         }
 
-        while (i+1 < n && nums[i] > nums[i+1])
+        while (i < n-1 && nums[i] > nums[i+1])
         {
             i++;
         }
