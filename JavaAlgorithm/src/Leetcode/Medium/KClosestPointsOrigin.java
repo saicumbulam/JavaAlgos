@@ -18,7 +18,7 @@ public class KClosestPointsOrigin {
 
         public int toDistance()
         {
-            return (int) Math.sqrt(Math.pow(x, 2) + Math.pow(y,2));
+            return (x * x) + (y*y);
         }
 
         @Override

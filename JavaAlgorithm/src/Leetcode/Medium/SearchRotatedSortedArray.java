@@ -24,6 +24,8 @@ public class SearchRotatedSortedArray {
 
             if (nums[left] <= nums[mid]) // ascending part
             {
+                //always first is the >=
+                // mid doesnt contain equal to signs.
                 if (target >= nums[left] && target < nums[mid])
                 {
                     right = mid-1;
@@ -35,7 +37,7 @@ public class SearchRotatedSortedArray {
             }
             else
             {
-                if (target >= nums[mid] && target < nums[right])
+                if (target > nums[mid] && target <= nums[right])
                 {
                     left = mid+1;
                 }

@@ -40,6 +40,18 @@ public class MostCommonWord {
             }
         }
 
+
+        if (!word.equals("") && !bann.contains(word))
+        {
+            map.put(word, map.getOrDefault(word, 0) + 1);
+
+            if (map.get(word) > ansCount)
+            {
+                ansCount = map.get(word);
+                ans = word;
+            }
+        }
+
         return ans;
     }
 }

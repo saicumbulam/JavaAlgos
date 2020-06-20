@@ -5,6 +5,7 @@ public class CountPrimes {
         int n = 10;
         boolean[] primes = new boolean[n+1];
 
+        // 2 starting number is important
         for (int i = 2; i * i < n ; i++) {
             if(!primes[i])
             {

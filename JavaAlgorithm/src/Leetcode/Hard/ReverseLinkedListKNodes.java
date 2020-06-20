@@ -17,7 +17,8 @@ public class ReverseLinkedListKNodes {
         int length = ListLength(node);
 
         int count = 0;
-        while (count + k <= length) // this is for not reverse last nodes that are less than K.
+        //watchout
+        while (count + k <= length) // used to prevent reverse of last nodes that are less than K.
         {
             ListNode lastNodePrevious = previous;
             ListNode lastNodeSublist = current;
@@ -30,7 +31,7 @@ public class ReverseLinkedListKNodes {
                 previous = current;
                 current = next;
             }
-
+            //watchout
             if (lastNodePrevious != null)
             {
                 lastNodePrevious.next = previous;
@@ -39,12 +40,14 @@ public class ReverseLinkedListKNodes {
             {
                 node = previous;
             }
+            //watchout
             lastNodeSublist.next = current;  // forgetting will give a infinte loop
 
             if (current == null)
             {
                 break;
             }
+            //watchout
             previous = lastNodeSublist;
         }
 
