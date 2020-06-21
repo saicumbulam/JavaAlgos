@@ -19,18 +19,38 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f960813a-8beb-4284-beb1-231ef18c34a5" name="Default Changelist" comment="Added some more algorithms">
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/AutomatedInterviewer/DailyShuffleQuestions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Hard/CutOffTreesGolfEvent.java" afterDir="false" />
+    <list default="true" id="f960813a-8beb-4284-beb1-231ef18c34a5" name="Default Changelist" comment="Included some changes in the existing code for improving readability">
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/FibonacciSeries.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/HammingDistance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/NimGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/NumberFactors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/RemoveLinkedListElements.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/StairCase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Hard/EditDistance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Hard/LongestAlternativeSubsequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Hard/LongestBiotonicSubsequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Hard/LongestCommonSubSequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Hard/LongestCommonSubstring.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Hard/LongestIncreasingSubsequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Hard/LongestRepeatingSubsequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Hard/MaximumSumIncreasingSubsequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Hard/MinDelInsTransString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Hard/MinimumDeletionsSequenceSorted.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Hard/ShortestCommonSuperSequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Hard/StringsInterleaving.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Hard/SubsequencePatternMatching.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/FlattenBinaryTreeLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/MinimumFeeJumps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/MinimumJumpstoReachEnd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/PalindromicSubstrings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/CountPrimes.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/CountPrimes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Hard/ReverseLinkedListKNodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Hard/ReverseLinkedListKNodes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/KClosestPointsOrigin.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/KClosestPointsOrigin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/MostCommonWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/MostCommonWord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/SearchRotatedSortedArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/SearchRotatedSortedArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/DataStructures/BST/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/DataStructures/BST/BinarySearchTree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/KClosestPointsOrigin$Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/KClosestPointsOrigin$Point.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/MostCommonWord.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/MostCommonWord.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Easy/CountPrimes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Easy/CountPrimes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Easy/FizzBuzz.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Easy/FizzBuzz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Easy/ValidMountainArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Easy/ValidMountainArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Hard/ReverseLinkedListKNodes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Hard/ReverseLinkedListKNodes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/SearchRotatedSortedArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/Medium/SearchRotatedSortedArray.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,35 +115,9 @@
       <recent name="C:\Users\sadithya\Documents\Code\JavaAlgos\JavaAlgorithm\src\Leetcode\Easy" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DailyShuffleQuestions">
-    <configuration name="CutOffTreesGolfEvent" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Leetcode.Hard.CutOffTreesGolfEvent" />
-      <module name="JavaAlgos" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Leetcode.Hard.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DailyShuffleQuestions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="AutomatedInterviewer.DailyShuffleQuestions" />
-      <module name="JavaAlgos" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="AutomatedInterviewer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="KClosestPointsOrigin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Leetcode.Medium.KClosestPointsOrigin" />
+  <component name="RunManager" selected="Application.FlattenBinaryTreeLinkedList">
+    <configuration name="FlattenBinaryTreeLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Leetcode.Medium.FlattenBinaryTreeLinkedList" />
       <module name="JavaAlgos" />
       <extension name="coverage">
         <pattern>
@@ -135,8 +129,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MostCommonWord" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Leetcode.Medium.MostCommonWord" />
+    <configuration name="HammingDistance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Leetcode.Easy.HammingDistance" />
+      <module name="JavaAlgos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Leetcode.Easy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MinimumFeeJumps" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Leetcode.Medium.MinimumFeeJumps" />
       <module name="JavaAlgos" />
       <extension name="coverage">
         <pattern>
@@ -148,12 +155,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OrderedPrinting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Threads.Course.OrderedPrinting" />
+    <configuration name="NimGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Leetcode.Easy.NimGame" />
       <module name="JavaAlgos" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Threads.Course.*" />
+          <option name="PATTERN" value="Leetcode.Easy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RemoveLinkedListElements" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Leetcode.Easy.RemoveLinkedListElements" />
+      <module name="JavaAlgos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Leetcode.Easy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -163,11 +183,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DailyShuffleQuestions" />
-        <item itemvalue="Application.CutOffTreesGolfEvent" />
-        <item itemvalue="Application.MostCommonWord" />
-        <item itemvalue="Application.KClosestPointsOrigin" />
-        <item itemvalue="Application.OrderedPrinting" />
+        <item itemvalue="Application.FlattenBinaryTreeLinkedList" />
+        <item itemvalue="Application.RemoveLinkedListElements" />
+        <item itemvalue="Application.NimGame" />
+        <item itemvalue="Application.HammingDistance" />
+        <item itemvalue="Application.MinimumFeeJumps" />
       </list>
     </recent_temporary>
   </component>
@@ -238,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592238115294</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Included some changes in the existing code for improving readability">
+      <created>1592663685477</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1592663685477</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -260,7 +287,8 @@
     <MESSAGE value="Included new algorithms" />
     <MESSAGE value="Changed the position of old algorithmns and included a new leetcode ones" />
     <MESSAGE value="Added some more algorithms" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some more algorithms" />
+    <MESSAGE value="Included some changes in the existing code for improving readability" />
+    <option name="LAST_COMMIT_MESSAGE" value="Included some changes in the existing code for improving readability" />
   </component>
   <component name="WindowStateProjectService">
     <state x="634" y="302" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592442254470">
@@ -285,71 +313,75 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="475" height="582" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1592441738709" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1592663699878">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592663699878" />
     <state x="687" y="110" key="FileChooserDialogImpl" timestamp="1592251543980">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1233" y="215" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591792992754" />
     <state x="458" y="72" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1592239650807" />
     <state x="687" y="110" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592251543980" />
-    <state width="1865" height="250" key="GridCell.Tab.0.bottom" timestamp="1592506527162">
+    <state width="1865" height="313" key="GridCell.Tab.0.bottom" timestamp="1592754676785">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1865" height="182" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591654137410" />
     <state width="1225" height="123" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1591889090578" />
     <state width="1225" height="267" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1592164913243" />
-    <state width="1865" height="250" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592506527162" />
-    <state width="1865" height="250" key="GridCell.Tab.0.center" timestamp="1592506527162">
+    <state width="1865" height="313" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592754676785" />
+    <state width="1865" height="313" key="GridCell.Tab.0.center" timestamp="1592754676785">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1865" height="182" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591654137410" />
     <state width="1225" height="123" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1591889090578" />
     <state width="1225" height="267" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1592164913243" />
-    <state width="1865" height="250" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592506527162" />
-    <state width="1865" height="250" key="GridCell.Tab.0.left" timestamp="1592506527162">
+    <state width="1865" height="313" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592754676785" />
+    <state width="1865" height="313" key="GridCell.Tab.0.left" timestamp="1592754676784">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1865" height="182" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591654137410" />
     <state width="1225" height="123" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1591889090578" />
     <state width="1225" height="267" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1592164913243" />
-    <state width="1865" height="250" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592506527162" />
-    <state width="1865" height="250" key="GridCell.Tab.0.right" timestamp="1592506527162">
+    <state width="1865" height="313" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592754676784" />
+    <state width="1865" height="313" key="GridCell.Tab.0.right" timestamp="1592754676785">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1865" height="182" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591654137410" />
     <state width="1225" height="123" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1591889090578" />
     <state width="1225" height="267" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1592164913243" />
-    <state width="1865" height="250" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592506527162" />
-    <state width="1865" height="318" key="GridCell.Tab.1.bottom" timestamp="1592506527159">
+    <state width="1865" height="313" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592754676785" />
+    <state width="1865" height="313" key="GridCell.Tab.1.bottom" timestamp="1592754660509">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1865" height="327" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1592103352617" />
-    <state width="1865" height="318" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592506527159" />
-    <state width="1865" height="318" key="GridCell.Tab.1.center" timestamp="1592506527158">
+    <state width="1865" height="313" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592754660509" />
+    <state width="1865" height="313" key="GridCell.Tab.1.center" timestamp="1592754660509">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1865" height="327" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1592103352617" />
-    <state width="1865" height="318" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592506527158" />
-    <state width="1865" height="318" key="GridCell.Tab.1.left" timestamp="1592506527158">
+    <state width="1865" height="313" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592754660509" />
+    <state width="1865" height="313" key="GridCell.Tab.1.left" timestamp="1592754660509">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1865" height="327" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1592103352617" />
-    <state width="1865" height="318" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592506527158" />
-    <state width="1865" height="318" key="GridCell.Tab.1.right" timestamp="1592506527158">
+    <state width="1865" height="313" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592754660509" />
+    <state width="1865" height="313" key="GridCell.Tab.1.right" timestamp="1592754660509">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1865" height="327" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1592103352617" />
-    <state width="1865" height="318" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592506527158" />
+    <state width="1865" height="313" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592754660509" />
     <state x="703" y="0" key="SettingsEditor" timestamp="1592153770809">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1569" y="0" key="SettingsEditor/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591889148783" />
     <state x="703" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1592153770809" />
-    <state x="399" y="24" key="Vcs.Push.Dialog.v2" timestamp="1592238203468">
+    <state x="399" y="24" key="Vcs.Push.Dialog.v2" timestamp="1592663694589">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1468" y="187" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591518495788" />
     <state x="266" y="16" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1591672920867" />
-    <state x="399" y="24" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592238203468" />
+    <state x="399" y="24" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592663694589" />
     <state x="294" y="10" key="VcsDiffUtil.ChangesDialog" timestamp="1591965981980">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -358,23 +390,28 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1174" y="282" key="chooseDestDirectoryDialog/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591518117220" />
-    <state x="414" y="234" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592426921515">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="621" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592663636886">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="234" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1592426921515" />
+    <state x="621" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592663636886" />
     <state x="621" y="261" key="git4idea.merge.GitPullDialog" timestamp="1592621438594">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="621" y="261" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592621438594" />
+    <state x="654" y="231" key="refactoring.ChangeSignatureDialog" timestamp="1592683503045">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="654" y="231" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592683503045" />
     <state x="532" y="237" key="run.anything.popup" timestamp="1592622500291">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="532" y="237" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592622500291" />
-    <state x="532" y="-5" width="840" height="1032" key="search.everywhere.popup" timestamp="1592662924945">
+    <state x="532" y="-5" width="840" height="1032" key="search.everywhere.popup" timestamp="1592751383882">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="355" y="-3" width="840" height="675" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1592164044077" />
-    <state x="532" y="-5" width="840" height="1032" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592662924945" />
+    <state x="532" y="-5" width="840" height="1032" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592751383882" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -458,6 +495,11 @@
           <url>file://$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Hard/CutOffTreesGolfEvent.java</url>
           <line>50</line>
           <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/FlattenBinaryTreeLinkedList.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
