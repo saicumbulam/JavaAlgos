@@ -20,23 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f960813a-8beb-4284-beb1-231ef18c34a5" name="Default Changelist" comment="Included new algorithms">
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/FlattenMultilevelDoubleLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/BookItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/BookLending.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/BookReservation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/Catalog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/Fine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/Rack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/Search.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/DefangingIpAddress.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/PrintInOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/ParkingLot/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/ParkingLot/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/ParkingLot/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/ParkingLot/Constants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/ParkingLot/ParkingAttendant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/ParkingLot/ParkingDisplayBoard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/ParkingLot/ParkingFloor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/ParkingLot/ParkingLot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/ParkingLot/ParkingSpot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/ParkingLot/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/ParkingLot/Vehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/MinimumJumpstoReachEnd.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/MinimumJumpstoReachEnd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/BookItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/BookItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/BookLending.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/BookLending.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/BookReservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/BookReservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/ObjectOrientedInterview/LibraryMgmt/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/DataStructures/BST/BinarySearchTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/Leetcode/DataStructures/BST/BinarySearchTree.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,15 +61,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>”</find>
-      <find>“</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>&quot;</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -102,7 +98,20 @@
       <recent name="C:\Users\saicumbulam\Documents\Github\JavaAlgos\practice\src\Algorithms" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FlattenMultilevelDoubleLinkedList">
+  <component name="RunManager" selected="Application.DefangingIpAddress">
+    <configuration name="DefangingIpAddress" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Leetcode.Easy.DefangingIpAddress" />
+      <module name="JavaAlgos" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Leetcode.Easy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FlattenBinaryTreeLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Leetcode.Medium.FlattenBinaryTreeLinkedList" />
       <module name="JavaAlgos" />
@@ -129,25 +138,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HammingDistance" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Leetcode.Easy.HammingDistance" />
+    <configuration name="MinimumJumpstoReachEnd" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Leetcode.Medium.MinimumJumpstoReachEnd" />
       <module name="JavaAlgos" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Leetcode.Easy.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="NimGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Leetcode.Easy.NimGame" />
-      <module name="JavaAlgos" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Leetcode.Easy.*" />
+          <option name="PATTERN" value="Leetcode.Medium.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -170,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DefangingIpAddress" />
+        <item itemvalue="Application.MinimumJumpstoReachEnd" />
         <item itemvalue="Application.FlattenMultilevelDoubleLinkedList" />
         <item itemvalue="Application.FlattenBinaryTreeLinkedList" />
         <item itemvalue="Application.RemoveLinkedListElements" />
-        <item itemvalue="Application.NimGame" />
-        <item itemvalue="Application.HammingDistance" />
       </list>
     </recent_temporary>
   </component>
@@ -259,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592754836712</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Included new algorithms">
+      <created>1592837140715</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1592837140716</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -317,34 +320,34 @@
     <state x="-1233" y="215" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591792992754" />
     <state x="458" y="72" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1592239650807" />
     <state x="687" y="110" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1592251543980" />
-    <state width="1225" height="312" key="GridCell.Tab.0.bottom" timestamp="1592789823706">
+    <state width="1225" height="69" key="GridCell.Tab.0.bottom" timestamp="1592948717221">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1865" height="182" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591654137410" />
     <state width="1225" height="123" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1591889090578" />
-    <state width="1225" height="312" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1592789823706" />
-    <state width="1865" height="312" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592786520049" />
-    <state width="1225" height="312" key="GridCell.Tab.0.center" timestamp="1592789823706">
+    <state width="1225" height="69" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1592948717221" />
+    <state width="1865" height="245" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592939812643" />
+    <state width="1225" height="69" key="GridCell.Tab.0.center" timestamp="1592948717221">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1865" height="182" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591654137410" />
     <state width="1225" height="123" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1591889090578" />
-    <state width="1225" height="312" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1592789823706" />
-    <state width="1865" height="312" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592786520048" />
-    <state width="1225" height="312" key="GridCell.Tab.0.left" timestamp="1592789823706">
+    <state width="1225" height="69" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1592948717221" />
+    <state width="1865" height="245" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592939812643" />
+    <state width="1225" height="69" key="GridCell.Tab.0.left" timestamp="1592948717221">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1865" height="182" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591654137410" />
     <state width="1225" height="123" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1591889090578" />
-    <state width="1225" height="312" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1592789823706" />
-    <state width="1865" height="312" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592786520048" />
-    <state width="1225" height="312" key="GridCell.Tab.0.right" timestamp="1592789823706">
+    <state width="1225" height="69" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1592948717221" />
+    <state width="1865" height="245" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592939812642" />
+    <state width="1225" height="69" key="GridCell.Tab.0.right" timestamp="1592948717221">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1865" height="182" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591654137410" />
     <state width="1225" height="123" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1591889090578" />
-    <state width="1225" height="312" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1592789823706" />
-    <state width="1865" height="312" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592786520048" />
+    <state width="1225" height="69" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1592948717221" />
+    <state width="1865" height="245" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592939812643" />
     <state width="1225" height="312" key="GridCell.Tab.1.bottom" timestamp="1592789823706">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -370,11 +373,11 @@
     </state>
     <state x="-1569" y="0" key="SettingsEditor/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591889148783" />
     <state x="703" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1592153770809" />
-    <state x="399" y="24" key="Vcs.Push.Dialog.v2" timestamp="1592663694589">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="266" y="16" key="Vcs.Push.Dialog.v2" timestamp="1592837151680">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="-1468" y="187" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591518495788" />
-    <state x="266" y="16" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1591672920867" />
+    <state x="266" y="16" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1592837151680" />
     <state x="399" y="24" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592663694589" />
     <state x="294" y="10" key="VcsDiffUtil.ChangesDialog" timestamp="1591965981980">
       <screen x="0" y="0" width="1280" height="680" />
@@ -401,11 +404,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="532" y="237" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592622500291" />
-    <state x="532" y="-5" width="840" height="1032" key="search.everywhere.popup" timestamp="1592751383882">
+    <state x="532" y="-5" width="840" height="1032" key="search.everywhere.popup" timestamp="1592939328277">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="355" y="-3" width="840" height="675" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1592164044077" />
-    <state x="532" y="-5" width="840" height="1032" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592751383882" />
+    <state x="532" y="-5" width="840" height="1032" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592939328277" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,9 +1,10 @@
 package ObjectOrientedInterview.LibraryMgmt;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class BookItem extends Book {
-    private String barcode;
+    public String barcode;
     private boolean isReferenceOnly;
     private Date borrowed;
     private Date dueDate;
@@ -19,7 +20,7 @@ public class BookItem extends Book {
             ShowError("This book is Reference only and can't be issued");
             return false;
         }
-        if(!BookLending.lendBook(getBarCode(), memberId)){
+        if(!BookLending.lendBook(barcode, memberId)){
             return false;
         }
         updateBookItemStatus(Constants.BookStatus.LOANED);
@@ -30,7 +31,9 @@ public class BookItem extends Book {
 
     private void ShowError(String s) { }
 
-    private String getBarCode() { return ""; }
+    void updateBookItemStatus(Constants.BookStatus loaned) { }
 
-    private void updateBookItemStatus(Constants.BookStatus loaned) { }
+    public void updateDueDate(LocalDate plusDays) { }
+
+    public void updateBookItemState(Constants.BookStatus reserved) { }
 }

@@ -25,7 +25,8 @@ public class Constants {
         WAITING,
         PENDING,
         CANCELED,
-        NONE
+        NONE,
+        COMPLETED ;
     }
 
     public enum AccountStatus{

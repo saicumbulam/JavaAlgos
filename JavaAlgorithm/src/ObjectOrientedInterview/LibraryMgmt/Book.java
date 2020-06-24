@@ -7,5 +7,5 @@ public abstract class Book {
     private String publisher;
     private String language;
     private int numberOfPages;
-    private List<Author> authors;
+    //private List<Author> authors;
 }
