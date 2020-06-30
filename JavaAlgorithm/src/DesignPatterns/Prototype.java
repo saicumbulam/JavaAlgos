@@ -1,4 +1,4 @@
-package DesignPattern;
+package DesignPatterns;
 
 import java.util.HashMap;
 import java.util.Map;

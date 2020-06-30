@@ -1,4 +1,4 @@
-package DesignPattern;
+package DesignPatterns;
 
 
 /*Bridge is used when we need to decouple an abstraction from

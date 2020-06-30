@@ -1,4 +1,4 @@
-package DesignPattern;
+package DesignPatterns;
 
 /*This type of design pattern comes under creational pattern as this
 pattern provides one of the best ways to create an object.

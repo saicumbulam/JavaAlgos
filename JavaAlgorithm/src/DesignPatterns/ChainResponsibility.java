@@ -1,4 +1,4 @@
-package DesignPattern;
+package DesignPatterns;
 
 /*The chain of responsibility pattern
 creates a chain of receiver objects for a request. This pattern decouples sender and receiver
