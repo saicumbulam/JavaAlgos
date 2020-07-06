@@ -19,26 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f960813a-8beb-4284-beb1-231ef18c34a5" name="Default Changelist" comment="Renamed the directory">
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/FindPivotIndex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/HeightChecker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/LargestNumberAtleastTwiceOthers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/LongPressedName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/MaximumDistanceClosestPerson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/MultipleMissingNumbers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/RearrangePositiveNegativeNumbers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/RearrangeSortedMinMax.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/RotateArrayOneIndex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/SecondMaximum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Easy/SmallestCommonNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Hard/ThreeEqualParts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/LargeGroupPositions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaAlgorithm/src/Leetcode/Medium/QuickSort.java" afterDir="false" />
+    <list default="true" id="f960813a-8beb-4284-beb1-231ef18c34a5" name="Default Changelist" comment="Included new algorithms">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_xerial_sqlite_jdbc_3_32_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/info.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/JavaAlgos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/JavaAlgos.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaAlgorithm/src/AutomatedInterviewer/DailyShuffleQuestions.java" beforeDir="false" afterPath="$PROJECT_DIR$/JavaAlgorithm/src/AutomatedInterviewer/DailyShuffleQuestions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/.idea/JavaAlgos.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/.idea/JavaAlgos.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaAlgos/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/DesignPattern/Prototype/EmployeeRecord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/DesignPattern/Prototype/prototype.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaAlgos/DesignPattern/Singleton.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,15 +67,19 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/JavaAlgorithm/src" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -176,6 +168,30 @@
         <item itemvalue="Application.RearrangeSortedMinMax" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SQLiteDataSourceStorage">
+    <local-data-sources>
+      <data-source>
+        <option name="databaseName" value="test.db" />
+        <option name="filePath" value="C:\Users\sadithya\Documents\Code\JavaAlgos\test.db" />
+        <option name="name" value="Test2" />
+      </data-source>
+      <data-source>
+        <option name="databaseName" value="test.db" />
+        <option name="filePath" value="C:\Users\sadithya\Documents\Code\JavaAlgos\test.db" />
+        <option name="name" value="Test4" />
+      </data-source>
+      <data-source>
+        <option name="databaseName" value="test.db" />
+        <option name="filePath" value="C:\Users\sadithya\Documents\Code\JavaAlgos\test.db" />
+        <option name="name" value="Test1" />
+      </data-source>
+      <data-source>
+        <option name="databaseName" value="test.db" />
+        <option name="filePath" value="C:\Users\sadithya\Documents\Code\JavaAlgos\test.db" />
+        <option name="name" value="Test3" />
+      </data-source>
+    </local-data-sources>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -286,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593507764596</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Included new algorithms">
+      <created>1593999976126</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1593999976126</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -308,21 +331,26 @@
     <MESSAGE value="Changed the position of old algorithmns and included a new leetcode ones" />
     <MESSAGE value="Added some more algorithms" />
     <MESSAGE value="Included some changes in the existing code for improving readability" />
-    <MESSAGE value="Included new algorithms" />
     <MESSAGE value="Design Patterns added" />
     <MESSAGE value="Renamed the directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed the directory" />
+    <MESSAGE value="Included new algorithms" />
+    <option name="LAST_COMMIT_MESSAGE" value="Included new algorithms" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="634" y="302" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592442254470">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="423" y="197" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594000748921">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="423" y="197" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1594000748921" />
     <state x="634" y="302" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1592442254470" />
-    <state x="718" y="166" key="#com.intellij.ide.util.MemberChooser" timestamp="1593083738432">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="479" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1594003344847">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="479" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1592795808588" />
+    <state x="479" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1594003344847" />
     <state x="718" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593083738432" />
+    <state x="467" y="0" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1594000497748">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="467" y="0" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.0.1280.680@0.0.1280.680" timestamp="1594000497748" />
     <state x="526" y="429" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1593506342392">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -332,10 +360,19 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1197" y="378" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591518193931" />
-    <state x="579" y="198" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1593504098817">
+    <state x="360" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1594002403957">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="360" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1280.680@0.0.1280.680" timestamp="1594002403957" />
+    <state x="579" y="198" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593504098817" />
+    <state x="624" y="206" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594038145906">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="579" y="198" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593504098817" />
+    <state x="624" y="206" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594038145906" />
+    <state x="305" y="36" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1594000505765">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="305" y="36" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1280.680@0.0.1280.680" timestamp="1594000505765" />
     <state width="475" height="582" key="DebuggerActiveHint" timestamp="1592441738709">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -344,71 +381,71 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592663699878" />
-    <state x="687" y="110" key="FileChooserDialogImpl" timestamp="1593530182055">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="458" y="0" key="FileChooserDialogImpl" timestamp="1594000350516">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="-1233" y="215" key="FileChooserDialogImpl/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591792992754" />
-    <state x="458" y="72" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1592239650807" />
+    <state x="458" y="0" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1594000350516" />
     <state x="687" y="110" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593530182055" />
-    <state width="902" height="300" key="GridCell.Tab.0.bottom" timestamp="1593723887307">
+    <state width="1865" height="300" key="GridCell.Tab.0.bottom" timestamp="1594038346226">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1865" height="182" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591654137410" />
     <state width="1225" height="123" key="GridCell.Tab.0.bottom/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1591889090578" />
-    <state width="1225" height="69" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1592948717221" />
-    <state width="902" height="300" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593723887307" />
-    <state width="902" height="300" key="GridCell.Tab.0.center" timestamp="1593723887307">
+    <state width="1225" height="99" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1594002026358" />
+    <state width="1865" height="300" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594038346226" />
+    <state width="1865" height="300" key="GridCell.Tab.0.center" timestamp="1594038346226">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1865" height="182" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591654137410" />
     <state width="1225" height="123" key="GridCell.Tab.0.center/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1591889090578" />
-    <state width="1225" height="69" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1592948717221" />
-    <state width="902" height="300" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593723887307" />
-    <state width="902" height="300" key="GridCell.Tab.0.left" timestamp="1593723887307">
+    <state width="1225" height="99" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1594002026358" />
+    <state width="1865" height="300" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594038346226" />
+    <state width="1865" height="300" key="GridCell.Tab.0.left" timestamp="1594038346225">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1865" height="182" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591654137410" />
     <state width="1225" height="123" key="GridCell.Tab.0.left/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1591889090578" />
-    <state width="1225" height="69" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1592948717221" />
-    <state width="902" height="300" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593723887307" />
-    <state width="902" height="300" key="GridCell.Tab.0.right" timestamp="1593723887307">
+    <state width="1225" height="99" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1594002026358" />
+    <state width="1865" height="300" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594038346225" />
+    <state width="1865" height="300" key="GridCell.Tab.0.right" timestamp="1594038346226">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1865" height="182" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591654137410" />
     <state width="1225" height="123" key="GridCell.Tab.0.right/0.0.1280.680/-1920.0.1920.1040@0.0.1280.680" timestamp="1591889090578" />
-    <state width="1225" height="69" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1592948717221" />
-    <state width="902" height="300" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593723887307" />
-    <state width="902" height="300" key="GridCell.Tab.1.bottom" timestamp="1593723887307">
+    <state width="1225" height="99" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1594002026358" />
+    <state width="1865" height="300" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594038346226" />
+    <state width="1865" height="300" key="GridCell.Tab.1.bottom" timestamp="1594038346226">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1225" height="312" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1592789823706" />
-    <state width="902" height="300" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593723887307" />
-    <state width="902" height="300" key="GridCell.Tab.1.center" timestamp="1593723887307">
+    <state width="1865" height="300" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594038346226" />
+    <state width="1865" height="300" key="GridCell.Tab.1.center" timestamp="1594038346226">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1225" height="312" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1592789823706" />
-    <state width="902" height="300" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593723887307" />
-    <state width="902" height="300" key="GridCell.Tab.1.left" timestamp="1593723887307">
+    <state width="1865" height="300" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594038346226" />
+    <state width="1865" height="300" key="GridCell.Tab.1.left" timestamp="1594038346226">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1225" height="312" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1592789823706" />
-    <state width="902" height="300" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593723887307" />
-    <state width="902" height="300" key="GridCell.Tab.1.right" timestamp="1593723887307">
+    <state width="1865" height="300" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594038346226" />
+    <state width="1865" height="300" key="GridCell.Tab.1.right" timestamp="1594038346226">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1225" height="312" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1592789823706" />
-    <state width="902" height="300" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593723887307" />
-    <state x="65" y="0" key="SettingsEditor" timestamp="1593999571657">
+    <state width="1865" height="300" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594038346226" />
+    <state x="0" y="0" key="SettingsEditor" timestamp="1594000833630">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="-1569" y="0" key="SettingsEditor/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591889148783" />
-    <state x="65" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1593999571657" />
+    <state x="0" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1594000833630" />
     <state x="703" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1593478811522" />
-    <state x="399" y="24" key="Vcs.Push.Dialog.v2" timestamp="1593507780942">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="266" y="16" key="Vcs.Push.Dialog.v2" timestamp="1593999987719">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="-1468" y="187" key="Vcs.Push.Dialog.v2/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591518495788" />
-    <state x="266" y="16" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1592837151680" />
+    <state x="266" y="16" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1593999987719" />
     <state x="399" y="24" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593507780942" />
     <state x="294" y="10" key="VcsDiffUtil.ChangesDialog" timestamp="1591965981980">
       <screen x="0" y="0" width="1280" height="680" />
@@ -418,11 +455,19 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1174" y="282" key="chooseDestDirectoryDialog/0.0.1280.680/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1591518117220" />
-    <state x="621" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592754799261">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="288" y="210" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1594000491563">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="414" y="234" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1592426921515" />
+    <state x="288" y="210" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1280.680@0.0.1280.680" timestamp="1594000491563" />
+    <state x="414" y="234" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593999936109">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="414" y="234" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1593999936109" />
     <state x="621" y="358" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592754799261" />
+    <state x="438" y="69" key="extract.method.dialog" timestamp="1594001270500">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="438" y="69" key="extract.method.dialog/0.0.1280.680@0.0.1280.680" timestamp="1594001270500" />
     <state x="621" y="261" key="git4idea.merge.GitPullDialog" timestamp="1592621438594">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -516,7 +561,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/JavaAlgorithm/src/AutomatedInterviewer/DailyShuffleQuestions.java</url>
-          <line>41</line>
+          <line>161</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
