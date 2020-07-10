@@ -23,7 +23,7 @@ public class ConstructBinaryTreePreorderInorder {
         inorderArray = inorder;
         preorderArray = preorder;
 
-        int count = 0;
+        int count = 0; // you missed this earlier. Watch out
         for (int item: inorderArray) {
             map.put(item, count++);
         }

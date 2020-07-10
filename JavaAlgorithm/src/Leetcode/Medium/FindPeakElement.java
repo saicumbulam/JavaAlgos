@@ -5,7 +5,7 @@ public class FindPeakElement {
         int[] nums = {1,2,3,1};
 
         int start = 0, end = nums.length-1;
-        while (start < end) // infinite loop will go if its a < = sign
+        while (start < end) // infinite loop will go if its a <= sign
         {
             int mid = start + (end -start)/2;
 

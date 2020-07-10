@@ -28,7 +28,8 @@ public class DailyShuffleQuestions {
     private static String pastDate = "1970-01-01";
 
     public static void main(String[] args) {
-        Controller();
+        ResetRun();
+        //Controller();
     }
 
     private static void ConnectDatabase()
@@ -43,10 +44,12 @@ public class DailyShuffleQuestions {
             connection = DriverManager.getConnection("jdbc:sqlite:info.db");
             if (flag)
             {
-                QueryExecutorVoid("CREATE TABLE PROBS " +
-                        "(NAME TEXT    NOT NULL, " +
-                        " ACCESSDTE TEXT     NOT NULL, " +
-                        " CATEGORY CHAR(50))");
+                QueryExecutorVoid(
+                        "CREATE TABLE PROBS " +
+                        "(NAME TEXT NOT NULL, " +
+                        " ACCESSDTE TEXT NOT NULL, " +
+                        " CATEGORY CHAR(50)," +
+                        " CONF TEXT)");
             }
         } catch ( Exception e ) {
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
@@ -119,6 +122,16 @@ public class DailyShuffleQuestions {
         CloseConnection();
     }
 
+    private static void ResetRun()
+    {
+        LoadThreshold();
+        ConnectDatabase();
+        for (Map.Entry<String, Integer> entry : hashMap.entrySet()) {
+            List<String> files = getFileFromFolder(Paths.get(leetCodePath, entry.getKey()).toString());
+            InsertMissingProbs(files, new ArrayList<>(), entry.getKey());
+        }
+    }
+
     private static void InsertMissingProbs(List<String> files, List<ProbsDef> dbRows,
                                            String category)
     {
@@ -129,10 +142,10 @@ public class DailyShuffleQuestions {
             }
         }
         for (String item: files) {
-            String sql = "INSERT INTO PROBS (NAME,ACCESSDTE,CATEGORY) " +
-                    String.format("VALUES (\"%s\",\"%s\",\"%s\");", item,
+            String sql = "INSERT INTO PROBS (NAME,ACCESSDTE,CATEGORY,CONF) " +
+                    String.format("VALUES (\"%s\",\"%s\",\"%s\",\"%s\");", item,
                             pastDate,
-                            category);
+                            category, "NS");
             QueryExecutorVoid(sql);
         }
     }
@@ -153,12 +166,16 @@ public class DailyShuffleQuestions {
         int count = times;
         List<ProbsDef> dbRows = QueryExecutorString(
                 String.format("SELECT * FROM PROBS WHERE CATEGORY = '%s' " +
-                        "AND (DATE('now') - ACCESSDTE) > 7;",category, 7));
+                        "AND (DATE('now') - ACCESSDTE) > %d AND " +
+                        "CONF = \"%s\";",category, 7, "NS"));
 
         if (dbRows == null || dbRows.size() < count)
         {
-            QueryExecutorVoid(String.format("UPDATE PROBS set ACCESSDTE = %s where (DATE('now') - ACCESSDTE) > %d;",
-                    pastDate,7));
+            QueryExecutorVoid(String.format("UPDATE PROBS set ACCESSDTE = \"%s\" " +
+                            "where (DATE('now') - ACCESSDTE) > %d " +
+                            "AND " +
+                            "CATEGORY = \"%s\";",
+                    pastDate,7, category));
         }
         while (count > 0) {
             ProbsDef randomElement = dbRows.get(random.nextInt(dbRows.size()));
@@ -178,8 +195,8 @@ public class DailyShuffleQuestions {
 
     private static void LoadThreshold()
     {
-        hashMap.put("Easy", 5);
-        hashMap.put("Medium", 3);
+        hashMap.put("Easy", 10);
+        hashMap.put("Medium", 10);
         hashMap.put("Hard", 2);
     }
 

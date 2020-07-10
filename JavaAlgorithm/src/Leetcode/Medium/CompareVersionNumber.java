@@ -8,6 +8,7 @@ public class CompareVersionNumber {
 
     private static int Calculate(String version1, String version2)
     {
+        // splitting is important
         String[] v1 = version1.split("\\.");
         String[] v2 = version2.split("\\.");
         int n1 = v1.length, n2 = v2.length;

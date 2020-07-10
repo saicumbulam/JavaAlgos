@@ -28,7 +28,7 @@ public class RemoveLinkedListElements {
             {
                 prev.next = curr.next;
             }
-            else
+            else // this is very important for some test cases
             {
                 prev = curr;
             }
