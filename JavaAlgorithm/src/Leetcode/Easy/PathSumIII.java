@@ -4,6 +4,10 @@ import Leetcode.DataStructures.BST.BinarySearchTree;
 import Leetcode.DataStructures.BST.TreeNode;
 import sun.reflect.generics.tree.Tree;
 
+// Find the number of paths that sum to a given value.
+// The path does not need to start or end at the root or a leaf,
+// but it must go downwards (traveling only from parent nodes to child nodes).
+
 public class PathSumIII {
     private static int count = 0;
 
