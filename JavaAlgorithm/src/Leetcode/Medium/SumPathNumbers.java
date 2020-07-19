@@ -2,6 +2,7 @@ package Leetcode.Medium;
 
 import Leetcode.DataStructures.BST.TreeNode;
 
+// Calculate the sum of all path numbers
 public class SumPathNumbers {
     private static int findRootToLeaf(TreeNode root, int pathSum)
     {

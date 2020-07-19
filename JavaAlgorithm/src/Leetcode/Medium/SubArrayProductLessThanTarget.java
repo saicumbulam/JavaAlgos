@@ -16,6 +16,7 @@ public class SubArrayProductLessThanTarget {
 
         for (int right = 0; right < arr.length; right++) {
             product *= arr[right];
+            // '=' is important as the problem asks for items less than the target
             while (product >= target && left < arr.length)
             {
                 product /= arr[left++];
@@ -23,6 +24,7 @@ public class SubArrayProductLessThanTarget {
 
             List<Integer> tempList = new ArrayList<>();
             for (int i = right; i >= left  ; i--) {
+                // index 0 should be added for getting the exact result.
                 tempList.add(0, arr[i]);
                 result.add(new ArrayList<>(tempList));
             }

@@ -29,13 +29,14 @@ public class TicTacToe {
             xdiag += move;
         }
 
+        // math.abs for all values checked.
         if(Math.abs(rowCounter[row]) == 3 ||
                 Math.abs(colCounter[col]) == 3 ||
                 Math.abs(diag) == 3 || Math.abs(xdiag) == 3)
         {
             return player;
         }
-        return 0;
+        return 0; //return should be 0 and not -1
     }
 
 }

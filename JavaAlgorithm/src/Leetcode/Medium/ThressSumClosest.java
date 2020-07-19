@@ -14,6 +14,7 @@ public class ThressSumClosest {
     private static int Calculate(int[] arr, int target)
     {
         Integer smallest = Integer.MAX_VALUE;
+        // forgot to sort the array
         Arrays.sort(arr);
         for (int i = 0; i < arr.length-2; i++) {
             int left = i + 1, right = arr.length-1;
@@ -23,6 +24,7 @@ public class ThressSumClosest {
                     return target - targetDiff;
                 }
 
+                // this formulae is crucial for smallest value calculation
                 if(Math.abs(targetDiff) < Math.abs(smallest) ||
                         ((Math.abs(targetDiff) == Math.abs(smallest)) && targetDiff > smallest))
                 {
@@ -36,6 +38,6 @@ public class ThressSumClosest {
                 }
             }
         }
-        return target - smallest; //lpok out for this
+        return target - smallest; //look out for this
     }
 }

@@ -33,11 +33,13 @@ public class SortList {
 
     private static ListNode Merger(ListNode first, ListNode second)
     {
+        // forgot this. This is important to deal null
         if (first == null)
         {
             return second;
         }
 
+        // forgot this. This is important to deal null
         if (second == null)
         {
             return first;
@@ -73,6 +75,7 @@ public class SortList {
             resultTail = resultTail.next;
         }
 
+        // forgot abt this. ListNode doesnt needs while loop. Just use if statement
         if (first != null)
         {
             resultTail.next = first;
