@@ -1,10 +1,21 @@
+/*
+Problem: Count of small numbers after self
+Input: [5,2,6,1]
+Output: [2,1,1,0]
+
+Time complexity: o(n log n)
+space complexity: o(n)
+
+See the comments
+* */
 package Leetcode.Hard;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-import java.util.Stack;
 
 public class FindNumberSmallerElementsRight {
+    // 1. BST tree node defined
     static class Node
     {
         Node left;
@@ -26,6 +37,7 @@ public class FindNumberSmallerElementsRight {
 
     static int addTree(Node head, int number)
     {
+        // 5. if number greater than root, create right
         if (number > head.value)
         {
             if (head.right == null)
@@ -66,21 +78,18 @@ public class FindNumberSmallerElementsRight {
             return result;
         }
 
-        Stack<Integer> stack = new Stack<>();
-        stack.push(0); // for the last emenet in the resultant list
+        // 2. 0 added at result for output
+        result.add(0); // for the last emenet in the resultant list
 
-        Node head = new Node(arr[n-1]);
+        // 3. Define root from n-1
+        Node root = new Node(arr[n-1]);
 
+        // 4. Add elements in binary tree and store result.
         for (int i = n-2; i >= 0; i--) {
-            stack.push(addTree(head, arr[i]));
+            result.add(addTree(root, arr[i]));
         }
 
-        while (stack.size() > 0)
-        {
-
-            result.add(stack.pop());
-        }
-
+        Collections.reverse(result);
         return result;
     }
 }
