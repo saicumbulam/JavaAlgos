@@ -9,6 +9,7 @@ public class FindPeakElement {
         {
             int mid = start + (end -start)/2;
 
+            // The mid shld be greater than mid+1
             if (nums[mid] > nums[mid+1])
             {
                 end = mid;

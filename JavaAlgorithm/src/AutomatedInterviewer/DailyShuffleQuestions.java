@@ -5,7 +5,7 @@ import java.io.File;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.*;
-import java.util.Date;
+
 
 class ProbsDef
 {
@@ -28,8 +28,8 @@ public class DailyShuffleQuestions {
     private static String pastDate = "1970-01-01";
 
     public static void main(String[] args) {
-        ResetRun();
-        //Controller();
+        //ResetRun();
+        Controller();
     }
 
     private static void ConnectDatabase()
@@ -117,6 +117,11 @@ public class DailyShuffleQuestions {
             List<ProbsDef> dbRows = QueryExecutorString("SELECT * FROM PROBS");
             InsertMissingProbs(files, dbRows, entry.getKey());
             List<String> selectedFiles = shuffler(entry.getKey(), entry.getValue());
+            if (selectedFiles.size() == 0)
+            {
+                System.out.println(String.format("Completed coding for %s", entry.getKey()));
+                continue;
+            }
             printList(selectedFiles, entry.getKey());
         }
         CloseConnection();
@@ -169,14 +174,20 @@ public class DailyShuffleQuestions {
                         "AND (DATE('now') - ACCESSDTE) > %d AND " +
                         "CONF = \"%s\";",category, 7, "NS"));
 
-        if (dbRows == null || dbRows.size() < count)
+/*        if (dbRows == null || dbRows.size() < count)
         {
             QueryExecutorVoid(String.format("UPDATE PROBS set ACCESSDTE = \"%s\" " +
                             "where (DATE('now') - ACCESSDTE) > %d " +
                             "AND " +
                             "CATEGORY = \"%s\";",
                     pastDate,7, category));
+        }*/
+
+        if (dbRows.size() == 0)
+        {
+            return result;
         }
+
         while (count > 0) {
             ProbsDef randomElement = dbRows.get(random.nextInt(dbRows.size()));
             if (!result.contains(randomElement.name))
@@ -195,9 +206,9 @@ public class DailyShuffleQuestions {
 
     private static void LoadThreshold()
     {
-        hashMap.put("Easy", 10);
-        hashMap.put("Medium", 10);
-        hashMap.put("Hard", 2);
+        hashMap.put("Easy", 20);
+        hashMap.put("Medium", 20);
+        hashMap.put("Hard", 0);
     }
 
     private static List<String> getFileFromFolder(String path)

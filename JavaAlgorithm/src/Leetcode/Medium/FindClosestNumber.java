@@ -1,3 +1,11 @@
+/*
+run time complexity: o(logn)
+
+Pseudocode:
+1. Do a binary search to find the mid.
+2. if the mid is not found, return start if ((arr[start] - target) < (target - arr[end])
+   else return end
+* */
 package Leetcode.Medium;
 
 public class FindClosestNumber {

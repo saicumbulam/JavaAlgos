@@ -5,31 +5,25 @@ import java.util.Arrays;
 public class RearrangeSortedMinMax {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6,7};
-        Calculate(arr);
+        arr = Calculate(arr);
         Arrays.stream(arr).forEach(System.out::println);
     }
 
-    private static void Calculate(int[] arr)
+    private static int[] Calculate(int[] arr)
     {
-        int maxIdx = arr.length-1;
-        int minIdx = 0;
-        int maxElement = arr[maxIdx] + 1;
+        int left = 0, right = arr.length-1;
+        int[] result = new int[arr.length];
+        int index = 0;
 
-        for (int i = 0; i < arr.length; i++) {
-            if (i % 2 == 0)
-            {
-                arr[i] += (arr[maxIdx] % maxElement) * maxElement;
-                maxIdx--;
-            }
-            else
-            {
-                arr[i] += (arr[minIdx] % maxElement) * maxElement;
-                minIdx++;
-            }
-        }
+        while(left < right)
+        {
+            result[index++] = arr[right];
+            result[index++] = arr[left];
 
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = arr[i]/maxElement;
+            left++;
+            right--;
         }
+        result[index++] = arr[left];
+        return result;
     }
 }
