@@ -1,3 +1,10 @@
+/*
+1. Perform binary search to find the element.
+2. If the mid element is "", then make i = mid-1
+   and j = mid+1.
+   do while to traverse i and j btw left and right.
+   if i or j sees a word, then break the loop and continue binary search.
+* */
 package Leetcode.BinarySearch.Easy;
 
 public class SparseSearch {
@@ -17,43 +24,53 @@ public class SparseSearch {
                 ""
         };
 
-        System.out.println(Calculate(array, 0, array.length - 1, "educative"));
+        System.out.println(Calculater(array, "educative"));
     }
 
-    private static int Calculate(String[] arr, int low, int high, String target)
+    private static int Calculater(String[] arr, String target)
     {
-        if (low > high)
-            return -1;
-        //calculating mid value
-        int mid = (low + high) / 2;
+        int left = 0, right = arr.length-1;
 
-        // Our modification
-        if (arr[mid] == "") {
-            int i = mid - 1;
-            int j = mid + 1;
-            while (true) {
-                if (i < low && j > high)
-                    return -1;
+        while (left <= right)
+        {
+            int mid = left + (right - left)/2;
 
-                if (i >= low && arr[i] != "") {
-                    mid = i;
-                    break;
-                } else if (j <= high && arr[j] != "") {
-                    mid = j;
-                    break;
+            if (arr[mid].equals("")) {
+                int i = mid - 1;
+                int j = mid + 1;
+
+                while (true) {
+                    if (i < left || j > right) {
+                        return -1;
+                    }
+                    if (i >= left && !arr[i].equals("")) {
+                        mid = i;
+                        break;
+                    }
+                    if (j <= right && !arr[j].equals("")) {
+                        mid = j;
+                        break;
+                    }
+                    i--;
+                    j++;
                 }
-                i--;
-                j++;
+            }
+
+            if (arr[mid].equals(target))
+            {
+                return mid;
+            }
+
+            if (arr[mid].compareTo(target) > 0)
+            {
+                right = mid-1;
+            }
+            else if (arr[mid].compareTo(target) < 0)
+            {
+                left = mid + 1;
             }
         }
-
-        // Now perform simple Binary Search
-        if (arr[mid].equals(target))
-            return mid;
-        else if (arr[mid].compareTo(target) > 0)
-            return Calculate(arr, low, mid - 1, target);
-        else
-            return Calculate(arr, mid + 1, high, target);
+        return -1;
     }
 
 }
