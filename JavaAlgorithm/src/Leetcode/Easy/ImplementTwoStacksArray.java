@@ -3,7 +3,7 @@
 2. push: top1 < top2-1 => arr[++top1], arr[top2--]
 3. pop: top1 > -1, top2 < maxSize => arr[top1--], arr[top2++]
 * */
-package Leetcode.Easy;
+package Leetcode.String.Easy.Easy;
 
 public class ImplementTwoStacksArray {
     private int maxSize;

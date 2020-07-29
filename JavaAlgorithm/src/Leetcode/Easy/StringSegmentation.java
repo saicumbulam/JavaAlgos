@@ -1,7 +1,7 @@
 /*
 Time complexity: o(n^2)
 * */
-package Leetcode.Easy;
+package Leetcode.String.Easy.Easy;
 
 import java.util.ArrayList;
 import java.util.List;

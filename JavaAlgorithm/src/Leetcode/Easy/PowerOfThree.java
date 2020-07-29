@@ -1,4 +1,4 @@
-package Leetcode.Easy;
+package Leetcode.String.Easy.Easy;
 
 public class PowerOfThree {
     public static void main(String[] args) {

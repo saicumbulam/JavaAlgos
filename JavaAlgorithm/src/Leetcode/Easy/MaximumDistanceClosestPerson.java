@@ -1,4 +1,4 @@
-package Leetcode.Easy;
+package Leetcode.String.Easy.Easy;
 
 import java.util.Arrays;
 
@@ -41,6 +41,7 @@ public class MaximumDistanceClosestPerson {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == 0)
             {
+                //seat such that the distance between him and the closest person to him is maximized.
                 ans = Math.max(ans, Math.min(left[i], right[i]));
             }
         }

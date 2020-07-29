@@ -1,4 +1,4 @@
-package Leetcode.Easy;
+package Leetcode.String.Easy.Easy;
 
 //possible ways are there to reach the top of the staircase, given that,
 // at every step you can either take 1 step, 2 steps, or 3 steps

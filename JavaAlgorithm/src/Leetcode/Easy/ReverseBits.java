@@ -9,7 +9,7 @@ Psuedo:
 3. When there is no more bits of one left (i.e. n == 0), we terminate the iteration.
 
 * */
-package Leetcode.Easy;
+package Leetcode.String.Easy.Easy;
 
 public class ReverseBits {
     public static int Calculate(int n)

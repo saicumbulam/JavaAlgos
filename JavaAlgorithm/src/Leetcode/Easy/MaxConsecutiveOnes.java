@@ -1,4 +1,4 @@
-package Leetcode.Easy;
+package Leetcode.String.Easy.Easy;
 
 public class MaxConsecutiveOnes {
     public static void main(String[] args) {
@@ -22,6 +22,6 @@ public class MaxConsecutiveOnes {
             }
         }
 
-        return Math.max(maxCount,count);
+        return Math.max(maxCount,count); // this should come
     }
 }

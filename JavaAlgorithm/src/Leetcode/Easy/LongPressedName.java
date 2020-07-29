@@ -1,31 +1,39 @@
-package Leetcode.Easy;
+package Leetcode.String.Easy.Easy;
 
 public class LongPressedName {
-    public boolean isLongPressedName(String name, String typed) {
-        int j = 0;
-        for (char c: name.toCharArray()) {
-            if (j == typed.length())
-                return false;
+    public static void main(String[] args) {
+        System.out.println(isLongPressedName("vtkgn", "vttkgnn"));
+    }
+    private static boolean isLongPressedName(String name, String typed) {
+        int start1 = 0, start2 = 0;
+        int length1 = name.length();
+        int length2 = typed.length();
 
-            // If mismatch...
-            if (typed.charAt(j) != c) {
-                // If it's the first char of the block, ans is false.
-                if (j==0 || typed.charAt(j-1) != typed.charAt(j))
+        while(start2 < length2)
+        {
+            if (name.charAt(start1) != typed.charAt(start2))
+            {
+                if (start1 == 0)
+                {
                     return false;
-
-                // Discard all similar chars
-                char cur = typed.charAt(j);
-                while (j < typed.length() && typed.charAt(j) == cur)
-                    j++;
-
-                // If next isn't a match, ans is false.
-                if (j == typed.length() || typed.charAt(j) != c)
+                }
+                else if (name.charAt(start1-1) != typed.charAt(start2))
+                {
                     return false;
+                }
             }
-
-            j++;
+            else
+            {
+                start1++;
+            }
+            start2++;
         }
 
-        return true;
+        if (start1 == length1)
+        {
+            return true;
+        }
+
+        return false;
     }
 }

@@ -1,4 +1,21 @@
-package Leetcode.Easy;
+/*
+problem:
+Calculate the maximum profit for robbery if adjacent houses are not allowed.
+
+Time complexity : O(N) if memoization, O(2^N) if its ordinary.
+space complexity is o(n)
+
+pseudocode:
+For every house ‘i’, we have two options:
+Base condition : idx >= arr.length, return 0
+1. Steal from the current house (‘i’), and steal from (‘i+2’).
+    arr[idx] + recfn(arr,idx+2)
+2. Skip the current house (‘i’), and steal from (‘i+1’).
+   recfn(arr,idx+1)
+
+3. Get the maximum value from two steals.
+*/
+package Leetcode.String.Easy.Easy;
 
 import java.util.HashMap;
 

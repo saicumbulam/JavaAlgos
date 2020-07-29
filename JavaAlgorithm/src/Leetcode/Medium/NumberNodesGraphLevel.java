@@ -1,6 +1,6 @@
 package Leetcode.Medium;
 
-import Leetcode.DataStructures.DoubleLinkedList;
+import Leetcode.LinkedList.DoubleLinkedList;
 import Leetcode.DataStructures.Graph;
 
 import java.util.LinkedList;

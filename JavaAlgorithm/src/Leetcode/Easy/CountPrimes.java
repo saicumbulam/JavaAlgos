@@ -10,7 +10,7 @@ pseudocode:
 2. if !bool[i], iterate from i to 'j'*i < n. mark bool[j*i] true.
 3. iterate 2 to n after step 2 completed. get count of !bool[i].
 */
-package Leetcode.Easy;
+package Leetcode.String.Easy.Easy;
 
 public class CountPrimes {
     public static void main(String[] args) {

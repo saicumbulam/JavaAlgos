@@ -1,6 +1,6 @@
 package Leetcode.DataStructures;
 
-import java.util.LinkedList;
+import Leetcode.LinkedList.DoubleLinkedList;
 
 public class Graph {
     public int vertices;
