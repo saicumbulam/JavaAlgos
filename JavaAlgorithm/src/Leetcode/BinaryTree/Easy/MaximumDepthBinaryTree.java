@@ -1,7 +1,7 @@
 package Leetcode.String.Easy.Easy;
 
-import Leetcode.DataStructures.BST.BinarySearchTree;
-import Leetcode.DataStructures.BST.TreeNode;
+import Leetcode.BinarySearch.BST.BinarySearchTree;
+import Leetcode.BinarySearch.BST.TreeNode;
 
 public class MaximumDepthBinaryTree {
     public static void main(String[] args) {

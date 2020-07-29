@@ -1,7 +1,7 @@
 package Leetcode.Medium;
 
 import Leetcode.LinkedList.DoubleLinkedList;
-import Leetcode.DataStructures.Graph;
+import Leetcode.Graph.Graph;
 
 public class PrintedConnectedComponents {
     public static void main(String[] args) {

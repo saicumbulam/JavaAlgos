@@ -1,7 +1,7 @@
 package Leetcode.String.Easy.Easy;
 
-import Leetcode.DataStructures.BST.BinarySearchTree;
-import Leetcode.DataStructures.BST.TreeNode;
+import Leetcode.BinarySearch.BST.BinarySearchTree;
+import Leetcode.BinarySearch.BST.TreeNode;
 
 // Find the number of paths that sum to a given value.
 // The path does not need to start or end at the root or a leaf,

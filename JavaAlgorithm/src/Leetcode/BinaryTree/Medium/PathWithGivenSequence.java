@@ -1,6 +1,6 @@
 package Leetcode.Medium;
 
-import Leetcode.DataStructures.BST.TreeNode;
+import Leetcode.BinarySearch.BST.TreeNode;
 
 public class PathWithGivenSequence {
     private static boolean findPath(TreeNode root, int[] sequence, int seqIdx)

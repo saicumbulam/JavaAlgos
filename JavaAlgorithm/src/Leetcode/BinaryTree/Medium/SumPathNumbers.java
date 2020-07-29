@@ -1,6 +1,6 @@
 package Leetcode.Medium;
 
-import Leetcode.DataStructures.BST.TreeNode;
+import Leetcode.BinarySearch.BST.TreeNode;
 
 // Calculate the sum of all path numbers
 public class SumPathNumbers {

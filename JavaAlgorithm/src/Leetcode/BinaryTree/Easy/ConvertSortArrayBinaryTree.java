@@ -1,7 +1,7 @@
 package Leetcode.BinaryTree.Easy;
 
-import Leetcode.DataStructures.BST.BinarySearchTree;
-import Leetcode.DataStructures.BST.TreeNode;
+import Leetcode.BinarySearch.BST.BinarySearchTree;
+import Leetcode.BinarySearch.BST.TreeNode;
 
 public class ConvertSortArrayBinaryTree {
     public static void main(String[] args) {

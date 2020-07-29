@@ -1,7 +1,7 @@
 package Leetcode.BinaryTree.Medium;
 
-import Leetcode.DataStructures.BST.BinarySearchTree;
-import Leetcode.DataStructures.BST.TreeNode;
+import Leetcode.BinarySearch.BST.BinarySearchTree;
+import Leetcode.BinarySearch.BST.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,7 @@
 package Leetcode.Medium;
 
 import Leetcode.LinkedList.DoubleLinkedList;
-import Leetcode.DataStructures.Graph;
+import Leetcode.Graph.Graph;
 
 import java.util.HashMap;
 

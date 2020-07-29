@@ -1,7 +1,5 @@
 package Leetcode.DataStructures;
 
-import Leetcode.DataStructures.BST.TreeNode;
-
 public class Trie {
     public class TrieNode
     {
