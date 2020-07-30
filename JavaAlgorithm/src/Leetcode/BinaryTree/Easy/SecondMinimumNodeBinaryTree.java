@@ -1,7 +1,7 @@
 package Leetcode.String.Easy.Easy;
 
-import Leetcode.BinarySearch.BST.BinarySearchTree;
-import Leetcode.BinarySearch.BST.TreeNode;
+import Leetcode.BinaryTree.BST.BinarySearchTree;
+import Leetcode.BinaryTree.BST.TreeNode;
 
 import java.util.HashSet;
 import java.util.Set;

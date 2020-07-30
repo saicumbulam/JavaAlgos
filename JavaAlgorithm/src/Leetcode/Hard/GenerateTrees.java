@@ -10,7 +10,7 @@ generate tree from lefttree and rightree
 
 package Leetcode.Hard;
 
-import Leetcode.BinarySearch.BST.TreeNode;
+import Leetcode.BinaryTree.BST.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
 package Leetcode.String.Easy.Easy;
 
-import Leetcode.BinarySearch.BST.TreeNode;
+import Leetcode.BinaryTree.BST.TreeNode;
 
 public class PathSumExists {
     private static boolean hasPath(TreeNode root, int sum)

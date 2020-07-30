@@ -1,7 +1,7 @@
 package Leetcode.Medium;
 
-import Leetcode.BinarySearch.BST.BinarySearchTree;
-import Leetcode.BinarySearch.BST.TreeNode;
+import Leetcode.BinaryTree.BST.BinarySearchTree;
+import Leetcode.BinaryTree.BST.TreeNode;
 
 public class InsufficientNodesRootLeafPaths {
     public static void main(String[] args) {

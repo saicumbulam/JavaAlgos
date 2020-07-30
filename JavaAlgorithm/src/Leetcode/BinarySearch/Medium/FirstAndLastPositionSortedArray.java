@@ -1,5 +1,7 @@
 /*
+Find the range of a number
 This is normal binary with an extra keyIndex finding
+
 * */
 package Leetcode.BinarySearch.Medium;
 

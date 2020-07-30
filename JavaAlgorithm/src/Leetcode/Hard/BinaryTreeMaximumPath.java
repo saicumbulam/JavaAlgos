@@ -1,7 +1,7 @@
 package Leetcode.Hard;
 
-import Leetcode.BinarySearch.BST.BinarySearchTree;
-import Leetcode.BinarySearch.BST.TreeNode;
+import Leetcode.BinaryTree.BST.BinarySearchTree;
+import Leetcode.BinaryTree.BST.TreeNode;
 
 public class BinaryTreeMaximumPath {
     static int globalMaximum = Integer.MIN_VALUE;

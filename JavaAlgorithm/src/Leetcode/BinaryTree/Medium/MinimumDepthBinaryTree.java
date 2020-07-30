@@ -1,6 +1,6 @@
 package Leetcode.Medium;
 
-import Leetcode.BinarySearch.BST.TreeNode;
+import Leetcode.BinaryTree.BST.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

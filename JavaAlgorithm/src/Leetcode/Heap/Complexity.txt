@@ -1,0 +1,2 @@
+Time complexity is O(NLogN). LogN to heapify and for N elements
+Space compleity is O(N)
