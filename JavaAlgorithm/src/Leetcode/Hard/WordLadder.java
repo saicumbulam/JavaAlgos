@@ -1,3 +1,7 @@
+/*
+Time complexity: O(MN) where M is the length of words and N is the number of words
+Spce complexity: O(MN)
+* */
 package Leetcode.Hard;
 
 import java.util.*;
@@ -53,8 +57,8 @@ public class WordLadder {
                     }
                     wordChars[j] = Char;
                 }
-                level += 1;
             }
+            level++;
         }
         return 0;
     }

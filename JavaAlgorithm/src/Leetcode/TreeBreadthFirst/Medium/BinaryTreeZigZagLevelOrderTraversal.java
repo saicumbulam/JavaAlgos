@@ -1,4 +1,4 @@
-package Leetcode.Medium;
+package Leetcode.TreeBreadthFirst.Medium;
 
 import Leetcode.BinaryTree.BST.BinarySearchTree;
 import Leetcode.BinaryTree.BST.TreeNode;

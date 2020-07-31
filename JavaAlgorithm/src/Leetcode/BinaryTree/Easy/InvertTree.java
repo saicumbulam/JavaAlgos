@@ -10,7 +10,7 @@ pseudocode:
 2. switch the left and right of the root using temp
    and return root
 */
-package Leetcode.String.Easy.Easy;
+package Leetcode.BinaryTree.Easy;
 
 import Leetcode.BinaryTree.BST.BinarySearchTree;
 import Leetcode.BinaryTree.BST.TreeNode;
