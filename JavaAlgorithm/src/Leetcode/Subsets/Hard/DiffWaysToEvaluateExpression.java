@@ -1,4 +1,4 @@
-package Leetcode.Hard;
+package Leetcode.Subsets.Hard;
 
 import java.util.ArrayList;
 import java.util.List;

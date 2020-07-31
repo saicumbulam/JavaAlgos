@@ -1,11 +1,16 @@
-package Leetcode.Medium;
+/*
+output: [-1,4,-1,2,2]
+1. Minheap ds is for getting minimum element
+2. push minheap from the array.
+* */
+package Leetcode.TopKElements.Medium;
 
 import java.util.PriorityQueue;
 
 public class NearestSmallerElement {
     public static void main(String[] args) {
-        //int[] arr = {4, 5, 2, 10, 8};
-        int[] arr = {3,2,1};
+        int[] arr = {4, 5, 2, 10, 8};
+        //int[] arr = {3,2,1};
         for (int item: Calculate(arr)
              ) {
             System.out.println(item);

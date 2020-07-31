@@ -1,4 +1,4 @@
-package Leetcode.Medium;
+package Leetcode.Subsets.Medium;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;

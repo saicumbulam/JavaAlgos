@@ -26,6 +26,7 @@ public class MinimumCostConnectSticks {
 
         int result = 0;
 
+        // temp shld be loaded into maxheap
         while (minHeap.size() > 1)
         {
             int temp = minHeap.poll() + minHeap.poll();

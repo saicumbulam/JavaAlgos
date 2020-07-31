@@ -1,4 +1,4 @@
-package Leetcode.Medium;
+package Leetcode.TopKElements.Medium;
 
 import java.util.PriorityQueue;
 
@@ -7,17 +7,16 @@ public class FindKthLargestInArray {
         int[] arr = {3,2,1,5,6,4};
         int k = 2;
 
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a);
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>((a, b) -> a - b);
 
         for (int i = 0; i < arr.length; i++) {
-            maxHeap.add(arr[i]);
+            minHeap.add(arr[i]);
+            if (minHeap.size() > k)
+            {
+                minHeap.poll();
+            }
         }
 
-        while (k > 1)
-        {
-            maxHeap.poll();
-            k--;
-        }
-        System.out.println(maxHeap.peek());
+        System.out.println(minHeap.peek());
     }
 }

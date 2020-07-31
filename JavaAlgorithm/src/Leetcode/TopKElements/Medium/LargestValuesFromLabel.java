@@ -1,9 +1,13 @@
 /*
+Input: values = [5,4,3,2,1], labels = [1,1,2,2,3], num_wanted = 3, use_limit = 1
+Output: 9
+Explanation: The subset chosen is the first, third, and fifth item.
+
 1. Create a Item class and store all values in a list
 2. Add items in a maxheap queue.
 3. poll items in a queue and increment the sum with the value.
 * */
-package Leetcode.Medium;
+package Leetcode.TopKElements.Medium;
 
 import java.util.*;
 

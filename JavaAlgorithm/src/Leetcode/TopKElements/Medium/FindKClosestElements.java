@@ -4,7 +4,7 @@ space complexity : o(1)
 
 * */
 
-package Leetcode.Medium;
+package Leetcode.TopKElements.Medium;
 
 
 import java.util.ArrayList;
@@ -15,8 +15,8 @@ import java.util.PriorityQueue;
 public class FindKClosestElements {
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5};
-        int k = 4;
-        int x = -1;
+        int k = 3;
+        int x = 3;
         System.out.println(Calculate(arr, k, x));
     }
     static class Element
@@ -33,22 +33,31 @@ public class FindKClosestElements {
 
     private static List<Integer> Calculate (int[] arr, int k, int x)
     {
+        List<Integer> result = new ArrayList<>();
+
         int index = binarySearch(arr, x);
+        if(index == -1)
+        {
+            return result;
+        }
         int low = index-k;
         int high = index + x;
 
         low = Math.max(0,low);
         high = Math.min(high,arr.length-1);
 
-        PriorityQueue<Element> minHeap = new PriorityQueue<>((a,b) -> a.key - b.key);
+        PriorityQueue<Element> maxHeap = new PriorityQueue<>((a,b) -> b.key - a.key);
         for (int i = low; i <= high ; i++) {
-            minHeap.add(new Element(Math.abs(arr[i] - x), arr[i]));
+            maxHeap.add(new Element(Math.abs(arr[i] - x), arr[i]));
+            if(maxHeap.size() > k)
+            {
+                maxHeap.poll();
+            }
         }
 
-        List<Integer> result = new ArrayList<>();
 
         for (int i = 0; i < k; i++) {
-            result.add(minHeap.poll().val);
+            result.add(maxHeap.poll().val);
         }
 
         Collections.sort(result);
