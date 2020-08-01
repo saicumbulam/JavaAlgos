@@ -1,4 +1,4 @@
-package Leetcode.ReverseLinkedList.Hard;
+package Leetcode.ReverseLinkedList.Medium;
 
 import Leetcode.LinkedList.LinkedList.ListNode;
 import Leetcode.LinkedList.LinkedList.SingleLinkedList;

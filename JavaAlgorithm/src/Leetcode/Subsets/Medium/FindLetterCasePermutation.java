@@ -1,3 +1,6 @@
+/*
+output: [ad52, Ad52, aD52, AD52]
+* */
 package Leetcode.Subsets.Medium;
 
 import java.util.ArrayList;

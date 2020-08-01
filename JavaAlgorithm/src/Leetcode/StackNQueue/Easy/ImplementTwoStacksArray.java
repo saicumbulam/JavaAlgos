@@ -38,7 +38,7 @@ public class ImplementTwoStacksArray {
     {
         if (top1 > -1)
         {
-            return arr[maxSize--];
+            return arr[top1--];
         }
         return -1;
     }
@@ -47,7 +47,7 @@ public class ImplementTwoStacksArray {
     {
         if(top2 < maxSize)
         {
-            return arr[maxSize++];
+            return arr[top2++];
         }
         return -1;
     }

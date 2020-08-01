@@ -20,7 +20,7 @@ public class MergeSort {
         if (high > low)
         {
             int mid = low + (high - low)/2;
-
+            // mid and mid+1. right > left
             Calculate(arr, low, mid);
             Calculate(arr, mid+1, high);
             Merge(arr, low, mid, high);
@@ -29,16 +29,19 @@ public class MergeSort {
 
     private static void Merge(int[] arr, int left, int mid, int right)
     {
+        // mid-left+1 and right-mid
         int sizeLeft = mid - left + 1;
         int sizeRight = right - mid;
 
         int[] leftArray = new int[sizeLeft];
         int[] rightArray = new int[sizeRight];
 
+        // left+i
         for (int i = 0; i < sizeLeft; i++) {
             leftArray[i] = arr[left+i];
         }
 
+        // mid+i+1
         for (int i = 0; i < sizeRight; i++) {
             rightArray[i] = arr[mid+1+i];
         }
@@ -49,29 +52,22 @@ public class MergeSort {
         {
             if(leftArray[i] <= rightArray[j])
             {
-                arr[k] = leftArray[i];
-                i++;
+                arr[k++] = leftArray[i++];
             }
             else
             {
-                arr[k] = rightArray[j];
-                j++;
+                arr[k++] = rightArray[j++];
             }
-            k++;
         }
 
         while (i < sizeLeft)
         {
-            arr[k] = leftArray[i];
-            i++;
-            k++;
+            arr[k++] = leftArray[i++];
         }
 
         while (j < sizeRight)
         {
-            arr[k] = rightArray[j];
-            j++;
-            k++;
+            arr[k++] = rightArray[j++];
         }
     }
 }

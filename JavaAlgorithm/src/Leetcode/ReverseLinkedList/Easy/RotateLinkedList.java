@@ -3,7 +3,7 @@
 2. calculate skiplength = list - rotations. iterate list till < skip length.
 3. connect head = list.next and list.next = null
 * */
-package Leetcode.LinkedList.Medium;
+package Leetcode.ReverseLinkedList.Easy;
 
 import Leetcode.LinkedList.LinkedList.ListNode;
 import Leetcode.LinkedList.LinkedList.SingleLinkedList;

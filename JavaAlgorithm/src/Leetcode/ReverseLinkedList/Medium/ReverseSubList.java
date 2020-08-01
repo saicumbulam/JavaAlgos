@@ -1,5 +1,5 @@
 /* Time complexity = o(n) and space complexity: o(1)*/
-package Leetcode.LinkedList.Medium;
+package Leetcode.ReverseLinkedList.Medium;
 
 import Leetcode.LinkedList.LinkedList.ListNode;
 import Leetcode.LinkedList.LinkedList.SingleLinkedList;

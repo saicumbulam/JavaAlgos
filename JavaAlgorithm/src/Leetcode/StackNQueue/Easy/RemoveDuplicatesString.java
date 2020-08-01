@@ -1,4 +1,7 @@
-package Leetcode.String.Easy.Easy;
+/*
+output: ca
+* */
+package Leetcode.StackNQueue.Easy;
 
 import java.util.Stack;
 

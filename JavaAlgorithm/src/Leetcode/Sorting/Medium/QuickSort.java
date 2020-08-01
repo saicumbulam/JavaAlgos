@@ -1,4 +1,4 @@
-package Leetcode.Medium;
+package Leetcode.Sorting.Medium;
 
 import java.util.Arrays;
 
@@ -16,6 +16,7 @@ public class QuickSort {
 
     private static void quickSortRec(int[] arr, int low, int high)
     {
+        // high > low, pivotIndex -1 and pivotIndex+1
         if (high > low) {
             int pivot_index = Finder(arr, low, high);
             quickSortRec(arr, low, pivot_index - 1);

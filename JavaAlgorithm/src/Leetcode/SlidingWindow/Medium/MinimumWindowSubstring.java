@@ -1,10 +1,11 @@
-package Leetcode.Medium;
+package Leetcode.SlidingWindow.Medium;
 
 import java.util.HashMap;
 
 public class MinimumWindowSubstring {
     public static void main(String[] args) {
-        String s = "ADOBECODEBANC", t = "ABC";
+        //String s = "ADOBECODEBANC", t = "ABC";
+        String s = "BBBANC", t = "ABC";
         System.out.println(Calculate(s, t));
     }
 

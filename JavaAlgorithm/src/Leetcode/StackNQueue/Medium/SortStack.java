@@ -1,7 +1,7 @@
 /*
 Time complexity : o(n^2)
 * */
-package Leetcode.Medium;
+package Leetcode.StackNQueue.Medium;
 
 import java.util.Stack;
 

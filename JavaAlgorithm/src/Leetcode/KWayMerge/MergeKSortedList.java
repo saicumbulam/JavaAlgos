@@ -1,4 +1,4 @@
-package Leetcode.ReverseLinkedList.Medium.Hard;
+package Leetcode.KWayMerge;
 
 import Leetcode.LinkedList.LinkedList.ListNode;
 import Leetcode.LinkedList.LinkedList.SingleLinkedList;

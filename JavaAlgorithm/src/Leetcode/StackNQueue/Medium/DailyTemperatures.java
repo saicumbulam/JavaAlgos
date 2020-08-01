@@ -1,4 +1,12 @@
-package Leetcode.Medium;
+/*
+output : [1, 1, 4, 2, 1, 1, 0, 0]
+
+1. iterate the chars in the string
+2. arr[i] > stack.peek() => stack.pop()
+3. result[i] = stack.peek()-i
+4. stack.push(i)
+* */
+package Leetcode.StackNQueue.Medium;
 
 import java.util.Stack;
 

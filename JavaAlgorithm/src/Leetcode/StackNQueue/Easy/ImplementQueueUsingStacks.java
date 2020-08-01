@@ -3,7 +3,7 @@
 2. for dequeue, transfer all contents from stack1 to stack 2.
    return top element from stack2. transfer stack2 to stack1.
 * */
-package Leetcode.String.Easy.Easy;
+package Leetcode.StackNQueue.Easy;
 
 import java.util.Stack;
 

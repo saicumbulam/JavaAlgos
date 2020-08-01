@@ -2,7 +2,7 @@
 use stack to load the words in the string.
 words can be formed by iterating each characters in a while loop
 * */
-package Leetcode.Medium;
+package Leetcode.StackNQueue.Medium;
 
 import java.util.Stack;
 
