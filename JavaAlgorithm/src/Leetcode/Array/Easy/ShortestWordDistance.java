@@ -1,4 +1,7 @@
-package Leetcode.MultiArray.Easy;
+/*
+Just get the i1 and i2 distance and then take a subtraction
+* */
+package Leetcode.Array.Easy;
 
 public class ShortestWordDistance {
     public static void main(String[] args) {

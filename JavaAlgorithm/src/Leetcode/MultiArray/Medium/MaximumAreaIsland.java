@@ -36,6 +36,7 @@ public class MaximumAreaIsland {
             return 0;
         }
 
+        // to avoid repetition in the array depth first search
         arr[r][c] = 0;
         int count = 1;
         count += Dfs(arr, r+1,c);

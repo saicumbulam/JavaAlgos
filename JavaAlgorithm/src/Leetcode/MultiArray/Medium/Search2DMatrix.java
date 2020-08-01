@@ -1,4 +1,4 @@
-package Leetcode.Medium;
+package Leetcode.MultiArray.Medium;
 
 import java.util.PriorityQueue;
 

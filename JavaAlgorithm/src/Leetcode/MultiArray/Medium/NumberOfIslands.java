@@ -1,4 +1,4 @@
-package Leetcode.Medium;
+package Leetcode.MultiArray.Medium;
 
 public class NumberOfIslands {
     public static void main(String[] args) {

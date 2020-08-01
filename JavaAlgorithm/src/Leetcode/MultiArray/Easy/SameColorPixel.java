@@ -1,3 +1,7 @@
+/*
+Given the source location in a matrix,
+change all the connecting adjacent cells with the colour from the source cell
+* */
 package Leetcode.MultiArray.Easy;
 
 public class SameColorPixel {

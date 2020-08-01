@@ -1,46 +1,37 @@
 package Leetcode.MultiArray.Medium;
 
 public class LongestIncreasingPathMatrix {
+    private static final int[][] dirs = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+    private static int m, n;
+
     public static void main(String[] args) {
         int[][] arr = new int[][]{{9, 9, 4}, {6, 6, 8}, {2, 1, 1}};
+        //int[][] arr = new int[][]{{3,4,5}, {3,2,6}, {2, 2, 1}};
+        //int[][] arr = new int[][]{{1}};
         System.out.println(Calculate(arr));
     }
 
     private static int Calculate(int[][] arr) {
         int max = 0;
-
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr.length; j++) {
-                max = Math.max(max, dfs(arr, i, j, -1));
+        m = arr.length;
+        n = arr[0].length;
+        int[][] cache = new int[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                max = Math.max(max, dfs(arr, i, j, cache));
             }
         }
 
-        return max;
+         return max;
     }
 
-    private static int dfs(int[][] arr, int r, int c, int prev) {
-        //0,0
-        int[][] neighbors = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
-
-        if (r < 0 || r >= arr.length || c < 0 || c >= arr[0].length) {
-            return Integer.MIN_VALUE;
+    private static int dfs(int[][] arr,  int i, int j, int[][] cache) {
+        if (cache[i][j] != 0) return cache[i][j];
+        for (int[] d : dirs) {
+            int x = i + d[0], y = j + d[1];
+            if (0 <= x && x < m && 0 <= y && y < n && arr[x][y] > arr[i][j])
+                cache[i][j] = Math.max(cache[i][j], dfs(arr, x, y, cache));
         }
-
-        int res = 0;
-
-        for (int i = 0; i < neighbors.length; i++) {
-            int row = r + neighbors[i][0];
-            int col = c + neighbors[i][1];
-            if (row < 0 || row >= arr.length || col < 0 || col >= arr[0].length) {
-                continue;
-            }
-            if (prev == -1 || arr[row][col] > prev) {
-                int cal = dfs(arr, row, col, arr[row][col]);
-                if (cal != Integer.MIN_VALUE) {
-                    res += 1;
-                }
-            }
-        }
-        return res;
+        return ++cache[i][j];
     }
 }

@@ -1,4 +1,4 @@
-package Leetcode.Medium;
+package Leetcode.MultiArray.Medium;
 
 public class RotateImage {
     public static void main(String[] args) {
