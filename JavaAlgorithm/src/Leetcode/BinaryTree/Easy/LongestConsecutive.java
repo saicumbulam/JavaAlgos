@@ -3,7 +3,7 @@ package Leetcode.BinaryTree.Easy;
 import Leetcode.BinaryTree.BST.BinarySearchTree;
 import Leetcode.BinaryTree.BST.TreeNode;
 
-public class LongestConseqecutive {
+public class LongestConsecutive {
     static int maxCount = 0;
 
     public static void main(String[] args) {

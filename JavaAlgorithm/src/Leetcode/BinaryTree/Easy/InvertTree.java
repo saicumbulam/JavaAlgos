@@ -22,7 +22,7 @@ public class InvertTree {
     public static void main(String[] args) {
         BinarySearchTree bst = new BinarySearchTree();
         TreeNode root = bst.CreateBinaryTree();
-        root = Calculate(root);
+        root = invertTree(root);
         bst.printTree2D(root, 5);
     }
 
@@ -43,17 +43,20 @@ public class InvertTree {
     }
 
     // iTERATIVE solution
-    public TreeNode invertTree(TreeNode root) {
+    public static TreeNode invertTree(TreeNode root) {
         if (root == null) return null;
         Queue<TreeNode> queue = new LinkedList<TreeNode>();
         queue.add(root);
         while (!queue.isEmpty()) {
-            TreeNode current = queue.poll();
-            TreeNode temp = current.getLeft();
-            current.setLeft(current.getRight());
-            current.setRight(temp);
-            if (current.getLeft() != null) queue.add(current.getLeft());
-            if (current.getRight() != null) queue.add(current.getRight());
+            int n = queue.size();
+            for (int i = 0; i < n; i++) {
+                TreeNode current = queue.poll();
+                TreeNode temp = current.getLeft();
+                current.setLeft(current.getRight());
+                current.setRight(temp);
+                if (current.getLeft() != null) queue.add(current.getLeft());
+                if (current.getRight() != null) queue.add(current.getRight());
+            }
         }
         return root;
     }

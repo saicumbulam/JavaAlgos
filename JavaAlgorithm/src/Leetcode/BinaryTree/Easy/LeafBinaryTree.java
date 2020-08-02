@@ -2,7 +2,7 @@
 Time complexity: o(n)
 space complexity: o(n)
 * */
-package Leetcode.String.Easy.Easy;
+package Leetcode.BinaryTree.Easy;
 
 import Leetcode.BinaryTree.BST.BinarySearchTree;
 import Leetcode.BinaryTree.BST.TreeNode;
