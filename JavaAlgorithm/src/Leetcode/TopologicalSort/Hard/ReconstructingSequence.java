@@ -1,4 +1,4 @@
-package Leetcode.Hard;
+package Leetcode.KWayMerge.Medium.Hard;
 
 import java.util.*;
 
