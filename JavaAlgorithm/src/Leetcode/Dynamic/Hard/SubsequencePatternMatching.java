@@ -1,12 +1,25 @@
+/*
+Example 1: Input: string: “baxmx”, pattern: “ax”
+Output: 2
+Explanation: {baxmx, baxmx}.
+
+Example 2:
+
+Input: string: “tomorrow”, pattern: “tor”
+Output: 4
+Explanation: Following are the four occurences: {tomorrow, tomorrow, tomorrow, tomorrow}.
+* */
 package Leetcode.Dynamic.Hard;
 
 public class SubsequencePatternMatching {
     public static void main(String[] args) {
-        String str  = "baxmx", pattern = "ax";
+        String str  = "ax", pattern = "ax";
         System.out.println(Calculate(str, pattern, 0, 0));
     }
 
-    private static int Calculate(String str, String pattern, int strIdx, int pattIdx)
+    private static int Calculate(String str,
+                                 String pattern,
+                                 int strIdx, int pattIdx)
     {
         if (pattIdx >= pattern.length())
         {

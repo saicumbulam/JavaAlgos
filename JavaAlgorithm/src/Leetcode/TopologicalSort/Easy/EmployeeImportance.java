@@ -2,19 +2,20 @@ package Leetcode.TopologicalSort.Easy;
 
 import java.util.*;
 
-class Employee {
-    public int id;
-    public int importance;
-    public List<Integer> subordinates;
-
-    public Employee(int id, int importance, List<Integer> subordinates) {
-        this.id = id;
-        this.importance = importance;
-        this.subordinates = subordinates;
-    }
-};
 
 public class EmployeeImportance {
+    static class Employee {
+        public int id;
+        public int importance;
+        public List<Integer> subordinates;
+
+        public Employee(int id, int importance, List<Integer> subordinates) {
+            this.id = id;
+            this.importance = importance;
+            this.subordinates = subordinates;
+        }
+    };
+
     public static void main(String[] args) {
         List<Employee> newList = new ArrayList<>();
         newList.add(new Employee(1, 5, Arrays.asList(2,3)));
@@ -24,7 +25,9 @@ public class EmployeeImportance {
     }
 
     public static int getImportance(List<Employee> employees, int id) {
+        int sum = 0;
         HashMap<Integer, List<Integer>> graph = new HashMap<>();
+        HashMap<Integer, Employee> dict = new HashMap<>();
         HashSet<Integer> set = new HashSet<>();
         set.add(id);
 
@@ -33,34 +36,21 @@ public class EmployeeImportance {
             int parent = employees.get(i).id;
             List<Integer> childrens =  employees.get(i).subordinates;
             graph.put(parent, childrens);
+            dict.put(parent, employees.get(i));
         }
 
+        Queue<Integer> source = new LinkedList<>();
+        source.add(id);
 
-        set.add(id);
-
-        for (int item: graph.get(id))
+        while (!source.isEmpty())
         {
-            set.add(item);
-        }
+            int polled = source.poll();
+            List<Integer> children = graph.get(polled);
+            sum += dict.get(polled).importance;
 
-        for (Map.Entry<Integer, List<Integer>> entry: graph.entrySet())
-        {
-            if (set.contains(entry.getKey()) && entry.getKey() != id)
-            {
-                for (int item: entry.getValue())
-                {
-                    set.add(item);
-                }
-            }
-        }
-
-        int sum = 0;
-
-        for (int i = 0; i < employees.size(); i++)
-        {
-            if (set.contains(employees.get(i).id))
-            {
-                sum += employees.get(i).importance;
+            for (int child: children
+                 ) {
+                source.offer(child);
             }
         }
 

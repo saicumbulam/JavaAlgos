@@ -1,6 +1,6 @@
-package Leetcode.Medium;
+package Leetcode.Trie.Medium;
 
-import Leetcode.DataStructures.Trie;
+import Leetcode.Trie.Trie;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -24,7 +24,10 @@ public class FindAllWordsTrie {
     }
 
     // The fucntion works like a depth first search.
-    private static void Calculate(Trie.TrieNode root, char[] chars, List<String> result, int level)
+    private static void Calculate(Trie.TrieNode root,
+                                  char[] chars,
+                                  List<String> result,
+                                  int level)
     {
         if (root.isEndWord)
         {

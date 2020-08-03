@@ -1,3 +1,13 @@
+/*
+Input: s1 = "passpot"
+       s2 = "ppsspqrt"
+Output: 3
+Explanation: Replace 'a' with 'p', 'o' with 'q', and insert 'r'.
+
+Time complexity without memo = o(3^(m+n))
+Time complexity = o(m+n)
+space complexity = o(m+n)
+* */
 package Leetcode.Dynamic.Hard;
 
 public class EditDistance {

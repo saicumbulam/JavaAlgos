@@ -1,4 +1,4 @@
-package Leetcode.String.Easy.Easy;
+package Leetcode.TwoPointers.Easy;
 
 public class TwoSumInputArraySorted {
     public static void main(String[] args) {

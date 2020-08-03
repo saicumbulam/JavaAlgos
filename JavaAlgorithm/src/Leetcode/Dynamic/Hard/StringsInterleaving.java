@@ -1,3 +1,8 @@
+/*
+Input: m="abd", n="cef", p="abcdef"
+Output: true
+Explanation: 'p' contains all the letters from 'm' and 'n' and preserves their order too.
+* */
 package Leetcode.Dynamic.Hard;
 
 import java.util.HashMap;

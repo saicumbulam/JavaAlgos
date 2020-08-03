@@ -24,6 +24,10 @@ public class NextInterval {
             this.end = end;
             this.arrayIdx = arrayIdx;
         }
+        public String toString()
+        {
+            return start + ", " + end;
+        }
     }
 
     public static void main(String[] args) {
@@ -45,7 +49,7 @@ public class NextInterval {
             maxEndheap.add(intervals.get(i));
         }
 
-        for (int i = 0; i < intervals.size(); i++) {
+        while (!maxEndheap.isEmpty()) {
             Interval topEnd = maxEndheap.poll();
             result[topEnd.arrayIdx] = -1;
 
@@ -53,6 +57,7 @@ public class NextInterval {
             {
                 Interval topStart = maxStartheap.poll();
 
+                // this is to remove extra intervals
                 while (!maxStartheap.isEmpty() && maxStartheap.peek().start >= topEnd.end)
                 {
                     topStart = maxStartheap.poll();

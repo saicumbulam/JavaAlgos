@@ -1,4 +1,4 @@
-package Leetcode.DataStructures;
+package Leetcode.Trie;
 
 public class Trie {
     public class TrieNode
@@ -36,6 +36,7 @@ public class Trie {
     {
         TrieNode currentNode = root;
         int index = 0;
+        // convert all string to lowercase
         str = str.toLowerCase();
         for (int level = 0; level < str.length(); level++) {
             index = getIndex(str.charAt(level));

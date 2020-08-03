@@ -58,10 +58,7 @@ public class MaximumDepthNArrayTree {
                 }
                 else
                 {
-                    if (maxDepth < polled.depth)
-                    {
-                        maxDepth = polled.depth;
-                    }
+                    maxDepth = Math.max(maxDepth, polled.depth);
                 }
             }
 

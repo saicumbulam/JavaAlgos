@@ -1,4 +1,4 @@
-package Leetcode.Medium;
+package Leetcode.TwoPointers.Medium;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +22,7 @@ public class SubArrayProductLessThanTarget {
                 product /= arr[left++];
             }
 
+            // right to left should come to avoid duplicates
             List<Integer> tempList = new ArrayList<>();
             for (int i = right; i >= left  ; i--) {
                 // index 0 should be added for getting the exact result.

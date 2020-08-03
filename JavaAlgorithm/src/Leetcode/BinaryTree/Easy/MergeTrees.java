@@ -24,9 +24,9 @@ public class MergeTrees {
             return root1 == null ? root2:root1;
         }
 
-        root1.setData(root1.getData()+ root2.getData());
-        root1.setLeft(Calculate(root1.getLeft(), root2.getLeft()));
-        root1.setRight(Calculate(root1.getRight(), root2.getRight()));
+        root1.data += root2.data;
+        root1.left = Calculate(root1.left, root2.left);
+        root1.right = Calculate(root1.right, root2.right);
         return root1;
     }
 }

@@ -1,6 +1,6 @@
-package Leetcode.Medium;
+package Leetcode.Trie.Medium;
 
-import Leetcode.DataStructures.Trie;
+import Leetcode.Trie.Trie;
 
 public class TotalWordsTrie {
     public static void main(String[] args) {

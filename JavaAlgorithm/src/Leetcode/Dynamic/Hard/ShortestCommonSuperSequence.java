@@ -1,3 +1,8 @@
+/*
+Input: s1: "abcf" s2:"bdcf"
+Output: 5
+Explanation: The shortest common super-sequence (SCS) is "abdcf".
+* */
 package Leetcode.Dynamic.Hard;
 
 public class ShortestCommonSuperSequence {

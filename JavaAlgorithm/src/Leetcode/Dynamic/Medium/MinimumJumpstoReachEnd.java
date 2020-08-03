@@ -25,7 +25,7 @@ public class MinimumJumpstoReachEnd {
             int startIdx = currentIdx+1;
             int endIndex = currentIdx + jumps[currentIdx];
 
-            while (startIdx < jumps.length && startIdx <= endIndex)
+            while (endIndex < jumps.length && startIdx <= endIndex)
             {
                 int minJumps = countMinJumps(jumps, startIdx++, dp);
                 if (minJumps != Integer.MAX_VALUE)
