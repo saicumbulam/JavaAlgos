@@ -1,4 +1,4 @@
-package Leetcode.String.Medium;
+package Leetcode.Palindrome.Medium;
 
 import java.util.ArrayList;
 import java.util.Calendar;

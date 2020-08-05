@@ -1,4 +1,4 @@
-package Leetcode.Dynamic.Medium;
+package Leetcode.Palindrome.Medium;
 
 import java.util.logging.Level;
 

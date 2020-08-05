@@ -1,4 +1,4 @@
-package Leetcode.Dynamic.Hard;
+package Leetcode.Palindrome.Hard;
 
 import java.util.ArrayList;
 import java.util.Arrays;
