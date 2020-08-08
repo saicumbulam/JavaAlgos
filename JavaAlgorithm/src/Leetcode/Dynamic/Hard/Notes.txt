@@ -9,9 +9,6 @@ Similar problems:
 1. edit distance
 2. shortest common super sequence
 
-Similar problems:
-1. edit distance
-2. shortest common super sequence
 
 Similar problems:
 1. Minimum del ins string

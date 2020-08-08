@@ -24,7 +24,8 @@ public class PalindromePairs {
             int currentWordIndex = hashMap.get(word);
             String reversedWord = new StringBuilder(word).reverse().toString();
 
-            if (hashMap.containsKey(reversedWord) && hashMap.get(reversedWord) != currentWordIndex)
+            if (hashMap.containsKey(reversedWord) &&
+                    hashMap.get(reversedWord) != currentWordIndex)
             {
                 result.add(Arrays.asList(currentWordIndex, hashMap.get(reversedWord)));
             }
@@ -89,7 +90,7 @@ public class PalindromePairs {
         {
             if (isPlaindrome(word, 0, i))
             {
-                result.add(word.substring(i+1, word.length()));
+                result.add(word.substring(i+1));
             }
         }
         return result;

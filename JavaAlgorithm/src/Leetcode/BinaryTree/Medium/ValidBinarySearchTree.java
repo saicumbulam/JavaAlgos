@@ -22,7 +22,8 @@ public class ValidBinarySearchTree {
             return false;
         }
 
-        if(highValue != null && root.getData() > highValue)
+        // >= should come
+        if(highValue != null && root.getData() >= highValue)
         {
             return false;
         }

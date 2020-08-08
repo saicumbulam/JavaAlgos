@@ -34,7 +34,7 @@ public class MinimumCoinChange {
                     int res = Calculate(coins, amount-coins[index], index, map);
                     if (res != Integer.MAX_VALUE)
                     {
-                        count1 = res + 1;
+                        count1 = res + 1; //res+1 is important
                     }
                 }
                 int count2 = Calculate(coins, amount, index+1, map);

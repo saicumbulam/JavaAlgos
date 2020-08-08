@@ -3,6 +3,11 @@ package Leetcode.BinaryTree.BST;
 public class BinarySearchTree {
     TreeNode root;
 
+    public BinarySearchTree() {}
+    public BinarySearchTree(int value)
+    {
+        root = new TreeNode(value);
+    }
     public TreeNode getRoot() {
         return root;
     }

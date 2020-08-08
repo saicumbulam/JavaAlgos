@@ -24,19 +24,20 @@ public class InsertionSort {
     }
 
 
-    private static void Calculate(int[] arr)
+    private static void Calculate(int[] array)
     {
-        for (int i = 1; i < arr.length; i++) {
-            int ele = arr[i];
-            int j = i-1;
+        for (int i = 0; i < array.length; i++)
+        {
+            int j = i;
 
-            while (j >= 0 && arr[j] > ele)
+            while ( j > 0 && array[j-1] > array[j])
             {
-                arr[j+1] = arr[j];
-                j = j-1;
+                int temp = array[j-1];
+                array[j-1] = array[j];
+                array[j] = temp;
+                j--;
             }
-
-            arr[j+1] = ele;
         }
+
     }
 }

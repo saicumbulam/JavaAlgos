@@ -22,10 +22,7 @@ public class MaximumProductSubArray {
             currMin = Math.min(Math.min(temp* nums[i],
                     currMin * nums[i]), nums[i]);
 
-            if (currMax > finalMax)
-            {
-                finalMax = currMax;
-            }
+            finalMax = Math.max(currMax, finalMax);
         }
         return finalMax;
     }

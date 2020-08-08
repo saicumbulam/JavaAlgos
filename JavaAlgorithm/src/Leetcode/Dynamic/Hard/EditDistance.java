@@ -12,7 +12,7 @@ package Leetcode.Dynamic.Hard;
 
 public class EditDistance {
     public static void main(String[] args) {
-        String s1 = "bat", s2 = "but";
+        String s1 = "abc", s2 = "yabd";
         System.out.println(Calculate(s1, s2, 0, 0));
     }
 

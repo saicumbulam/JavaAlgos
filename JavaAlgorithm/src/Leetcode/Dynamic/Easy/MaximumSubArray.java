@@ -11,6 +11,7 @@ public class MaximumSubArray {
         int curSum = arr[0];
         int maxSum = arr[0];
 
+        // it should be iterated from 1
         for (int i = 1; i < arr.length; i++) {
             curSum = Math.max(arr[i], curSum+arr[i]);
             maxSum = Math.max(curSum, maxSum);

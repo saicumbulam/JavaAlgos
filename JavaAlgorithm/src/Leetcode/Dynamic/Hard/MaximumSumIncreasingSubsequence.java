@@ -18,7 +18,8 @@ public class MaximumSumIncreasingSubsequence {
         int c1 = sum;
         if (previousIdx == -1 || nums[currentIdx] > nums[previousIdx])
         {
-            c1 = Calculate(nums,currentIdx+1, currentIdx, sum + nums[currentIdx]);
+            c1 = Calculate(nums,currentIdx+1, currentIdx,
+                    sum + nums[currentIdx]);
         }
 
         int c2 = Calculate(nums,currentIdx+1, previousIdx, sum);

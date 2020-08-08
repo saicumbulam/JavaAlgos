@@ -28,7 +28,7 @@ public class WordBreak {
             return memo[start];
         }
 
-        for (int end = start+1; end <= str.length() ; end++) {
+        for (int end = start; end <= str.length() ; end++) {
             if(wordDict.contains(str.substring(start, end)) &&
                     Calculate(str, wordDict, memo, end))
             {

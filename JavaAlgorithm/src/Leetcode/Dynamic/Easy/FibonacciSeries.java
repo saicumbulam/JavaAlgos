@@ -6,11 +6,17 @@ public class FibonacciSeries {
     }
 
     private static int CalculateFibonacci(int num) {
-        if (num < 2)
+        if (num == 2)
         {
-            return num;
+            return 1;
         }
-
-        return CalculateFibonacci(num-1) + CalculateFibonacci(num-2);
+        else if (num == 1)
+        {
+            return 0;
+        }
+        else
+        {
+            return CalculateFibonacci(num-1) + CalculateFibonacci(num-2);
+        }
     }
 }

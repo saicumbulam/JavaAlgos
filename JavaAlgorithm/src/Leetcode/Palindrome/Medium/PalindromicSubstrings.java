@@ -8,21 +8,27 @@ public class PalindromicSubstrings {
 
     private static int Calculate(String str)
     {
-        int n = str.length();
-        int count = 0;
+        int i = 0, count = 0;
 
-        for (int center = 0; center < 2*n-1; center++) {
-            int left = center/2;
-            int right = left + center%2;
-            //Expand Around Center
-            while (left >= 0 && right < n && str.charAt(left) == str.charAt(right))
-            {
-                count++;
-                left--;
-                right++;
-            }
+        while (i < str.length())
+        {
+            count += isPalindrome(str, i, i);
+            count += isPalindrome(str, i, i+1);
+            i++;
         }
+        return count;
+    }
 
+    private static int isPalindrome(String str, int left, int right )
+    {
+        int count = 0;
+        int Left = left, Right = right;
+        while (Left >= 0 && Right < str.length() && str.charAt(Left) == str.charAt(Right))
+        {
+            count++;
+            Left--;
+            Right++;
+        }
         return count;
     }
 }
