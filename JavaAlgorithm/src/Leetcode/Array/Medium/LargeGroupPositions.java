@@ -13,9 +13,9 @@ public class LargeGroupPositions {
     private static List<List<Integer>> Calculate(String str)
     {
         List<List<Integer>> result = new ArrayList<>();
-        int i = 0;
+        int i = 0, j = 0;
 
-        for (int j = 0; j < str.length(); j++) {
+        while (j < str.length()) {
             if (j == str.length()-1|| str.charAt(j) != str.charAt(j+1))
             {
                 if (j-i+1 >= 3)
@@ -24,6 +24,7 @@ public class LargeGroupPositions {
                 }
                 i = j+1;
             }
+            j++;
         }
 
         return result;

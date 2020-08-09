@@ -1,3 +1,7 @@
+/*
+Input: arr = [17,18,5,4,6,1]
+Output: [18,6,6,6,1,-1]
+* */
 package Leetcode.Array.Easy;
 
 import java.util.Arrays;
@@ -14,13 +18,13 @@ public class ReplaceElementsGreatestElementRightSide {
         int maxItem = arr[arr.length-1];
         arr[arr.length-1] = -1;
 
-        for(int i = arr.length-2; i>= 0; i--)
+        for(int i = arr.length-2; i >= 0; i--)
         {
             int temp = arr[i];
-
             arr[i] = maxItem;
 
-            maxItem = Math.max(maxItem, temp);
+            maxItem = Math.max(temp, maxItem);
         }
+
     }
 }

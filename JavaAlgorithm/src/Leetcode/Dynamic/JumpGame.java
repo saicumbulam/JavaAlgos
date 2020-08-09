@@ -1,4 +1,4 @@
-package Leetcode.Array.Medium;
+package Leetcode.Dynamic;
 
 public class JumpGame {
     public static void main(String[] args) {
