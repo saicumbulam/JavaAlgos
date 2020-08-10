@@ -1,2 +1,0 @@
-Time complexity is O(N)
-Space is O(1)

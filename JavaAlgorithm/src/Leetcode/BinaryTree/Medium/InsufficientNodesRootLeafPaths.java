@@ -1,4 +1,4 @@
-package Leetcode.Medium;
+package Leetcode.BinaryTree.Medium;
 
 import Leetcode.BinaryTree.BST.BinarySearchTree;
 import Leetcode.BinaryTree.BST.TreeNode;
@@ -19,27 +19,14 @@ public class InsufficientNodesRootLeafPaths {
         }
     }
 
-    private static int Calculate(TreeNode root, int sum, int target) {
-        if (root == null)
-        {
-            return Integer.MIN_VALUE;
-        }
-
-        if (root.getLeft() == null && root.getRight() == null)
-        {
-            return sum + root.getData();
-        }
-
-        int leftSum = Calculate(root.getLeft(), sum + root.getData(), target);
-        if (leftSum < target)
-        {
-            root.setLeft(null);
-        }
-        int rightSum = Calculate(root.getRight(), sum + root.getData(), target);
-        if (rightSum < target)
-        {
-            root.setRight(null);
-        }
+    private static int Calculate(TreeNode root, int sum, int limit) {
+        if (root == null) return Integer.MIN_VALUE; // no path
+        if (root.left == null && root.right == null) // leaf node
+            return root.data + sum;
+        int leftSum = Calculate(root.left, root.data + sum, limit); // get the left path sum
+        if (leftSum < limit) root.left = null; // cut the left path
+        int rightSum = Calculate(root.right, root.data + sum, limit); // get the right path sum
+        if (rightSum < limit) root.right = null; // cut the right path
         return Math.max(leftSum, rightSum);
     }
 }

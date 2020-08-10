@@ -13,7 +13,8 @@ public class ConvertSortArrayBinaryTree {
 
     public static TreeNode Calculate(int[] arr, int left, int right)
     {
-        if (left <= right) // mid is calculated, so there should be <=
+        if (left <= right) // mid is calculated, so there should be <=, exactly like binary search.
+            // mid is the root and recurse with mid-1 and mid+1
         {
             int mid = (right + left)/2;
             TreeNode root = new TreeNode(arr[mid]);
