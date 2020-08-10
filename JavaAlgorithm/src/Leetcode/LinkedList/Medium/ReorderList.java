@@ -28,7 +28,7 @@ public class ReorderList {
 
         ListNode root = head, subroot = reverse(slow);
 
-        while (subroot.next != null) // .next pointer is nessacary to avoid null pointer exception
+        while (root != null && subroot != null) // .next pointer is nessacary to avoid null pointer exception
         {
             ListNode temp = root.next;
             root.next = subroot;

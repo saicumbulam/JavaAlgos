@@ -1,4 +1,4 @@
-package Leetcode.String.Easy.Easy;
+package Leetcode.LinkedList.Easy;
 
 import Leetcode.LinkedList.LinkedList.ListNode;
 import Leetcode.LinkedList.LinkedList.SingleLinkedList;

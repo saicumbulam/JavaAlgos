@@ -12,32 +12,32 @@ public class FlattenBinaryTreeLinkedList {
         flatten(root);
         bst.printTree2D(root, 3);
     }
-    private static TreeNode flattenTree(TreeNode node) {
+    private static TreeNode flattenTree(TreeNode root) {
 
         // Handle the null scenario
-        if (node == null) {
+        if (root == null) {
             return null;
         }
 
         // For a leaf node, we simply return the
         // node as is.
-        if (node.getLeft() == null && node.getRight() == null) {
-            return node;
+        if (root.getLeft() == null && root.getRight() == null) {
+            return root;
         }
 
         //Recursively flatten the left subtree
-        TreeNode leftTail = flattenTree(node.getLeft());
+        TreeNode leftTail = flattenTree(root.getLeft());
 
         // Recursively flatten the right subtree
-        TreeNode rightTail = flattenTree(node.getRight());
+        TreeNode rightTail = flattenTree(root.getRight());
 
         // If there was a left subtree, we shuffle the connections
         // around so that there is nothing on the left side
         // anymore.
         if (leftTail != null) {
-            leftTail.setRight(node.getRight());
-            node.setRight(node.getLeft());
-            node.setLeft(null);
+            leftTail.right = root.right;
+            root.right = root.left;
+            root.left = null;
         }
 
         // We need to return the "rightmost" node after we are

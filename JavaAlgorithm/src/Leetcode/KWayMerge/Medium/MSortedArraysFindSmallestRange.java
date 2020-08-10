@@ -1,3 +1,7 @@
+/*
+1. Maintain current Max number
+2. Update the range start and range end by using polling and adding minheap.
+* */
 package Leetcode.KWayMerge.Medium;
 
 import org.w3c.dom.Element;

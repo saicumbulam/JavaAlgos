@@ -2,8 +2,6 @@ package Leetcode.LinkedList.Medium;
 
 import Leetcode.LinkedList.LinkedList.ListNode;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Stack;
 
 public class NextGreaterNodeLinkedList {
@@ -27,23 +25,56 @@ public class NextGreaterNodeLinkedList {
     private static int[] NextLargerNodes(ListNode head)
     {
         Stack<Integer> stack = new Stack<>();
-        List<Integer> arr = new ArrayList<>();
-        while (head != null)
-        {
-            arr.add(head.value);
-            head = head.next;
-        }
+        int length = GetLength(head);
+        int[] result = new int[length];
+        int index = 0;
 
-        int[] result = new int[arr.size()];
-        //Note the forward pass and filling the array.
-        for (int i = 0; i < arr.size(); i++) {
-            while (!stack.isEmpty() && arr.get(stack.peek()) < arr.get(i) )
+        ListNode current = Reverse(head);
+        while (current != null)
+        {
+            while (!stack.isEmpty() && stack.peek() < current.value)
             {
-                result[stack.pop()] = arr.get(i);
+                stack.pop();
             }
-            stack.push(i);
+
+            if (stack.isEmpty())
+            {
+                result[index++] = 0;
+            }
+            else
+            {
+                result[index++] = stack.peek();
+            }
+            stack.push(current.value);
         }
 
         return result;
+    }
+
+    private static ListNode Reverse(ListNode head)
+    {
+        ListNode current = head;
+        ListNode prev = null;
+        while (current != null)
+        {
+            ListNode next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        return prev;
+    }
+
+    private static int GetLength(ListNode head)
+    {
+        ListNode current = head;
+        int count = 0;
+
+        while (current != null)
+        {
+            count++;
+            current = current.next;
+        }
+        return count;
     }
 }

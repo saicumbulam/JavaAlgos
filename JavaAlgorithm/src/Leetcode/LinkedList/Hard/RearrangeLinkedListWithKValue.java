@@ -1,5 +1,6 @@
-package Leetcode.LinkedList.LinkedList;
+package Leetcode.LinkedList.Hard;
 
+import Leetcode.LinkedList.LinkedList.ListNode;
 import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
 public class RearrangeLinkedListWithKValue {

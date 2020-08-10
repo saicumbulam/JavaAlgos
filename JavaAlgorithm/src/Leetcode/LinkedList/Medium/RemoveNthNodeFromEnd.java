@@ -1,4 +1,4 @@
-package Leetcode.Medium;
+package Leetcode.LinkedList.Medium;
 
 import Leetcode.LinkedList.LinkedList.ListNode;
 import Leetcode.LinkedList.LinkedList.SingleLinkedList;
@@ -13,6 +13,7 @@ public class RemoveNthNodeFromEnd {
     private static ListNode Calculate(ListNode head, int n)
     {
         int size = GetLength(head);
+        // this is from the end
         n = size-n;
 
         ListNode curr = head, prev = null;

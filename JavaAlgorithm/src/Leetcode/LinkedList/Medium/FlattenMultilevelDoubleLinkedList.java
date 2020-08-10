@@ -56,11 +56,11 @@ public class FlattenMultilevelDoubleLinkedList {
         curr.prev = prev;
         prev.next = curr;
 
-        Node next = curr.next;
+        Node nextCurr = curr.next;
 
-        Node tail = dfs(curr, curr.child);
+        Node nextPrev = dfs(curr, curr.child);
         curr.child = null;
 
-        return dfs(tail, next);
+        return dfs(nextPrev, nextCurr);
     }
 }

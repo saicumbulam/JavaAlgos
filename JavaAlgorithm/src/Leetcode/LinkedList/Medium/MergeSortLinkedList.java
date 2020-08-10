@@ -3,7 +3,7 @@ package Leetcode.LinkedList.Medium;
 import Leetcode.LinkedList.LinkedList.ListNode;
 import Leetcode.LinkedList.LinkedList.SingleLinkedList;
 
-public class SortList {
+public class MergeSortLinkedList {
     public static void main(String[] args) {
         SingleLinkedList list = new SingleLinkedList();
         ListNode root = list.CreateListSample();
