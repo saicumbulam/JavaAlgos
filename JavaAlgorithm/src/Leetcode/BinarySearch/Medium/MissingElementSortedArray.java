@@ -10,7 +10,7 @@ package Leetcode.BinarySearch.Medium;
 
 public class MissingElementSortedArray {
     public static void main(String[] args) {
-        System.out.println(Calculate(new int[]{4,7, 9,10}, 1));
+        System.out.println(Calculate(new int[]{1,3,5}, 2));
     }
 
     public static int Calculate(int[] nums, int k) {

@@ -1,4 +1,4 @@
-package Leetcode.Medium;
+package Leetcode.Array.Medium;
 
 public class MinimumWindowSort {
     public static void main(String[] args) {

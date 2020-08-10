@@ -27,10 +27,8 @@ public class AddStrings {
             {
                 sum += Character.getNumericValue(num2.charAt(j--));
             }
-
             result.insert(0,String.valueOf(sum%10));
             carry = sum/10;
-
         }
 
         return result.toString();

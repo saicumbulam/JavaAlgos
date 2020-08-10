@@ -1,4 +1,4 @@
-package Leetcode.String.Easy;
+package Leetcode.Misc.Easy;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,3 +1,9 @@
+/*
+Output is a zig zag pattern
+P   A   H   N
+A P L S I I G
+Y   I   R
+* */
 package Leetcode.String.Medium;
 
 import java.util.ArrayList;
@@ -40,6 +46,7 @@ public class ZigZagPattern {
         StringBuilder ret = new StringBuilder();
         for (StringBuilder item: result
              ) {
+            System.out.println(item.toString());
             ret.append(item);
         }
         return ret.toString();

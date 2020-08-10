@@ -1,4 +1,4 @@
-package Leetcode.String.Easy.Easy;
+package Leetcode.String.Easy;
 
 public class ReverseAString {
     public static void main(String[] args) {
