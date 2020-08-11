@@ -17,11 +17,11 @@ public class MaxConsecutiveOnes {
             }
             else
             {
-                maxCount = Math.max(maxCount, count);
                 count = 0;
             }
+            maxCount = Math.max(maxCount, count);
         }
 
-        return Math.max(maxCount,count); // this should come
+        return maxCount;
     }
 }

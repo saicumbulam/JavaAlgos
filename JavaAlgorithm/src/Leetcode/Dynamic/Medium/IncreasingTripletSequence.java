@@ -1,3 +1,4 @@
+
 package Leetcode.Dynamic.Medium;
 
 public class IncreasingTripletSequence {

@@ -1,3 +1,16 @@
+/*
+Given a staircase with ‘n’ steps and an array of
+‘n’ numbers representing the fee that you have to
+pay if you take the step.
+Implement a method to calculate the minimum fee
+required to reach the top of the staircase (beyond the top-most step).
+
+Number of stairs (n) : 6
+Fee: {1,2,5,2,1,2}
+Output: 3
+Explanation: Starting from index '0', we can reach the top through: 0->3->top
+The total fee we have to pay will be (1+2).
+* */
 package Leetcode.Dynamic.Medium;
 
 public class MinimumFeeJumps {

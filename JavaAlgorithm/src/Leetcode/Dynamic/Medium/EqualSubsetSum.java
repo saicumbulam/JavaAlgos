@@ -1,3 +1,10 @@
+/*
+calculate the ways to make coin change
+
+1. if amount == 0 , return true
+2. c1 = (amount-num[curIdx], curIdx+1)
+3. return c2 = (amount, curIdx+1)
+* */
 package Leetcode.Dynamic.Medium;
 
 public class EqualSubsetSum {

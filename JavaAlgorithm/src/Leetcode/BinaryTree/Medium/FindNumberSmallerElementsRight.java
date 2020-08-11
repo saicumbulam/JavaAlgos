@@ -35,38 +35,39 @@ public class FindNumberSmallerElementsRight {
         }
     }
 
-    static int addTree(Node head, int number)
+    static int addTree(Node root, int value)
     {
-        // 5. if number greater than root, create right
-        if (number > head.value)
+        // 5. if value greater than root, create right
+        if (value > root.value)
         {
-            if (head.right == null)
+            if (root.right == null)
             {
-                head.right = new Node(number);
-                return head.count;
+                root.right = new Node(value);
+                return root.count;
             }
             else
             {
-                return head.count + addTree(head.right, number);
+                return root.count + addTree(root.right, value);
             }
         }
         else
         {
-            head.count++;
-            if (head.left == null)
+            root.count++;
+            if (root.left == null)
             {
-                head.left = new Node(number);
-                return 0; // becoz we need the right elements
+                root.left = new Node(value);
+                return 0; // this is the smallest. only right nodes can return
             }
             else
             {
-                return addTree(head.left, number);
+                return addTree(root.left, value);
             }
         }
     }
 
-    public static void main(String[] args) {
-        System.out.println(Calculate(new int[] {5,2,6,1}));
+    public static void main(String[] args)
+    {
+        System.out.println(Calculate(new int[] {5,2,6}));
     }
 
     private static List<Integer> Calculate(int[] arr)
@@ -86,10 +87,8 @@ public class FindNumberSmallerElementsRight {
 
         // 4. Add elements in binary tree and store result.
         for (int i = n-2; i >= 0; i--) {
-            result.add(addTree(root, arr[i]));
+            result.add(0, addTree(root, arr[i]));
         }
-
-        Collections.reverse(result);
         return result;
     }
 }

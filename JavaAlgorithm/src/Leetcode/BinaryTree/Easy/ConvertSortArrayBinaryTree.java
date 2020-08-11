@@ -1,3 +1,6 @@
+/*
+Similar to problem constructing minimum height binary tree
+* */
 package Leetcode.BinaryTree.Easy;
 
 import Leetcode.BinaryTree.BST.BinarySearchTree;

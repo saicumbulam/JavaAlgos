@@ -1,5 +1,6 @@
 /*
 Time complexity: o(n^2)
+same as word break
 * */
 package Leetcode.String.Easy;
 

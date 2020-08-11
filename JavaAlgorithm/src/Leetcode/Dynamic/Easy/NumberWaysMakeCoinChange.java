@@ -1,3 +1,11 @@
+/*
+calculate the ways to make coin change
+
+1. if amount == 0 , return 1
+2. c1 = (amount-num[curIdx], curIdx)
+3. c2 = (amount, curIdx+1)
+4. c1 + c2
+* */
 package Leetcode.Dynamic.Easy;
 
 public class NumberWaysMakeCoinChange {
