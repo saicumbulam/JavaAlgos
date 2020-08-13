@@ -1,0 +1,23 @@
+A system can achieve concurrency by employing one of the following multitasking models:
+1. Preemptive Multitasking
+2. Cooperative Multitasking
+
+
+Preemptive Multitasking:
+In preemptive multitasking, the operating system preempts a
+program to allow another waiting task to run on the CPU.
+Programs or threads can't decide how long for or when they can use the CPU.
+The operating system’s scheduler decides which thread or
+program gets to use the CPU next and for how much time.
+
+
+
+Cooperative Multitasking:
+Cooperative Multitasking involves well-behaved programs to voluntarily
+give up control back to the scheduler so that another program can run.
+A program or thread may give up control after a period of time has
+expired or if it becomes idle or logically blocked.
+The operating system’s scheduler has no say in how long a program or
+thread runs for.
+A malicious program can bring the entire system to a halt by busy waiting or
+running an infinite loop and not giving up control.

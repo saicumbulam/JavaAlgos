@@ -1,0 +1,48 @@
+Monitor:
+Monitor is a mutex and then some. Monitors are generally language level
+constructs whereas mutex and semaphore are lower-level or OS provided constructs.
+
+Inefficient code
+-------------------
+void busyWaitFunction() {
+    // acquire mutex
+    while (predicate is false) {
+      // release mutex
+      // acquire mutex
+    }
+    // do something useful
+    // release mutex
+}
+
+Within the while loop we'll first release the mutex giving other threads a chance
+to acquire it and set the loop predicate to true. And before we check the loop predicate again,
+we make sure we have acquired the mutex again.
+This works but is an example of "spin waiting" which wastes a lot of CPU cycles.
+
+
+Next, let's see how condition variables solve the spin-waiting issue.
+Mutex provides mutual exclusion, however, at times mutual exclusion is not enough.
+We want to test for a predicate with a mutually exclusive lock so that no other
+thread can change the predicate when we test for it but if we find the predicate to be false,
+we'd want to wait on a condition variable till the predicate's value is changed.
+This thus is the solution to spin waiting.
+
+a monitor is made up of a mutex and one or more condition variables.
+
+Translated efficient code
+---------------------------------
+void efficientWaitingFunction() {
+    mutex.acquire()
+    while (predicate == false) {
+      condVar.wait()
+    }
+    // Do something useful
+    mutex.release()
+}
+
+void changePredicate() {
+    mutex.acquire()
+    set predicate = true
+    condVar.signal()
+    mutex.release()
+}

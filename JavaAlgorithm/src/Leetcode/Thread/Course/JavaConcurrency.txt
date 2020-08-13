@@ -1,0 +1,40 @@
+Synchronized:
+Synchronized blocks allow only one object to enter and exit. Means a single thread can access the
+method/class or the block on which synichronized is applied
+
+diff ways to do synchronize:
+1. methods:
+class Counter
+{
+    public synchronized void add(int value)
+    {
+
+    }
+}
+
+2. class:
+class Counter
+{
+    public Counter(int value)
+    {
+        synchronized(Counter.class)
+        {
+
+        }
+    }
+}
+
+3. Synchronize on objects
+synchronized(Variable)
+{
+
+}
+
+
+Volatile:
+Volatile in a variable spcifies jvm to save the value of variable in main memory
+than keeping it in cache during run time.
+
+This is to avoid sync problems during multi threading
+
+volatile int count = 0;
