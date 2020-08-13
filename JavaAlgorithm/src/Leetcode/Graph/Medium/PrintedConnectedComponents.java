@@ -1,4 +1,4 @@
-package Leetcode.Medium;
+package Leetcode.Graph.Medium;
 
 import Leetcode.LinkedList.DoubleLinkedList;
 import Leetcode.Graph.Graph;

@@ -1,4 +1,4 @@
-package Leetcode.Medium;
+package Leetcode.Graph.Medium;
 
 import Leetcode.LinkedList.DoubleLinkedList;
 import Leetcode.Graph.Graph;
@@ -23,7 +23,7 @@ public class GraphStronglyConnected {
         FillVisited(g, 0, visited);
         // if graph has any unvisited nodes return false
         for (int i = 0; i < g.vertices; i++)
-            if (visited[i] == false)
+            if (!visited[i])
                 return false;
 
         // NOW CHECK FOR TRANSPOSED GRAPH
@@ -39,7 +39,7 @@ public class GraphStronglyConnected {
 
         // if transpose of graph has any unvisited nodes return false
         for (int i = 0; i < g1.vertices; i++)
-            if (visited[i] == false)
+            if (!visited[i])
                 return false;
 
         return true;

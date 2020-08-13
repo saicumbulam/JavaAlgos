@@ -1,4 +1,7 @@
-package Leetcode.BinaryTree.BreadthFirst.Easy;
+/*
+Load visitor during queue push
+* */
+package Leetcode.Graph.Medium;
 
 import Leetcode.LinkedList.DoubleLinkedList;
 import Leetcode.Graph.Graph;

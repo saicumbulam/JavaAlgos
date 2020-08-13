@@ -1,3 +1,6 @@
+/*
+Load visitor during stack pop
+* */
 package Leetcode.Graph.Medium;
 
 import Leetcode.LinkedList.DoubleLinkedList;
@@ -52,6 +55,8 @@ public class DepthFirstSearch {
 
             //Pop a vertex/node from stack and add it to the result
             int current_node = stack.pop();
+            //Visit the node
+            visited[current_node] = true;
             result += String.valueOf(current_node);
 
             //Get adjacent vertices to the current_node from the array,
@@ -68,8 +73,7 @@ public class DepthFirstSearch {
                 }
                 temp = temp.nextNode;
             }
-            //Visit the node
-            visited[current_node] = true;
+
         }//end of while
         return result;
     }

@@ -23,7 +23,6 @@ public class CountPathsTwoNodes {
 
     private static int countPaths(Graph g, int source, int dest) {
         int count = 0;
-        int x = 0;
 
         HashMap<Integer, Integer> hashMap = new HashMap<>();
         DoubleLinkedList[] list = g.adjacencyList;
@@ -35,16 +34,15 @@ public class CountPathsTwoNodes {
 
         if (hashMap.containsValue(source))
         {
-            return count;
+            return 0;
         }
         else {
             DoubleLinkedList.Node temp = list[source].getHeadNode();
             while (temp != null)
             {
-                int adjVertex = temp.data;
-                x = countPaths(g, adjVertex, dest);
+                int x = countPaths(g, temp.data, dest);
                 count += x;
-                hashMap.put(x, adjVertex);
+                hashMap.put(x, temp.data);
                 temp = temp.nextNode;
             }
 
