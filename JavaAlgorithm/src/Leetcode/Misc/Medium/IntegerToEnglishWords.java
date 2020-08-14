@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class IntegerToEnglishWords {
     public static void main(String[] args) {
-        int num = 123;
+        int num = 5813;
         System.out.println(Calculate(num));
     }
 
