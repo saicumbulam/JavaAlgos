@@ -2,7 +2,7 @@ package Leetcode.BinarySearch.Easy;
 
 public class Sqrt {
     public static void main(String[] args) {
-        int x = 4;
+        int x = 16;
         System.out.println(Calculate(x));
     }
 
