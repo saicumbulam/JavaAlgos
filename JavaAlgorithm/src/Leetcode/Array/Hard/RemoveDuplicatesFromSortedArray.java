@@ -2,7 +2,7 @@
 1. next index = 1  and the for loop should start from 1
 2.
 * */
-package Leetcode.Array.Easy;
+package Leetcode.Array.Hard;
 
 public class RemoveDuplicatesFromSortedArray {
     public static void main(String[] args) {

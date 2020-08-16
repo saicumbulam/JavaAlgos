@@ -1,4 +1,4 @@
-package Leetcode.Array.Easy;
+package Leetcode.Array.Medium;
 
 import java.util.Arrays;
 import java.util.LinkedList;

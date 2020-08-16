@@ -6,7 +6,7 @@
 5.  calculate missing element  again at the end using nums[end] - nums[0]-1
 6. get the missing element using nums[end] + k - missing
 * */
-package Leetcode.BinarySearch.Medium;
+package Leetcode.BinarySearch.Hard;
 
 public class MissingElementSortedArray {
     public static void main(String[] args) {

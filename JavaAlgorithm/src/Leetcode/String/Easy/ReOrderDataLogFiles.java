@@ -1,3 +1,6 @@
+/*
+Done
+* */
 package Leetcode.String.Easy;
 
 import java.util.*;
@@ -5,80 +8,80 @@ import java.util.*;
 public class ReOrderDataLogFiles {
     static class Element
     {
-        String letter;
-        int iden;
-        int seq;
-        boolean letterLog;
-        String value;
+        String first;
+        boolean isLetter;
+        String moreWords;
+        String raw;
 
-        public Element(String letter, int iden, int seq, boolean letterLog, String value) {
-            this.letter = letter;
-            this.iden = iden;
-            this.seq = seq;
-            this.letterLog = letterLog;
-            this.value = value;
+        public Element(String str)
+        {
+            this.raw = str;
+            Calculate(str);
         }
 
-        public String toString()
+        private void Calculate(String str)
         {
-            return value;
+            String[] split = str.split(" ");
+            this.first = split[0];
+            if (!Character.isDigit(split[1].charAt(0)))
+            {
+                isLetter = true;
+            }
+
+            if (isLetter)
+            {
+                moreWords = str.substring(str.indexOf(" ")+1);
+            }
         }
     }
 
-    static class CompareElement implements Comparator<Element>
+    static class ElementCompare implements Comparator<Element>
     {
-        //-1 is lesser, 1 is greater and 0 is equal in compare method
         public int compare(Element e1, Element e2)
         {
-            if (e1.letterLog && !e2.letterLog)
+            if (e1.isLetter != e2.isLetter)
             {
-                return -1;
+                return e1.isLetter ? -1: 1;
             }
-            if (!e1.letterLog && e2.letterLog)
+
+            if (!e1.isLetter && !e2.isLetter)
             {
-                return 1;
+                return 0;
             }
-            if (!e1.letterLog && !e2.letterLog)
-            {
-                return e1.seq > e2.seq ? 1 : -1;
-            }
-            int lexiCompare = e1.letter.compareTo(e2.letter);
-            if (lexiCompare == 0)
-            {
-                return e1.iden > e2.iden ? 1: -1;
-            }
-            else
-            {
-                return lexiCompare;
-            }
+
+            return e1.moreWords.equals(e2.moreWords) ? e1.first.compareTo(e2.first) :
+                    e1.moreWords.compareTo(e2.moreWords);
+
         }
     }
 
     public static void main(String[] args) {
-        String[] arr = {"dig1 8 1 5 1","let1 art can","dig2 3 6","let2 own kit dig","let3 art zero"};
-        System.out.println(Calculate(arr));
+        //String[] arr = {"dig1 8 1 5 1","let1 art can","dig2 3 6","let2 own kit dig","let3 art zero"};
+        String[] arr = {"j mo", "5 m w", "g 07", "o 2 0", "t q h"};
+        String[] result = Calculate(arr);
+        for (String item: result
+             ) {
+            System.out.println(item);
+        }
     }
 
-    private static List<Element>Calculate(String[] arr)
-    {
-        List<Element> result = new ArrayList<>();
-        int seq = 0;
-
-        for (String word: arr
-             ) {
-            String[] split = word.split(" ");
-            boolean letterLog = true;
-            if (Character.isDigit(split[1].charAt(0)))
-            {
-                letterLog = false;
-            }
-            int iden = Character.getNumericValue(split[0].charAt(split[0].length()-1));
-            String letter = split[1];
-            seq++;
-            result.add(new Element(letter, iden, seq, letterLog, word));
+    public static String[] Calculate(String[] logs) {
+        List<Element> list = new ArrayList<>();
+        for(String log : logs)
+        {
+            list.add(new Element(log));
         }
 
-        Collections.sort(result, new CompareElement());
+        Collections.sort(list, new ElementCompare());
+
+        String[] result = new String[logs.length];
+        int index = 0;
+
+        for(Element item: list)
+        {
+            result[index++] = item.raw;
+        }
+
         return result;
     }
 }

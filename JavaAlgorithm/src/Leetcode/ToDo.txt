@@ -1,0 +1,10 @@
+1. Snakes and ladders
+2. Shortest path in a binary matrix
+3. Design snake game
+4. Critical Connections in a Network
+5. Optimal Account Balancing
+6. Design In-Memory File System
+7. Bus Routes
+8. Number of atoms
+9. Concatenation words
+10. Longest valid parenthesis

@@ -1,4 +1,4 @@
-package Leetcode.BinarySearch.Medium;
+package Leetcode.BinarySearch.Hard;
 
 public class GetRotationsCountArray {
     public static void main(String[] args) {

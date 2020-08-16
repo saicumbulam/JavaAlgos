@@ -1,4 +1,4 @@
-package Leetcode.BinarySearch.Easy;
+package Leetcode.BinarySearch.Medium;
 
 public class MinimumDiffElement {
     public static void main(String[] args) {

@@ -1,4 +1,7 @@
-package Leetcode.String.Easy.Easy;
+/*
+Intermediate
+* */
+package Leetcode.Array.Medium;
 
 public class CanPlaceFlowers {
     public static void main(String[] args) {

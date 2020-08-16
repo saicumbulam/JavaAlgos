@@ -5,7 +5,7 @@
    do while to traverse i and j btw left and right.
    if i or j sees a word, then break the loop and continue binary search.
 * */
-package Leetcode.BinarySearch.Easy;
+package Leetcode.BinarySearch.Hard;
 
 public class SparseSearch {
     public static void main(String[] args) {

@@ -1,3 +1,6 @@
+/*
+Easy
+* */
 package Leetcode.Array.Easy;
 
 import java.util.HashMap;

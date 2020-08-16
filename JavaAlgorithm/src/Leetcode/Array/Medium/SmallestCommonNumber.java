@@ -1,4 +1,4 @@
-package Leetcode.Array.Easy;
+package Leetcode.Array.Medium;
 
 public class SmallestCommonNumber {
     public static void main(String[] args) {

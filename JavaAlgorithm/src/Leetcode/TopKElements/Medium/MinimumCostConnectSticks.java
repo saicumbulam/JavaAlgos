@@ -1,4 +1,5 @@
 /*
+Done
 Time complexity : o(logn)
 space complexity : o(n)
 
@@ -6,7 +7,7 @@ space complexity : o(n)
 2. while minHeap.size > 1, temp = poll + poll,
    result += temp. poll the temp to minHeap
 * */
-package Leetcode.Medium;
+package Leetcode.TopKElements.Medium;
 
 import java.util.PriorityQueue;
 

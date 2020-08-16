@@ -4,7 +4,7 @@ width of each bar is 1, compute how much water it is able to trap after raining.
 Input: [0,1,0,2,1,0,1,3,2,1,2,1]
 Output: 6
 * */
-package Leetcode.Array.Medium;
+package Leetcode.Array.Hard;
 
 public class TrappingRainWater {
     public static void main(String[] args) {
