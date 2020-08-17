@@ -16,14 +16,14 @@ public class LargeGroupPositions {
         int i = 0, j = 0;
 
         while (j < str.length()) {
-            if (j == str.length()-1|| str.charAt(j) != str.charAt(j+1))
-            {
-                if (j-i+1 >= 3)
-                {
-                    result.add(Arrays.asList(i, j));
-                }
-                i = j+1;
+            while (j < str.length()-1 && str.charAt(j) == str.charAt(j+1)) {
+                j++;
             }
+            if (j-i+1 >= 3)
+            {
+                result.add(Arrays.asList(i, j));
+            }
+            i = j+1;
             j++;
         }
 

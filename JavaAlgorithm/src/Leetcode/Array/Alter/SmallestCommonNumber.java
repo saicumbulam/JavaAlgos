@@ -1,4 +1,4 @@
-package Leetcode.Array.Often;
+package Leetcode.Array.Alter;
 
 public class SmallestCommonNumber {
     public static void main(String[] args) {

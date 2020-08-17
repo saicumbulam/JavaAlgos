@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class SquaresSortedArray {
     public static void main(String[] args) {
-        int[] nums = {-4,-1,0,3,10};
+        int[] nums = {-4,-1,-2,3,10};
         int[] result = Calculate(nums);
         Arrays.stream(result).forEach(System.out::println);
     }
@@ -14,7 +14,7 @@ public class SquaresSortedArray {
         int[] result = new int[nums.length];
         int resultIndex = nums.length-1, left = 0, right = nums.length-1;
 
-        while (left < right)
+        while (left <= right)
         {
             int leftSquare = nums[left] * nums[left];
             int rightSquare = nums[right] * nums[right];
@@ -29,6 +29,7 @@ public class SquaresSortedArray {
                 right--;
             }
         }
+
         return result;
     }
 }
