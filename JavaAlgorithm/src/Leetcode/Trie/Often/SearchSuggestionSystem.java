@@ -1,4 +1,4 @@
-package Leetcode.Trie.Medium;
+package Leetcode.Trie.Often;
 
 import java.util.ArrayList;
 import java.util.List;

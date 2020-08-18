@@ -1,4 +1,4 @@
-package Leetcode.TwoPointers.Medium;
+package Leetcode.TwoPointers.Often;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,7 +26,8 @@ public class ThressSumClosest {
 
                 // this formulae is crucial for smallest value calculation
                 if(Math.abs(targetDiff) < Math.abs(smallest) ||
-                        ((Math.abs(targetDiff) == Math.abs(smallest)) && targetDiff > smallest))
+                        ((Math.abs(targetDiff) == Math.abs(smallest)) &&
+                                targetDiff > smallest))
                 {
                     smallest = targetDiff;
                 }

@@ -1,4 +1,4 @@
-package Leetcode.TopologicalSort.Easy;
+package Leetcode.TopologicalSort.After;
 
 import java.util.*;
 

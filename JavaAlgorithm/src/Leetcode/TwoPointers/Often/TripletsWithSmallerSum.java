@@ -1,4 +1,4 @@
-package Leetcode.Medium;
+package Leetcode.TwoPointers.Often;
 
 import java.util.Arrays;
 

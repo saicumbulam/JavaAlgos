@@ -1,4 +1,4 @@
-package Leetcode.TwoPointers.Medium;
+package Leetcode.TwoPointers.After;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -46,11 +46,11 @@ public class QuadruplesSum {
                 right--;
                 // minus comparision for left
                 // Plus comparision for right
-                while (left < right && arr[left] == arr[left-1])
+                while (left < right && arr[left] == arr[left+1])
                 {
                     left++;
                 }
-                while (left < right && arr[right] == arr[right+1])
+                while (left < right && arr[right] == arr[right-1])
                 {
                     right--;
                 }

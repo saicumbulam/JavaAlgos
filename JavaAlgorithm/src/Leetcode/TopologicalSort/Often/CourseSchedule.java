@@ -1,8 +1,8 @@
-package Leetcode.Medium;
+package Leetcode.TopologicalSort.Often;
 
 import java.util.*;
 
-public class CourseSchedule2 {
+public class CourseSchedule {
     public static void main(String[] args) {
         int numCourses = 2;
         List<List<Integer>> prerequisites = new ArrayList<>();
@@ -11,12 +11,13 @@ public class CourseSchedule2 {
         prerequisites.get(0).add(0);
         System.out.println(Calculate(numCourses, prerequisites));
     }
-    private static List<Integer> Calculate(int numCourses, List<List<Integer>> prerequisites)
+
+    private static boolean Calculate(int numCourses, List<List<Integer>> prerequisites)
     {
         List<Integer> sortedOrder = new ArrayList<>();
         if (numCourses == 0)
         {
-            return sortedOrder;
+            return true;
         }
 
         HashMap<Integer, Integer> inDegree = new HashMap<>();
@@ -28,8 +29,7 @@ public class CourseSchedule2 {
         }
 
         for (int i = 0; i < prerequisites.size(); i++) {
-            int parent = prerequisites.get(i).get(0);
-            int child = prerequisites.get(i).get(1);
+            int parent = prerequisites.get(i).get(0), child = prerequisites.get(i).get(1);
             inDegree.put(child, inDegree.getOrDefault(child, 0) + 1);
             graph.get(parent).add(child);
         }
@@ -45,7 +45,7 @@ public class CourseSchedule2 {
         while (!source.isEmpty())
         {
             int vertex = source.poll();
-            sortedOrder.add(0, vertex);  // the 0 is to maintain the sorted order
+            sortedOrder.add(vertex);
             List<Integer> children = graph.get(vertex);
             for (int child : children) {
                 inDegree.put(child, inDegree.get(child) - 1);
@@ -58,8 +58,8 @@ public class CourseSchedule2 {
 
         if (sortedOrder.size() != numCourses)
         {
-            return new ArrayList<>();
+            return false;
         }
-        return sortedOrder;
+        return true;
     }
 }

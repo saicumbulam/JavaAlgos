@@ -1,4 +1,4 @@
-package Leetcode.Trie;
+package Leetcode.Trie.Often;
 
 public class Trie {
     public class TrieNode

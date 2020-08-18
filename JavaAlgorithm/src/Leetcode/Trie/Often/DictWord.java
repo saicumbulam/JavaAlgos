@@ -1,6 +1,4 @@
-package Leetcode.Trie.Medium;
-
-import Leetcode.Trie.Trie;
+package Leetcode.Trie.Often;
 
 public class DictWord {
     public static void main(String[] args) {

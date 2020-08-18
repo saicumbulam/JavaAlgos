@@ -1,4 +1,4 @@
-package Leetcode.TwoPointers.Easy;
+package Leetcode.TwoPointers.After;
 
 import Leetcode.BinaryTree.BST.BinarySearchTree;
 import Leetcode.BinaryTree.BST.TreeNode;
