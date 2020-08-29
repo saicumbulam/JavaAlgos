@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class FindNumberSmallerElementsRight {
+public class CountSmallerNumberAfterSelf {
     // 1. BST tree node defined
     static class Node
     {

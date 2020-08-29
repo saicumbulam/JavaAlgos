@@ -1,4 +1,4 @@
-package Leetcode.Medium;
+package Leetcode.SlidingWindow.Medium;
 
 import java.util.HashMap;
 import java.util.Map;

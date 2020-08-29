@@ -14,6 +14,7 @@ public class ConstructBinaryTreePreorderInorder {
     public static void main(String[] args) {
         int[] preorder = {3,9,20,15,7};
         int[] inorder = {9,3,15,20,7};
+
         BinarySearchTree bst = new BinarySearchTree();
         bst.printTree(Calculate(inorder, preorder));
     }
@@ -40,8 +41,8 @@ public class ConstructBinaryTreePreorderInorder {
         int val = preorderArray[preOrderInx++];
         int index = map.get(val);
         TreeNode root = new TreeNode(val);
-        root.setLeft(Construct(left, index));
-        root.setRight(Construct(index+1, right));
+        root.left = Construct(left, index);
+        root.right = Construct(index+1, right);
         return root;
 
     }

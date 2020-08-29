@@ -2,7 +2,6 @@ package Leetcode.BinaryTree.BreadthFirst.Alter;
 
 import Leetcode.BinaryTree.BST.BinarySearchTree;
 import Leetcode.BinaryTree.BST.TreeNode;
-import javafx.util.Pair;
 
 import java.util.LinkedList;
 import java.util.Queue;

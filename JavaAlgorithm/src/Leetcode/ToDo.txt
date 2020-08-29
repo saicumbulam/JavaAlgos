@@ -8,3 +8,7 @@
 8. Number of atoms
 9. Concatenation words
 10. Longest valid parenthesis
+11. Shortest path grid obstacles elimination
+12. Shortest distance all buildings
+13. Maximal square
+14. Minimum score triangulation

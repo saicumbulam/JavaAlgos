@@ -1,43 +1,44 @@
 /*
-Risky
+There are two cases to consider:
+
+First, the second character of p is *, now p string can match any number of character before *. if(isMatch(s, p.substring(2)) means we can match the remaining s string, otherwise, we check if the first character matches or not.
+
+Second, if the second character is not *, we need match character one by one.
 * */
 package Leetcode.String.Hard;
 
-
 public class RegularExpressions {
     public static void main(String[] args) {
-        String str = "aabbbbbcdda";
-        String pattern = "a*bb*cdda";
-        System.out.println(Calculate(str, pattern));
+        System.out.println(Calculate("aa", "a*"));
     }
 
-    private static boolean Calculate(String text, String pattern) {
-        if (text.isEmpty() && pattern.isEmpty())
+    private static boolean Calculate(String s, String p) {
+        if (p.isEmpty())
         {
-            return true;
+            return s.isEmpty();
         }
 
-        if (!text.isEmpty() && pattern.isEmpty())
+        if (p.length() > 1 && p.charAt(1) == '*')
         {
+            if (Calculate(s, p.substring(2)))
+            {
+                return true;
+            }
+
+            if (s.length() > 0 &&(p.charAt(0) == '.' || s.charAt(0) == p.charAt(0)))
+            {
+                return true;
+            }
+
             return false;
-        }
-
-        boolean firstMatch = false;
-
-        if (!text.isEmpty() && (pattern.charAt(0) == '.' || pattern.charAt(0) == text.charAt(0)))
-        {
-            firstMatch = true;
-        }
-
-        if (pattern.length() >= 2 && pattern.charAt(1) == '*')
-        {
-            return (Calculate(text, pattern.substring(2))) || (firstMatch && Calculate(text.substring(1), pattern));
         }
         else
         {
-            return Calculate(text.substring(1), pattern.substring(1));
+            if (s.length() > 0 && (p.charAt(0) == '.' || s.charAt(0) == p.charAt(0)))
+            {
+                return Calculate(s.substring(1), p.substring(1));
+            }
+            return false;
         }
     }
-
-
 }

@@ -8,7 +8,8 @@ public class LongestIncreasingSubsequence {
     public static void main(String[] args) {
         //int[] nums = {4,2,3,6,10,1,12};
         //int[] nums = {5,7,-24,12,10,2,3,12,5,6,35};
-        int[] nums = {1,2,3};
+        //int[] nums = {1,2,3};
+        int[] nums = {100,4,200,1,3,2};
         //System.out.println(findLISLength(nums, 0, -1));
         System.out.println(findLISLengthArray(nums, 0, -1,
                 new ArrayList<>()));
