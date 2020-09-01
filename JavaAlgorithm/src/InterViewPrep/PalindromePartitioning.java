@@ -7,7 +7,7 @@ public class PalindromePartitioning {
     static List<List<String>> result = new ArrayList<>();
 
     public static void main(String[] args) {
-        String str = "aab";
+        String str = "abdbca";
         Calculate(str, 0, str.length()-1, new ArrayList<>());
         System.out.println(result);
     }
@@ -17,7 +17,6 @@ public class PalindromePartitioning {
         if (start == str.length())
         {
             result.add(new ArrayList<>(curr));
-            return;
         }
 
         for (int i = start; i <= end; i++) {
@@ -34,7 +33,7 @@ public class PalindromePartitioning {
     {
         while (left < right)
         {
-            if (str.charAt(left) == str.charAt(right))
+            if (str.charAt(left) != str.charAt(right))
             {
                 return false;
             }

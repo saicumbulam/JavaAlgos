@@ -16,41 +16,46 @@ public class PalindromeLinkedList {
 
     private static boolean Calculate(ListNode root)
     {
+        ListNode resultHead = null;
+
         ListNode slow = root, fast = root;
+
         while (fast != null && fast.next != null)
         {
             slow = slow.next;
             fast = fast.next.next;
         }
 
-        ListNode first = root;
-        ListNode second = Reverse(slow);
 
-        while (first != null && second != null)
+        ListNode firstPart = root;
+        ListNode secondPart = Reverse(slow);
+
+        while (firstPart != null && secondPart != null)
         {
-            if (first.val != second.val)
+            if (firstPart.val != secondPart.val)
             {
                 return false;
             }
-            first = first.next;
-            second = second.next;
+            firstPart = firstPart.next;
+            secondPart = secondPart.next;
         }
 
-        if (first == null && second == null)
+        if (firstPart == null || secondPart == null)
         {
             return true;
         }
         return false;
     }
 
-    private static ListNode Reverse(ListNode root)
+    private static ListNode Reverse(ListNode head)
     {
-        ListNode curr = root;
+        ListNode next = null;
         ListNode prev = null;
+        ListNode curr = head;
 
         while (curr != null)
         {
-            ListNode next = curr.next;
+            next = curr.next;
             curr.next = prev;
             prev = curr;
             curr = next;

@@ -3,27 +3,32 @@ package Leetcode.String.Palindrome.Easy;
 public class ValidPalindrome {
     public static void main(String[] args) {
         String str = "A man, a plan, a canal: Panama";
+        System.out.println(Calculate(str.toLowerCase().toCharArray()));
+    }
 
-        int left = 0, right = str.length()-1;
-        str = str.toLowerCase();
+    private static boolean Calculate(char[] strs)
+    {
+        int left = 0, right = strs.length-1;
+
         while (left < right)
         {
-            while (left < right && !Character.isLetterOrDigit(str.charAt(left)))
+            while (left < right && !Character.isLetter(strs[left]))
             {
                 left++;
             }
 
-            while (left < right && !Character.isLetterOrDigit(str.charAt(right)))
+            while (left < right && !Character.isLetter(strs[right]))
             {
                 right--;
             }
 
-            if (left < right && str.charAt(left++) != str.charAt(right--))
+            if(left < right && strs[left++] != strs[right--])
             {
-                System.out.println(false);
+                return false;
             }
         }
 
-        System.out.println(true);
+        return true;
+
     }
 }

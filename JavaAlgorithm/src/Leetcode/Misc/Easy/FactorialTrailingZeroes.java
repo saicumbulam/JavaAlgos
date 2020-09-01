@@ -3,14 +3,19 @@ package Leetcode.Misc.Easy;
 public class FactorialTrailingZeroes {
     public static void main(String[] args) {
         int n = 5;
-        int currentMultiple = 5;
-        int zeroCount = 0;
+        System.out.println(Calculate(n));
+    }
 
-        while (n >= currentMultiple)
-        {
-            zeroCount += n/currentMultiple;
-            currentMultiple *= 5;
+    private static int Calculate(int n)
+    {
+        int count = 0;
+        int multiple = 5;   // this should be long to avoid Integer max value error
+
+        while (n >= multiple){
+            count += n/multiple;
+            multiple *= 5;
         }
-        System.out.println(zeroCount);
+
+        return count;
     }
 }

@@ -15,23 +15,35 @@ public class IntersectionLists {
 
     private static boolean Check(ListNode list1, ListNode list2)
     {
-        int LengthA = LengthList(list1);
-        int LengthB = LengthList(list2);
+        if (list1 == null && list2 == null)
+        {
+            return false;
+        }
 
-        if(LengthA < LengthB)
+        if (list1 == null || list2 == null)
+        {
+            return false;
+        }
+
+        int length1 = getLength(list1);
+        int length2 = getLength(list2);
+
+        if (length2 > length1)
         {
             return Check(list2, list1);
         }
 
-        while (LengthA > LengthB)
+        int skip = length1 - length2;
+
+        while (skip > 0)
         {
             list1 = list1.next;
-            LengthA--;
+            skip--;
         }
 
         while (list1 != null && list2 != null)
         {
-            if(list1 == list2)
+            if (list1 == list2)
             {
                 return true;
             }
@@ -40,18 +52,17 @@ public class IntersectionLists {
         }
 
         return false;
-
     }
 
-    private static int LengthList(ListNode head)
+    private static int getLength(ListNode head)
     {
-        ListNode curr = head;
-        int count = 0;
-        while (curr != null)
+        int curr = 0;
+
+        while (head != null)
         {
-            count++;
-            curr = curr.next;
+            curr++;
+            head = head.next;
         }
-        return count;
+        return curr;
     }
 }

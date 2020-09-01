@@ -27,7 +27,7 @@ public class RegularExpressionMatching {
 
             if (s.length() > 0 &&(p.charAt(0) == '.' || s.charAt(0) == p.charAt(0)))
             {
-                return true;
+                return Calculate(s.substring(1), p);
             }
 
             return false;

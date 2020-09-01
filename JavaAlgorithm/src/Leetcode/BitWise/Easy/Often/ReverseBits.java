@@ -12,17 +12,21 @@ Psuedo:
 package Leetcode.BitWise.Easy.Often;
 
 public class ReverseBits {
+    public static void main(String[] args) {
+        System.out.println(Calculate(101001011));
+    }
     public static int Calculate(int n)
     {
         int ret = 0;
-        int power = 31;
-        while (n != 0)
+
+        for (int i = 0; i < 32; i++)
         {
-            ret += (n&1) << power; //accumulate result in ret
-            n = (n >> 1); //Iterate the n string from right most digit
-            power--;  //reduce the power
+            ret <<= 1;
+            ret = (n & 1) | (ret);
+            n >>= 1;
         }
 
         return ret;
     }
+
 }
