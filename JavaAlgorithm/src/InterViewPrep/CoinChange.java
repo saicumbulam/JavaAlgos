@@ -20,12 +20,10 @@ public class CoinChange {
             for (int s = 1; s <= amount; s++) {
                 if (i > 0)
                 {
-                    dp[i][s] += dp[i-1][s];
+                    dp[i][s] = dp[i-1][s];
                 }
                 if (s >= arr[i])
-                {
-                    dp[i][s] += dp[i][s-arr[i]];
-                }
+                    dp[i][s] += dp[i][s - arr[i]];
             }
         }
 
