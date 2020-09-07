@@ -2,38 +2,39 @@ package InterViewPrep;
 
 public class LongestPalindromicSubstring {
     public static void main(String[] args) {
-        //String str = "abdbca";
-        String str = "cddpd";
-        //String str = "pqr";
-        System.out.println(Calculate(str, 0, str.length()-1));
+        String str = "babad";
+        System.out.println(Calculate(str));
     }
 
-    private static int Calculate(String str, int startIdx, int endIdx) {
+    private static String Calculate(String str)
+    {
+        int start = 0, end = 0;
 
-        if (startIdx > endIdx)
-        {
-            return 0;
-        }
+        for (int i = 0; i < str.length(); i++) {
+            int l1 = isPalindrome(str, i, i);
+            int l2 = isPalindrome(str,i, i+1);
+            int len = Math.max(l1, l2);
 
-        if (startIdx == endIdx)
-        {
-            return 1;
-        }
-
-        // including elements that are same at the start and the end index
-        if (str.charAt(startIdx) == str.charAt(endIdx))
-        {
-            int remain = endIdx - startIdx - 1;
-            if (remain ==  Calculate(str, startIdx+1, endIdx-1))
+            if (len > end - start)
             {
-                return  remain+2;
+                start = i - (len-1)/2; // left of the ith element
+                end = i + (len)/2; // right of the ith element
             }
         }
 
-        int c1 = Calculate(str, startIdx+1, endIdx);
-        int c2 = Calculate(str, startIdx, endIdx-1);
-        return Math.max(c1, c2);
+        return str.substring(start, end+1); // +1 to include the end
+    }
 
+    private static int isPalindrome(String str, int left , int right)
+    {
+        int Left = left, Right = right;
 
+        while (Left >= 0 && Right < str.length() && str.charAt(Left) == str.charAt(Right))
+        {
+            Left--;
+            Right++;
+        }
+
+        return Right-Left-1;
     }
 }

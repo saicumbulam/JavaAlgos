@@ -14,17 +14,17 @@ public class Search2DMatrix {
 
         int target = 5;
 
-        int row = 0, col = nums.length-1;
+        int row= 0, col = nums[0].length-1;
 
-        while (row < nums.length && col >= 0)
+        while (row < nums.length-1 && col >= 0)
         {
             if (nums[row][col] == target)
             {
-                System.out.println("Found");
+                System.out.println(String.format("%s, %s",row, col));
                 break;
             }
 
-            if(nums[row][col] > target)
+            if (nums[row][col] > target)
             {
                 col--;
             }
@@ -33,7 +33,6 @@ public class Search2DMatrix {
                 row++;
             }
         }
-    }
 
-    ;
+    }
 }

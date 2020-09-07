@@ -6,72 +6,47 @@ public class FindReplaceString {
     public static void main(String[] args) {
         String S = "abcd";
         int[] indexes = {0,2};
-        String[] sources = {"a","cd"};
+        //String[] sources = {"a","cd"};
+        String[] sources = {"ab","ec"};
+        //String[] targets = {"eee","ffff"};
         String[] targets = {"eee","ffff"};
         System.out.println(Calculate(S, indexes, sources, targets));
     }
 
-    public static String Calculate(String S, int[] indexes, String[] sources, String[] targets) {
-        StringBuilder result = new StringBuilder();
+    public static String Calculate(String s, int[] indexes, String[] sources, String[] targets) {
+        HashMap<Integer, String[]> map = new HashMap<>();
 
-        HashMap<Character, Element> map = new HashMap<>();
-
-        for (int i = 0; i < indexes.length; i++)
-        {
-            map.put(sources[i].charAt(0), new Element(indexes[0], sources[i], targets[i]));
+        for (int i = 0; i < indexes.length; i++) {
+            map.put(indexes[i], new String[]{sources[i], targets[i]});
         }
 
+        StringBuilder str = new StringBuilder();
         int i = 0;
-
-        while (i < S.length())
-        {
-            if (i < S.length() && map.containsKey(S.charAt(i)))
+        while (i < s.length()) {
+            if (map.containsKey(i))
             {
-                Element ele = map.get(S.charAt(i));
-                int count = 0;
-
-                while (i < S.length() && count < ele.len())
+                String[] item = map.get(i);
+                int j = i + item[0].length();
+                System.out.println(s.substring(i, j));
+                if (j <= s.length() && s.substring(i, j).equals(item[0]))
                 {
-                    i++;
-                    count++;
-                }
-
-                if (count == ele.len())
-                {
-                    result.append(ele.target);
+                    str.append(item[1]);
+                    i= j;
                 }
                 else
                 {
-                    result.append(S.charAt(i));
+                    str.append(s.charAt(i));
+                    i++;
                 }
             }
             else
             {
-                result.append(S.charAt(i));
+                str.append(s.charAt(i));
+                i++;
             }
-
-            i++;
         }
 
-        return result.toString();
+        return str.toString();
     }
 
-    static class Element
-    {
-        int index = 0;
-        String source = null;
-        String target = null;
-
-        public Element(int index, String source, String target)
-        {
-            this.index = 0;
-            this.source = source;
-            this.target = target;
-        }
-
-        public int len()
-        {
-            return source.length()-1;
-        }
-    }
 }

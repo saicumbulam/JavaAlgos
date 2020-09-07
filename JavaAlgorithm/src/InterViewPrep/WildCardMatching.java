@@ -10,20 +10,24 @@ public class WildCardMatching {
 
     private static boolean Calculate(String s, String p)
     {
-        if (p.isEmpty())
+        if(p.isEmpty())
         {
             return s.isEmpty();
         }
 
-        boolean flag = false;
-        if (s.length() > 0 && (p.charAt(0) == '?' || (s.charAt(0) == p.charAt(0))))
+        if(p.charAt(0) == '*')
         {
-            flag = Calculate(s.substring(1), p.substring(1));
+            return Calculate(s, p.substring(1)) ||
+                    (s.length() > 0 && Calculate(s.substring(1), p));
         }
-        else if (p.charAt(0) == '*')
+        else if (p.charAt(0) == '?')
         {
-            flag = Calculate(s, p.substring(1)) || (s.length() > 0 && Calculate(s.substring(1), p));
+            return s.length() > 0 && Calculate(s.substring(1), p.substring(1));
         }
-        return flag;
+        else
+        {
+            return s.length() > 0 && s.charAt(0) == p.charAt(0) &&
+                    Calculate(s.substring(1), p.substring(1));
+        }
     }
 }

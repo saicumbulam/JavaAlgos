@@ -7,7 +7,7 @@ public class LongestPalindromicSubsequence {
     }
 
     private static int Calculate(String str, int startIdx, int endIdx) {
-        if (startIdx > endIdx)
+        if(startIdx > endIdx)
         {
             return 0;
         }
@@ -17,16 +17,14 @@ public class LongestPalindromicSubsequence {
             return 1;
         }
 
-        // including elements that are same at the start and the end index
         if (str.charAt(startIdx) == str.charAt(endIdx))
         {
-            return 2 + Calculate(str, startIdx+1, endIdx-1);
+            return 1 +  Calculate(str, startIdx+1, endIdx-1);
         }
 
         int c1 = Calculate(str, startIdx+1, endIdx);
         int c2 = Calculate(str, startIdx, endIdx-1);
         return Math.max(c1, c2);
-
 
     }
 }

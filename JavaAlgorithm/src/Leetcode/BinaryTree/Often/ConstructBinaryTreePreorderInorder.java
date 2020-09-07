@@ -24,26 +24,27 @@ public class ConstructBinaryTreePreorderInorder {
         inorderArray = inorder;
         preorderArray = preorder;
 
-        int count = 0; // you missed this earlier. Watch out
-        for (int item: inorderArray) {
+        int count = 0;
+        for (int item: inorder
+             ) {
             map.put(item, count++);
         }
 
-        return Construct(0, inorderArray.length);
+        return Calculate1(0, inorder.length);
     }
 
-    private static TreeNode Construct(int left, int right)
+    private static TreeNode Calculate1(int left , int right)
     {
-        if (left == right) {
+        if (left == right)
+        {
             return null;
         }
 
         int val = preorderArray[preOrderInx++];
-        int index = map.get(val);
         TreeNode root = new TreeNode(val);
-        root.left = Construct(left, index);
-        root.right = Construct(index+1, right);
+        int index = map.get(val);
+        root.left = Calculate1(left, index);
+        root.right = Calculate1(index+1, right);
         return root;
-
     }
 }

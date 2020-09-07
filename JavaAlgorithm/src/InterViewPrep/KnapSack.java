@@ -19,34 +19,31 @@ public class KnapSack {
         }
 
         for (int s = 1; s <= capacity; s++) {
-            dp[0][s] = weights[0] == s ? weights[0] : 0;
+            dp[0][s] = weights[0] == s ? profits[0] : 0;
         }
 
         for (int i = 1; i < weights.length; i++) {
-            for (int s = 1; s <= capacity; s++) {
-                int profit1 = dp[i-1][s];
-                int profit2 = 0;
+            for (int s = 1; s <= capacity ; s++) {
+                int profit1 = 0, profit2 = 0;
+
+                profit1 = dp[i-1][s];
+
                 if (weights[i] <= s)
                 {
-                    profit2 = profits[i] + dp[i-1][s - weights[i]];
+                    profit2 = profits[i] + dp[i-1][s-weights[i]];
                 }
-
                 dp[i][s] = Math.max(profit1, profit2);
             }
         }
-
         PrintElements(dp, weights, profits, capacity);
-
         return dp[weights.length-1][capacity];
-
     }
 
     private static void PrintElements(int[][] dp,int[] weights, int[] profits, int capacity)
     {
         int totalProfit = dp[weights.length-1][capacity];
-
         for (int i = weights.length-1; i > 0 ; i--) {
-            if (totalProfit != dp[i-1][capacity])
+            if(dp[i-1][capacity] != totalProfit)
             {
                 System.out.println(weights[i]);
                 totalProfit -= profits[i];

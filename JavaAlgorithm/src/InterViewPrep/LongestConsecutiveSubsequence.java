@@ -1,5 +1,6 @@
 package InterViewPrep;
 
+import java.util.HashMap;
 import java.util.HashSet;
 
 public class LongestConsecutiveSubsequence {
@@ -9,35 +10,28 @@ public class LongestConsecutiveSubsequence {
 
     private static int Calculate(int[] nums)
     {
-        if(nums.length == 1)
-        {
-            return nums.length;
-        }
-
-        int ans = 0;
         HashSet<Integer> set = new HashSet<>();
 
-        for(int i = 0; i < nums.length; i++)
-        {
-            set.add(nums[i]);
+        for (int item: nums
+             ) {
+            set.add(item);
         }
 
-        for (int i = 0; i < nums.length; i++)
-        {
-            if(!set.add(nums[i]-1))
+        int maxLength = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (set.contains(nums[i]) && !set.contains(nums[i]-1))
             {
                 int j = nums[i];
-
-                while(set.contains(j))
+                int count = 0;
+                while (set.contains(j))
                 {
+                    count++;
                     j++;
                 }
-
-                ans = Math.max(ans, (j - nums[i]+1));
+                maxLength = Math.max(maxLength, count);
             }
         }
 
-        return ans;
-
+        return maxLength;
     }
 }

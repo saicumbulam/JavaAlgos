@@ -8,48 +8,48 @@ import java.util.*;
 
 public class TaskScheduler {
     public static void main(String[] args) {
+        //char[] arr = {'A','A','A','B','B','B'};
+        //int n = 2;
+
         char[] arr = {'A','A','A','B','B','B'};
-        int n = 2;
+        int n = 0;
         System.out.println(leastInterval(arr, n));
     }
 
-    public static int leastInterval(char[] tasks, int n) {
-        int intervalCount = 0;
+    public static int leastInterval(char[] tasks, int k) {
 
         HashMap<Character, Integer> map = new HashMap<>();
-
-        for(char c: tasks)
-        {
-            map.put(c, map.getOrDefault(c, 0)+1);
+        for (char item: tasks
+             ) {
+            map.put(item, map.getOrDefault(item, 0) + 1);
         }
 
-        PriorityQueue<Map.Entry<Character, Integer>> maxHeap = new PriorityQueue<>(
-                (a, b) -> b.getValue() - a.getValue());
+        PriorityQueue<Map.Entry<Character, Integer>> maxHeap = new PriorityQueue<>((a,b) -> b.getValue() - a.getValue());
         maxHeap.addAll(map.entrySet());
+        int intervalCount = 0;
 
-        while(!maxHeap.isEmpty())
+        while (!maxHeap.isEmpty())
         {
+            int n = k+1;
             List<Map.Entry<Character, Integer>> waitList = new ArrayList<>();
-            int k = n+1;
-
-            for (; k > 0 && !maxHeap.isEmpty();k--)
+            for (; !maxHeap.isEmpty() && n > 0;n--)
             {
-                //increment the interval count
                 intervalCount++;
-                Map.Entry<Character, Integer> polled = maxHeap.poll();
-                if (polled.getValue() > 1)
+                Map.Entry<Character, Integer> item = maxHeap.poll();
+                item.setValue(item.getValue()-1);
+                if (item.getValue() > 0)
                 {
-                    polled.setValue(polled.getValue() - 1);
-                    waitList.add(polled);
+                    waitList.add(item);
                 }
             }
 
             maxHeap.addAll(waitList);
-            if(!maxHeap.isEmpty())
+            if (!maxHeap.isEmpty())
             {
-                intervalCount += k;
+                intervalCount += n;
             }
         }
+
         return intervalCount;
     }
 }

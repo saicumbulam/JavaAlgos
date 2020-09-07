@@ -5,35 +5,27 @@ import java.util.Queue;
 
 public class ReachNumber {
     public static void main(String[] args) {
-        //int target = 3;
-        int target = 2;
+        int target = 3;
 
         System.out.println(Calculate(target));
     }
-    // Bfs approach to get the result
-    private static int Calculate(int num)
+    private static int Calculate(int target)
     {
-        int count = 0;
+        target = Math.abs(target);
 
-        Queue<Integer> queue = new LinkedList<>();
-        queue.add(0);
-        int step = 1;
-
-        while (!queue.isEmpty())
-        {
-            int n = queue.size();
-            for (int i = 0; i < n; i++) {
-                int polled = queue.poll();
-                if (polled == num)
-                {
-                    return count;
-                }
-                queue.add(polled+step);
-                queue.add(polled-step);
-            }
+        int step = 0;
+        int sum = 0;
+        while (sum < target) {
             step++;
-            count++;
+            sum += step;
         }
-        return count;
+
+        if ((sum - target) %2 != 0)
+        {
+            step++;
+            sum += step;
+        }
+
+        return step;
     }
 }

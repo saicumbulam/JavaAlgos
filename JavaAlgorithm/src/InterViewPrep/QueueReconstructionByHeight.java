@@ -16,6 +16,7 @@ public class QueueReconstructionByHeight {
 
     private static void Calculate(int[][] arr)
     {
+
         Arrays.sort(arr, new Com());
     }
 

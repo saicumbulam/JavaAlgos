@@ -13,33 +13,30 @@ public class MaximizeCapital {
     }
 
     private static int Calculate(int[] capitals, int[] profits, int initCapital, int numProj) {
-        // This is a minHeap for capital and maxHeap for profit.
-        PriorityQueue<Integer> minCapital = new PriorityQueue<>((a, b) -> capitals[a] - capitals[b]);
-        PriorityQueue<Integer> maxProfit = new PriorityQueue<>((a, b) -> profits[b] - profits[a]);
+        PriorityQueue<Integer> minCapital = new PriorityQueue<>((a,b) -> capitals[a] - capitals[b]);
+        PriorityQueue<Integer> maxProfits = new PriorityQueue<>((a,b) -> profits[b] - profits[a]);
 
         for (int i = 0; i < capitals.length; i++) {
             minCapital.add(i);
         }
 
-        // Dont forget that priorityQueue has index inside it
-        int avialCapital = initCapital;
+        int availCapital = initCapital;
+
         for (int i = 0; i < numProj; i++) {
-            while (!minCapital.isEmpty() && capitals[minCapital.peek()] <= avialCapital)
+            while (!minCapital.isEmpty() && capitals[minCapital.peek()] <= availCapital)
             {
-                maxProfit.add(minCapital.poll());
+                maxProfits.add(minCapital.poll());
             }
 
-            if (maxProfit.isEmpty())
+            if (maxProfits.isEmpty())
             {
                 break;
             }
 
-            // this is a cumulative sum.
-            avialCapital += profits[maxProfit.poll()];
+            availCapital += profits[maxProfits.peek()];
         }
 
-        return avialCapital;
-
+        return availCapital;
     }
 
 

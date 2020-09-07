@@ -1,26 +1,35 @@
 package Leetcode.Misc.Medium;
 
 import java.util.HashMap;
-import java.util.Map;
 
 public class LRUCache {
     static class Node
     {
-        int val;
         int key;
-        Node next;
+        int val;
         Node prev;
+        Node next;
 
-        public Node(int val, int key) {
-            this.val = val;
+        public Node(int key, int val) {
             this.key = key;
+            this.val = val;
         }
     }
 
-    static class DoublyLinkedList
+    static class DoubleLinkedList
     {
         Node head;
         Node tail;
+
+        public DoubleLinkedList()
+        {
+        }
+
+
+        public boolean isEmpty()
+        {
+            return head == null && tail == null;
+        }
 
         public void push(Node n)
         {
@@ -38,71 +47,80 @@ public class LRUCache {
             head = n;
         }
 
-        public void remove(Node n)
+        public void remove(Node node)
         {
-            if (n == head)
+            if (head == node)
             {
                 head = head.next;
             }
 
-            if (n == tail)
+            else if (tail == node)
             {
                 tail = tail.prev;
             }
 
-            if (n.next != null)
+            else if (node.next != null)
             {
-                n.next.prev = n.prev;
+                node.next.prev = node.prev;
             }
 
-            if (n.prev != null)
+            else if (node.prev != null)
             {
-                n.prev.next = n.next;
+                node.prev.next = node.next;
             }
+
         }
     }
 
-    static Map<Integer, Node> hashMap = new HashMap<>();
-    static int capacity;
-    static  DoublyLinkedList dll = new DoublyLinkedList();
-
-    public LRUCache(int key)
+    static class LRU
     {
-        capacity = key;
-    }
+        HashMap<Integer, Node> cache = new HashMap<>();
+        DoubleLinkedList dll = new DoubleLinkedList();
+        int capacity;
 
-    public static int get(int key)
-    {
-        if (hashMap.containsKey(key))
-        {
-            Node n = hashMap.get(key);
-            dll.remove(n);
-            dll.push(n);
+        public LRU(int capacity){ this.capacity = capacity; }
+
+        public int get(int key) {
+            if (cache.containsKey(key))
+            {
+                Node newNode = cache.get(key);
+                dll.remove(newNode);
+                dll.push(newNode);
+                return newNode.val;
+            }
+            return -1;
         }
 
-        return -1;
-    }
+        public void put(int key, int value) {
 
-    public static void put(int key, int value)
-    {
-        if (hashMap.containsKey(key))
-        {
-            dll.remove(hashMap.get(key));
+            if (cache.containsKey(key))
+            {
+                dll.remove(cache.get(key));
+            }
+            else if (cache.size() >= capacity)
+            {
+                Node tail = dll.tail;
+                dll.remove(tail);
+                cache.remove(tail.key);
+            }
+
+            Node temp = new Node(key, value);
+            dll.push(temp);
+            cache.put(key, temp);
         }
-        else if (hashMap.size() >= capacity)
-        {
-            Node lru = dll.tail;
-            dll.remove(lru);
-            hashMap.remove(lru);
-        }
-
-        Node newNode = new Node(key, value);
-        dll.push(newNode);
-        hashMap.put(key, newNode);
     }
-
 
     public static void main(String[] args) {
+        LRU cache = new LRU( 2 );
 
+        cache.put(1, 1);
+        cache.put(2, 2);
+        System.out.println(cache.get(1));       // returns 1
+        cache.put(3, 3);    // evicts key 2
+        System.out.println(cache.get(2));       // returns -1 (not found)
+        cache.put(4, 4);    // evicts key 1
+        System.out.println(cache.get(1));       // returns -1 (not found)
+        System.out.println(cache.get(3));       // returns 3
+        System.out.println(cache.get(4));       // returns 4
     }
 }

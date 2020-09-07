@@ -50,14 +50,8 @@ public class ThreeSum {
                     right--;
                 }
             }
-            else if (currSum < target)
-            {
-                left++;
-            }
-            else
-            {
-                right--;
-            }
+            else if (currSum < target) left++;
+            else right--;
         }
     }
 }

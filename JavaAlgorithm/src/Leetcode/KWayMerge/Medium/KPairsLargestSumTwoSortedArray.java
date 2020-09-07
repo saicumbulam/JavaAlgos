@@ -31,24 +31,31 @@ public class KPairsLargestSumTwoSortedArray {
 
     private static List<List<Integer>> Calculate(int[] l1, int[] l2, int k)
     {
-        PriorityQueue<Element> minHeap = new PriorityQueue<>((a,b) -> a.sum-b.sum);
+
+        List<List<Integer>> result = new ArrayList<>();
+        PriorityQueue<Element> minHeap = new PriorityQueue<>((a,b) -> a.sum - b.sum);
+
         for (int i = 0; i < l1.length; i++) {
             for (int j = 0; j < l2.length; j++) {
                 int sum = l1[i] + l2[j];
+                if (!minHeap.isEmpty() && sum < minHeap.peek().sum && minHeap.size() >= k)
+                {
+                    continue;
+                }
                 minHeap.add(new Element(sum, l1[i], l2[j]));
-                if(minHeap.size() > k)
+                if (minHeap.size() > k)
                 {
                     minHeap.poll();
                 }
             }
         }
 
-        List<List<Integer>> result = new ArrayList<>();
         while (!minHeap.isEmpty())
         {
-            Element polled = minHeap.poll();
-            result.add(Arrays.asList(polled.i, polled.j));
+            Element e = minHeap.poll();
+            result.add(Arrays.asList(e.i, e.j));
         }
+
         return result;
     }
 

@@ -1,7 +1,10 @@
 /*
 There are two cases to consider:
 
-First, the second character of p is *, now p string can match any number of character before *. if(isMatch(s, p.substring(2)) means we can match the remaining s string, otherwise, we check if the first character matches or not.
+First, the second character of p is *,
+now p string can match any number of character before *.
+if(isMatch(s, p.substring(2)) means we can match the remaining s string,
+otherwise, we check if the first character matches or not.
 
 Second, if the second character is not *, we need match character one by one.
 * */

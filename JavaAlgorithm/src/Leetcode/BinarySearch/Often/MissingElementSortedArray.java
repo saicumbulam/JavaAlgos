@@ -14,21 +14,24 @@ public class MissingElementSortedArray {
     }
 
     public static int Calculate(int[] nums, int k) {
-        int start = 0;
-        int end = nums.length - 1;
+        int left = 0, right = nums.length-1;
 
-        while(start <= end){
-            int mid = start + (end - start)/2;
+        while (left <= right)
+        {
+            int mid = left + (right - left)/2;
 
             int missing = nums[mid] - nums[0] - mid;
 
-            if(missing >= k){
-                end = mid - 1;
-            } else {
-                start = mid + 1;
+            if (missing >= k)
+            {
+                right = mid-1;
+            }
+            else
+            {
+                left = mid+1;
             }
         }
-        int missing = nums[end] - nums[0] - end;
-        return nums[end] + k - missing;
+        int missing = nums[right] - nums[0] - right;
+        return nums[right] + missing - k;
     }
 }

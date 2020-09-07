@@ -8,8 +8,8 @@ public class WordBreak2 {
     static List<List<String>> result = new ArrayList<>();
 
     public static void main(String[] args) {
-        //String s = "catsanddogs";
-        String s = "catsandog";
+        String s = "catsanddogs";
+        //String s = "catsandog";
         //String[] wordDict = {"cat", "cats", "and", "sand", "dog"};
         //String s = "pineapplepenapple";
         //String[] wordDict = {"apple", "pen", "applepen", "pine", "pineapple"};
@@ -20,35 +20,33 @@ public class WordBreak2 {
             dict.add(word);
         }
         HashMap<Integer, Boolean> map = new HashMap<>();
-        Calculate(s, dict, 0, map, new ArrayList<>());
+        Calculate(s, dict, 0, new ArrayList<>());
         System.out.println(result);
     }
 
-    private static void Calculate(String str, List<String> dict,
-                                          int start, HashMap<Integer,
-            Boolean> map, List<String> curr)
-    {
-        if (start == str.length()-1)
-        {
-            if (dict.contains(str.charAt(start)))
-            {
-                curr.add(String.valueOf(str.charAt(start)));
-            }
-        }
 
-        if (start >= str.length()-1)
+    private static void Calculate(String s, List<String> dict, int startIdx, List<String> curr)
+    {
+        if (startIdx >= s.length()) return;
+        
+        if (startIdx == s.length()-1)
         {
+            if (dict.contains(s.charAt(startIdx)))
+            {
+                curr.add(String.valueOf(s.charAt(startIdx)));
+            }
             result.add(new ArrayList<>(curr));
             return;
         }
 
-        for (int i = start; i <= str.length(); i++) {
-            String firstWord = str.substring(start, i);
-            if (dict.contains(firstWord)) {
-                curr.add(firstWord);
-                Calculate(str, dict, i, map, curr);
-                curr.remove(curr.size() - 1);
+        for (int i = startIdx; i < s.length(); i++) {
+            if (dict.contains(s.substring(startIdx, i)))
+            {
+                curr.add(s.substring(startIdx, i));
+                Calculate(s, dict, i, curr);
+                curr.remove(curr.size()-1);
             }
         }
     }
+
 }

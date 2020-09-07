@@ -2,6 +2,7 @@ package Leetcode.Array.Often;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 
 public class LargestRange {
@@ -11,41 +12,43 @@ public class LargestRange {
     }
     private static List<Integer> Calculate(int[] arr)
     {
-        List<Integer> result = new ArrayList<>();
-        HashMap<Integer, Boolean> map = new HashMap<>();
-        int maxLength = 0;
-
-        for (int num: arr
-             ) {
-            map.put(num, true);
-        }
+        HashSet<Integer> set = new HashSet<>();
 
         for (int item: arr
              ) {
-            int currentLength = 0;
-            int left = item-1;
-            int right = item+1;
-
-            while (map.containsKey(left))
-            {
-                map.put(left, false);
-                currentLength++;
-                left--;
-            }
-            while (map.containsKey(right))
-            {
-                map.put(right, false);
-                currentLength++;
-                right++;
-            }
-
-            if (currentLength > maxLength)
-            {
-                maxLength = currentLength;
-                result.add(0, left+1);
-                result.add(1, right-1);
-            }
+            set.add(item);
         }
+
+        List<Integer> result = new ArrayList<>();
+        int maxLength = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            int i1 = arr[i]-1;
+            int i2 = arr[i]+1;
+
+            while (set.contains(i1))
+            {
+                i1--;
+            }
+            i1 +=1;
+
+            while (set.contains(i2))
+            {
+                i2++;
+            }
+            i2-=1;
+
+            if (maxLength < (i2 - i1))
+            {
+                result.clear();
+                maxLength = i2-i1;
+                result.add(0, i1);
+                result.add(0, i2);
+
+            }
+
+        }
+
         return result;
     }
 }

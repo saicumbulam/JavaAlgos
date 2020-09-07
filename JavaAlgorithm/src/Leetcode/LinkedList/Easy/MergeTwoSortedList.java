@@ -52,14 +52,8 @@ public class MergeTwoSortedList {
             resultTail = resultTail.next;
         }
 
-        if (list1 != null)
-        {
-            resultTail.next = list1;
-        }
-        if (list2 != null)
-        {
-            resultTail.next = list2;
-        }
+        if (list1 != null) resultTail.next = list1;
+        if (list2 != null) resultTail.next = list2;
         return resultHead;
 
     }

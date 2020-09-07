@@ -8,33 +8,19 @@ public class GetRotationsCountArray {
 
     private static int Calculate(int[] arr)
     {
-        // if there is only one element in the array
-        if (arr.length == 1)
-        {
-            return arr[0];
-        }
-
-
         int left = 0, right = arr.length-1;
-
-        // if the array is already sorted, the left will be smaller than right.
-        //  return the left element
-        if (arr[right] > arr[left])
-        {
-            return arr[left];
-        }
 
         while (left <= right)
         {
             int mid = left + (right - left)/2;
 
-            if (arr[mid-1] > arr[mid])
-            {
-                return arr[mid];
-            }
             if (arr[mid] > arr[mid+1])
             {
-                return arr[mid+1];
+                return mid+1;
+            }
+            if (arr[mid-1] > arr[mid])
+            {
+                return mid;
             }
 
             if (arr[left] < arr[mid])
