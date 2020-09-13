@@ -9,6 +9,7 @@ public class IncreasingTripletSequence {
 
     private static boolean Calculate(int[] nums)
     {
+
         return Finder(nums, -1, 0) >= 3;
     }
 
@@ -30,3 +31,4 @@ public class IncreasingTripletSequence {
         return Math.max(c1, c2);
     }
 }
+

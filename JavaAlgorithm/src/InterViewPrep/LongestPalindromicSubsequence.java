@@ -19,7 +19,7 @@ public class LongestPalindromicSubsequence {
 
         if (str.charAt(startIdx) == str.charAt(endIdx))
         {
-            return 1 +  Calculate(str, startIdx+1, endIdx-1);
+            return 2 +  Calculate(str, startIdx+1, endIdx-1);
         }
 
         int c1 = Calculate(str, startIdx+1, endIdx);

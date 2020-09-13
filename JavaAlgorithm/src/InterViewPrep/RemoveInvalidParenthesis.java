@@ -16,70 +16,64 @@ import java.util.Queue;
 public class RemoveInvalidParenthesis {
     public static void main(String[] args) {
         //String str = "()())()";
-        //String str = "(a)())()";
-        String str = ")(";
+        String str = "(a)())()";
+        //String str = ")(";
         Calculate(str);
     }
 
     private static void Calculate(String str)
     {
         Queue<String> queue = new LinkedList<>();
-        boolean level = false;
-        HashSet<String> set = new HashSet<>();
         queue.add(str);
-        set.add(str);
+        HashSet<String> set = new HashSet<String>();
+        boolean level = false;
 
-        while(!queue.isEmpty())
+        while (!queue.isEmpty())
         {
             String polled = queue.poll();
-            if (isValidString(polled))
+
+            if(isValidString(polled))
             {
                 System.out.println(polled);
                 level = true;
             }
-            if (level)
-                continue;
 
-            for (int i = 0; i < str.length(); i++) {
-                if (!isParenthesis(str.charAt(i)))
-                {
+            if(level) continue;
+
+            for (int i = 0; i < polled.length(); i++) {
+                if (!isParenthesis(polled.charAt(i)))
                     continue;
-                }
 
-                String temp = str.substring(0,i) + str.substring(i+1); // remove the current parenthesis
-                if (!set.contains(temp))
+                String strs = polled.substring(0,i) + polled.substring(i+1);
+                if(!set.contains(strs))
                 {
-                    queue.add(temp);
-                    set.add(temp);
+                    set.add(strs);
+                    queue.add(strs);
                 }
             }
-
         }
     }
 
-    private static boolean isValidString(String str) {
+    private static boolean isParenthesis(Character c)
+    {
+        return ( c == '(') || (c == ')');
+    }
+    private static boolean isValidString(String str)
+    {
         int count = 0;
+
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == '(')
+            if(str.charAt(i) == '(')
             {
                 count++;
             }
-            else if (str.charAt(i) == ')')
+            else if(str.charAt(i) == ')')
             {
                 count--;
-            }
-            //This condition is important to ignore ()())( brackets
-            if (count < 0)
-            {
-                return false;
+                if(count < 0) return false;
             }
         }
 
         return count == 0;
-    }
-
-    private static boolean isParenthesis(char c)
-    {
-        return c == ')' || c == '(';
     }
 }

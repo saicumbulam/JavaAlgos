@@ -13,13 +13,12 @@ public class Sqrt {
             return x;
         }
 
-        long num = 0;
         int pivot = 0;
         int left = 2, right = x/2;
         while (left <= right)
         {
             pivot = left+(right - left)/2;
-            num = pivot*pivot;
+            long num = (long) pivot*pivot;
             if(num > x)
             {
                 right = pivot-1;

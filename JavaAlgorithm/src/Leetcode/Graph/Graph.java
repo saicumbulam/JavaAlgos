@@ -4,7 +4,7 @@ import Leetcode.LinkedList.DoubleLinkedList;
 
 public class Graph {
     public int vertices;
-    public DoubleLinkedList adjacencyList[];
+    public DoubleLinkedList[] adjacencyList;
 
     public Graph(int vertices)
     {

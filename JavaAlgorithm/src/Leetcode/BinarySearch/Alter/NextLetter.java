@@ -12,15 +12,17 @@ public class NextLetter {
 
     private static char Calculate(char[] chars, char target)
     {
-        int left = 0, right = chars.length-1;
-        if (chars[left] > target || target > chars[right])
+
+        if (target < chars[0] || target > chars[chars.length-1])
         {
             return chars[0];
         }
+        int left = 0, right = chars.length-1;
 
-        while (left < right)
+        while (left <= right)
         {
-            int mid = left + (right-left)/2;
+            int mid = left + (right - left)/2;
+
             if (chars[mid] > target)
             {
                 right = mid-1;
@@ -30,7 +32,6 @@ public class NextLetter {
                 left = mid+1;
             }
         }
-
         return chars[left];
     }
 }

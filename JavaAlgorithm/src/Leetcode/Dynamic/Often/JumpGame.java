@@ -1,51 +1,50 @@
 package Leetcode.Dynamic.Often;
 
+import java.util.HashMap;
+
 public class JumpGame {
+    static HashMap<Integer, Integer> map = new HashMap<>();
+
     public static void main(String[] args) {
         int[] nums = {2,3,1,1,4};
-        System.out.println(Calculate(nums));
+        System.out.println(Calculate(nums, 0));
     }
 
-    private static boolean Calculate(int[] nums)
+    private static int Calculate(int[] nums, int index)
     {
-        int[] dp = new int[nums.length];
-        int minJumps = Finder(nums, 0, dp);
-        if (minJumps == Integer.MAX_VALUE)
+        if(map.containsKey(index))
         {
-            return false;
-        }
-        return true;
-    }
-
-    private static int Finder(int[] nums, int currentIndex, int[] dp)
-    {
-        if (currentIndex == nums.length-1)
-        {
-            return 0;
+            return map.get(index);
         }
 
-        if (nums[currentIndex] == 0)
+        if(index == nums.length-1)
         {
-            return Integer.MAX_VALUE;
+            map.put(index, 0);
         }
 
-        if (dp[currentIndex] == 0)
+        else if(nums[index] == 0)
+        {
+            map.put(index, Integer.MAX_VALUE);
+        }
+        else
         {
             int totalJumps = Integer.MAX_VALUE;
-            int start = currentIndex+1;
-            int end = currentIndex + nums[currentIndex];
+            int start = index+1;
+            int end = index + nums[index];
 
-            while (start < nums.length && start <= end)
+            while(start < nums.length && start <= end)
             {
-                int minJumps = Finder(nums, start++, dp);
-                if (minJumps != Integer.MAX_VALUE)
+                int minJumps = Calculate(nums, start++);
+                if(minJumps != Integer.MAX_VALUE)
                 {
                     totalJumps = Math.min(totalJumps, minJumps+1);
                 }
-                dp[currentIndex] = totalJumps;
             }
+
+            map.put(index, totalJumps);
         }
 
-        return dp[currentIndex];
+        return map.get(index);
     }
+
 }

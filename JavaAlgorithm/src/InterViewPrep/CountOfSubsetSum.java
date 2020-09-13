@@ -15,14 +15,15 @@ public class CountOfSubsetSum {
             dp[i][0] = 1;
         }
 
-        for (int s = 1; s <= sum; s++) {
+        for (int s = 1; s <= sum ; s++) {
             dp[0][s] = arr[0] == s ? 1 : 0;
         }
 
         for (int i = 1; i < arr.length; i++) {
-            for (int s = 1; s <= sum; s++) {
-                dp[i][s] += dp[i-1][s];
-                if (s >= arr[i])
+            for (int s = 1; s <= sum ; s++) {
+                dp[i][s] = dp[i-1][s];
+
+                if(s >= arr[i])
                 {
                     dp[i][s] += dp[i-1][s - arr[i]];
                 }

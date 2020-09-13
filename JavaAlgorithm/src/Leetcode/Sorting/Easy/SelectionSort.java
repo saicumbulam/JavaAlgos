@@ -11,27 +11,19 @@ public class SelectionSort {
 
     private static void Calculate(int[] arr)
     {
-        int minIdx = 0;
+        for (int i = 0; i < arr.length-1; i++) {
+            int minIdx = i;
 
-        for (int i = 0; i < arr.length; i++) {
-            minIdx = FindMin(arr,i, arr.length-1);
+            for (int j = i+1; j < arr.length; j++) {
+                if (arr[j] < arr[minIdx])
+                {
+                    minIdx = j;
+                }
+            }
 
             int temp = arr[i];
             arr[i] = arr[minIdx];
             arr[minIdx] = temp;
         }
-    }
-
-    private static int FindMin(int[] arr, int start, int end)
-    {
-        if (end <= 0 || start < 0)
-            return 0;
-
-        int minInd = start;
-        for (int i = start + 1; i <= end; i++) {
-            if (arr[minInd] > arr[i])
-                minInd = i;
-        }
-        return minInd;
     }
 }

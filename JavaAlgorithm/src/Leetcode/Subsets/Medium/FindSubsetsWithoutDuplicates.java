@@ -10,25 +10,26 @@ public class FindSubsetsWithoutDuplicates {
     }
 
     private static List<List<Integer>> Calculate(int[] nums) {
-        List<List<Integer>> result = new ArrayList<>();
-        result.add(new ArrayList<>());
+        List<List<Integer>> lists = new ArrayList<>();
+        lists.add(new ArrayList<>());
 
-        int startIndex = 0, endIndex = 0;
-        for (int i = 0; i < nums.length; i++) {
-            startIndex = 0;
+        int startIdx = 0, endIdx=0;
+        for (int i = 0; i < nums.length; i++
+             ) {
+            startIdx = 0;
 
-            if (i > 0 && nums[i] == nums[i - 1]) {
-                startIndex = endIndex + 1;
+            if(i > 0 && nums[i] == nums[i-1])
+            {
+                startIdx = endIdx;
             }
-            endIndex = result.size() - 1;
-
-            for (int k = startIndex; k <= endIndex; k++) {
-                List<Integer> list = new ArrayList<>(result.get(k));
-                list.add(nums[i]);
-                result.add(list);
+            endIdx = lists.size();
+            for (int j = startIdx; j < endIdx ; j++) {
+                List<Integer> oldList = new ArrayList<>(lists.get(j));
+                oldList.add(nums[i]);
+                lists.add(oldList);
             }
         }
 
-        return result;
+        return lists;
     }
 }

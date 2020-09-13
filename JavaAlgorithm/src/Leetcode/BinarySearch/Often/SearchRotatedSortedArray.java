@@ -11,8 +11,8 @@ public class SearchRotatedSortedArray {
 
 
     public static void main(String[] args) {
-        //int[] nums = {4,5,6,7,0,1,2};
-        int[] nums = {10,6,4};
+        int[] nums = {4,5,6,7,0,1,2};
+        //int[] nums = {10,6,4};
         //int target = 2;
         int target = 10;
         System.out.println(Calculate(nums, target));
@@ -26,15 +26,13 @@ public class SearchRotatedSortedArray {
         {
             int mid = left + (right - left)/2;
 
-            if (nums[mid] == target)
+            if(nums[mid] == target)
             {
                 return mid;
             }
 
-            if (nums[left] <= nums[mid]) // ascending part
+            if (nums[left] <= nums[mid])
             {
-                //always first is the >=
-                // mid doesn't contain equal to signs.
                 if (target >= nums[left] && target < nums[mid])
                 {
                     right = mid-1;
@@ -46,7 +44,7 @@ public class SearchRotatedSortedArray {
             }
             else
             {
-                if (target > nums[mid] && target <= nums[right])
+                if (target <= nums[right] && target > nums[mid])
                 {
                     left = mid+1;
                 }

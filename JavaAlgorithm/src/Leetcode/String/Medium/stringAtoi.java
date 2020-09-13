@@ -7,7 +7,7 @@ public class stringAtoi {
 
         char flag = '+';
         int  i = 0;
-        if (i < str.length() && str.charAt(i) == '-')
+        if (str.charAt(i) == '-')
         {
             flag = '-';
             i++;

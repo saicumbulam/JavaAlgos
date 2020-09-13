@@ -21,33 +21,28 @@ public class SubArrayProductLesserThanTarget {
     public static void main(String[] args) {
         int[] arr = {2, 5, 3, 10};
         int target = 30;
-        System.out.println(Calculate(arr, target));
+        //System.out.println(Calculate(arr, target));
+        System.out.println(Calculater(arr, target));
     }
 
-    private static List<List<Integer>> Calculate(int[] arr, int target)
+    private static List<List<Integer>> Calculater(int[] arr, int target)
     {
-        Arrays.sort(arr);
         List<List<Integer>> result = new ArrayList<>();
-        int product = 1;
-        int left = 0;
 
-        for (int right = 0; right < arr.length; right++) {   // this is O(N) => for loop
-            product *= arr[right];
-
-            while (left < arr.length && product >= target)
+        int windowStart = 0, product = 1;
+        for (int windowEnd = 0; windowEnd < arr.length; windowEnd++) {
+            product *= arr[windowEnd];
+            while (product >= target && windowStart < arr.length)
             {
-                product /= arr[left];
-                left++;
+                product /= arr[windowStart++];
             }
 
-            List<Integer> temp = new ArrayList<>();   // creating subsets is O(N^2)
-
-            for (int i = right; i >= left; i--) { // this should be right to left to get o/p without duplicates
-                temp.add(arr[i]);
-                result.add(new ArrayList<>(temp));
+            List<Integer> tempList = new ArrayList<>();
+            for (int i = windowEnd; i >= windowStart ; i--) {
+                tempList.add(0,arr[i]);
+                result.add(new ArrayList<>(tempList));
             }
         }
-
         return result;
     }
 }

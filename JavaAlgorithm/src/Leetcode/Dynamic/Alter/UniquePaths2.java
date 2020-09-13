@@ -14,30 +14,37 @@ package Leetcode.Dynamic.Alter;
 public class UniquePaths2 {
     public static void main(String[] args) {
         int[][] arr = {{0,0,0},{0,1,0},{0,0,0}};
-        int m = arr.length;
-        int n = arr[0].length;
+        System.out.println(Calc(arr));
+    }
 
-        int[][] dp = new int[m][n];
+    private static int Calc(int[][] arr)
+    {
+        if(arr[0][0] == 1) return 0;
 
-        for (int i = 0; i < m; i++) {
-            if (arr[i][0] != 1)
-                dp[i][0] = 1;
+        arr[0][0] = 1;
+
+        // Filling the values for the first column
+        for (int i = 1; i < arr.length; i++) {
+            arr[i][0] = (arr[i][0] == 0 && arr[i - 1][0] == 1) ? 1 : 0;
         }
 
-        for (int i = 0; i < n; i++) {
-            if (arr[0][i] != 1)
-                dp[0][i] = 1;
+        // Filling the values for the first row
+        for (int i = 1; i < arr[0].length; i++) {
+            arr[0][i] = (arr[0][i] == 0 && arr[0][i - 1] == 1) ? 1 : 0;
         }
 
-        for (int i = 1; i < m; i++) {
-            for (int j = 1; j < n; j++) {
-                if (arr[i][j] != 1)
-                {
-                    dp[i][j] = dp[i-1][j] + dp[i][j-1];
+        // i.e. From above and left.
+        for (int i = 1; i < arr.length; i++) {
+            for (int j = 1; j < arr[0].length; j++) {
+                if (arr[i][j] == 0) {
+                    arr[i][j] = arr[i - 1][j] + arr[i][j - 1];
+                } else {
+                    arr[i][j] = 0;
                 }
             }
         }
 
-        System.out.println(dp[m-1][n-1]);
+        // Return value stored in rightmost bottommost cell. That is the destination.
+        return arr[arr.length - 1][arr[0].length - 1];
     }
 }

@@ -7,13 +7,9 @@ import java.util.Stack;
 public class NextGreaterNodeLinkedList {
     public static void main(String[] args) {
         //1,7,5,1,9,2,5,1
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(7);
+        ListNode head = new ListNode(2);
+        head.next = new ListNode(1);
         head.next.next = new ListNode(5);
-        head.next.next.next = new ListNode(1);
-        head.next.next.next.next = new ListNode(9);
-        head.next.next.next.next.next = new ListNode(2);
-        head.next.next.next.next.next.next = new ListNode(5);
         int[] result = NextLargerNodes(head);
 
         for (int i = 0; i < result.length; i++)
@@ -27,7 +23,8 @@ public class NextGreaterNodeLinkedList {
         Stack<Integer> stack = new Stack<>();
         int length = GetLength(head);
         int[] result = new int[length];
-        int index = 0;
+        int index = result.length-1;
+
 
         ListNode current = Reverse(head);
         while (current != null)
@@ -37,15 +34,9 @@ public class NextGreaterNodeLinkedList {
                 stack.pop();
             }
 
-            if (stack.isEmpty())
-            {
-                result[index++] = 0;
-            }
-            else
-            {
-                result[index++] = stack.peek();
-            }
+            result[index--] = stack.isEmpty() ? 0: stack.peek();
             stack.push(current.value);
+            current = current.next;
         }
 
         return result;

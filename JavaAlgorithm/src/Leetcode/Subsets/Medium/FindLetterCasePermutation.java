@@ -4,7 +4,9 @@ output: [ad52, Ad52, aD52, AD52]
 package Leetcode.Subsets.Medium;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class FindLetterCasePermutation {
     public static void main(String[] args) {
@@ -17,22 +19,25 @@ public class FindLetterCasePermutation {
         result.add(str);
 
         for (int i = 0; i < str.length(); i++) {
-            // Check to see if its a letter.
-            if(Character.isLetter(str.charAt(i)))
+            if(!Character.isDigit(str.charAt(i)))
             {
                 int n = result.size();
-                // < n. if its <= n then duplicates will come
                 for (int j = 0; j < n; j++) {
-                    char[] strArray = result.get(j).toCharArray();
-                    if(Character.isUpperCase(strArray[i]))
+                    String polled = result.get(j);
+                    char[] charArray = polled.toCharArray();
+
+                    if(Character.isUpperCase(charArray[i]))
                     {
-                        strArray[i] = Character.toLowerCase(strArray[i]);
+                        charArray[i] = Character.toLowerCase(charArray[i]);
                     }
                     else
                     {
-                        strArray[i] = Character.toUpperCase(strArray[i]);
+                        charArray[i] = Character.toUpperCase(charArray[i]);
                     }
-                    result.add(String.valueOf(strArray));
+
+                    polled = String.valueOf(charArray);
+
+                    result.add(polled);
                 }
             }
         }

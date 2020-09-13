@@ -8,13 +8,14 @@ public class MaximumSubArray {
 
     public static int Calculate(int[] arr)
     {
-        int curSum = arr[0];
-        int maxSum = arr[0];
+        //[6,-100,6,6]
+        int curSum = arr[0]; //6
+        int maxSum = arr[0]; //6
 
         // it should be iterated from 1
         for (int i = 1; i < arr.length; i++) {
-            curSum = Math.max(arr[i], curSum+arr[i]);
-            maxSum = Math.max(curSum, maxSum);
+            curSum = Math.max(arr[i], curSum+arr[i]); //max(6, 6+6) => 12
+            maxSum = Math.max(curSum, maxSum); // 12
         }
         return maxSum;
     }

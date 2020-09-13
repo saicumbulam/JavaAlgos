@@ -12,10 +12,6 @@ public class MergeSort {
 
     private static void Calculate(int[] arr, int low, int high)
     {
-        if (low < 0 || high < 0)
-        {
-            return;
-        }
 
         if (high > low)
         {

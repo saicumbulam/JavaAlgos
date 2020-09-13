@@ -9,49 +9,50 @@ public class MostCommonWord {
     public static void main(String[] args) {
         String str = "Bob hit a ball, the hit BALL flew far after it was hit.";
         String[] banned = {"hit"};
-        System.out.println(Calculate(str.toLowerCase(), banned));
+        List<String> bannedList = new ArrayList<>();
+        for(String item: banned)
+        {
+            bannedList.add(item);
+        }
+
+        System.out.println(Calculate(str.toLowerCase(), bannedList));
     }
 
-    private static String Calculate(String str, String[] banned)
+    private static String Calculate(String paragraph, List<String> bannedList)
     {
-        String ans = "";
-        int ansCount = 0;
-        List<String> bann = new ArrayList<>(Arrays.asList(banned));
-        HashMap<String, Integer> map = new HashMap<>();
-        String word = "";
+        int i = 0, j = 0, maxFreq = 0;
+        String result = "";
 
-        for (int i = 0; i < str.length(); i++) {
-            if (Character.isLetter(str.charAt(i)))
+        HashMap<String, Integer> map = new HashMap<>();
+
+        paragraph = paragraph.toLowerCase();
+
+        while(j < paragraph.length())
+        {
+            while (j < paragraph.length() && Character.isLetter(paragraph.charAt(j)))
             {
-                word += str.charAt(i);
+                j++;
             }
-            else if (word.length() > 0)
+
+            if (j - i +1 > 0)
             {
-                if (!bann.contains(word))
+                String word = paragraph.substring(i, j);
+                if(!bannedList.contains(word) && !word.equals(""))
                 {
-                    map.put(word, map.getOrDefault(word, 0) + 1);
-                    if (map.get(word) > ansCount)
+                    map.put(word, map.getOrDefault(word, 0)+1);
+                    if(map.get(word) > maxFreq)
                     {
-                        ans = word;
-                        ansCount = map.get(word);
+                        maxFreq = map.get(word);
+                        result = word;
                     }
                 }
-                word = "";
             }
+
+            j++;
+            i = j;
         }
 
+        return result;
 
-        if (!word.equals("") && !bann.contains(word))
-        {
-            map.put(word, map.getOrDefault(word, 0) + 1);
-
-            if (map.get(word) > ansCount)
-            {
-                ansCount = map.get(word);
-                ans = word;
-            }
-        }
-
-        return ans;
     }
 }

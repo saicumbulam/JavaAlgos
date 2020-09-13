@@ -14,16 +14,12 @@ public class MaximumProductSubArray {
 
         for (int i = 1; i < nums.length; i++) {
             int temp = currMax;
+            currMax = Math.max(nums[i], Math.max(temp*nums[i], currMin*nums[i]));
+            currMin = Math.min(nums[i], Math.min(temp*nums[i], currMin*nums[i]));
 
-            currMax = Math.max(Math.max(
-                    temp* nums[i], currMin * nums[i]),
-                    nums[i]);
-
-            currMin = Math.min(Math.min(temp* nums[i],
-                    currMin * nums[i]), nums[i]);
-
-            finalMax = Math.max(currMax, finalMax);
+            finalMax = Math.max(finalMax,currMax);
         }
+
         return finalMax;
     }
 }

@@ -11,23 +11,17 @@ public class MultipleMissingNumbers {
 
     private static List<Integer> Calculate(int[] arr)
     {
-        List<Integer> result = new ArrayList<>();
+        List<Integer> list = new ArrayList<>();
 
         for (int i = 0; i < arr.length; i++) {
-            int j = Math.abs(arr[i]) - 1;
-            if (arr[j] > 0)
-            {
-                arr[j] *= -1;
-            }
+            int j = Math.abs(arr[i])-1;
+            if(arr[j] > 0) arr[j] *= -1;
         }
 
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > 0)
-            {
-                result.add(i+1);
-            }
+            if(arr[i] > 0) list.add(i+1);
         }
 
-        return result;
+        return list;
     }
 }

@@ -16,42 +16,40 @@ public class ShortestDistanceCharacter {
 
     private static int[] Calculate(String str, Character c)
     {
-        int[] ans = new int[str.length()];
+        int[] result = new int[str.length()];
         Queue<Integer> queue = new LinkedList<>();
-        int pre = -1;
 
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == c)
-            {
-                queue.add(i);
-            }
+            if (str.charAt(i) == c) queue.add(i);
         }
+        int previous = -1;
 
         for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) != c)
+            if(c != str.charAt(i))
             {
                 if(!queue.isEmpty())
                 {
-                    if (pre != -1)
+                    if (previous != -1)
                     {
-                        ans[i] = Math.min(queue.peek()-i, i - pre); //Math.min(future, previous index)
+                        result[i] = Math.min(queue.peek()-i, i - previous); //Math.min(future, previous index)
                     }
                     else {
-                        ans[i] = queue.peek()-i;  // future index
+                        result[i] = queue.peek()-i;  // future index
                     }
                 }
                 else
                 {
-                    ans[i] = i - pre;
+                    result[i] = i - previous;
                 }
             }
             else
             {
-                ans[i] = 0;
-                pre = i;
-                queue.poll(); // poll future index
+                result[i] = 0;
+                previous = i;
+                queue.poll();
             }
         }
-        return ans;
+
+        return result;
     }
 }

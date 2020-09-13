@@ -1,4 +1,4 @@
-package Leetcode.Medium;
+package Leetcode.TopKElements.Medium;
 
 import java.util.*;
 
@@ -27,14 +27,14 @@ public class TopKFrequentWords {
         {
             if (e1.frequency != e2.frequency)
             {
-                return e2.frequency - e1.frequency;
+                return e1.frequency - e2.frequency;
             }
             return e1.element.compareTo(e2.element);
         }
     }
 
     public static List<String> topKFrequent(String[] words, int k) {
-        PriorityQueue<Element> maxHeap = new PriorityQueue<>(new ElementCompare());
+        PriorityQueue<Element> minHeap = new PriorityQueue<>(new ElementCompare());
 
         HashMap<String, Integer> map = new HashMap<>();
         for (int i = 0; i < words.length; i++)
@@ -48,14 +48,21 @@ public class TopKFrequentWords {
             list.add(new Element(entry.getKey(), entry.getValue()));
         }
 
-        maxHeap.addAll(list);
+
+        for (Element e: list
+             ) {
+            minHeap.add(e);
+            if (minHeap.size() > k)
+            {
+                minHeap.poll();
+            }
+        }
         List<String> result = new ArrayList<>();
 
-        while (!maxHeap.isEmpty() && k > 0)
+        while (!minHeap.isEmpty())
         {
-            Element polled = maxHeap.poll();
+            Element polled = minHeap.poll();
             result.add(polled.element);
-            k--;
         }
 
         return result;

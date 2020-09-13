@@ -8,8 +8,8 @@ import java.util.Stack;
 public class SortStack {
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>();
-        stack.push(5);
         stack.push(4);
+        stack.push(5);
         stack.push(3);
         stack.push(2);
         stack.push(1);
@@ -27,16 +27,13 @@ public class SortStack {
 
         while (!stack.isEmpty())
         {
-            if (newStack.isEmpty() || stack.peek() > newStack.peek())
+            int value = stack.pop();
+
+            while (!newStack.isEmpty() && newStack.peek() < value)
             {
-                newStack.push(stack.pop());
+                stack.push(newStack.pop());
             }
-            else {
-                while (!newStack.isEmpty() && stack.peek() < newStack.peek())
-                {
-                    stack.push(newStack.pop());
-                }
-            }
+            newStack.push(value);
         }
 
         while (!newStack.isEmpty())

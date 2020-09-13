@@ -34,7 +34,7 @@ public class ShuffleArray {
     private static int[] Shuffle()
     {
         for (int i = 0; i < arr.length; i++) {
-            Swap(i, nextRand(i, arr.length));
+            Swap(i, nextRand(i, arr.length)); // arr.length is exclusive
         }
         return arr;
     }
