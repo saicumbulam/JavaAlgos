@@ -65,10 +65,6 @@ public class CountSmallerNumberAfterSelf {
         }
     }
 
-    public static void main(String[] args)
-    {
-        System.out.println(Calculate(new int[] {5,2,6}));
-    }
 
     private static List<Integer> Calculate(int[] arr)
     {
@@ -91,4 +87,10 @@ public class CountSmallerNumberAfterSelf {
         }
         return result;
     }
+
+    public static void main(String[] args)
+    {
+        System.out.println(Calculate(new int[] {5,2,6}));
+    }
+
 }

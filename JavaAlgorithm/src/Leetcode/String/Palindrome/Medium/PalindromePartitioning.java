@@ -21,7 +21,8 @@ public class PalindromePartitioning {
             return;
         }
         for (int i = start; i <= end ; i++) {
-            if(Ispalindrome(str, start, i))
+
+            if(ispalindrome(str, start, i))
             {
                 curr.add(str.substring(start, i+1));
                 Calculate(str, i+1, end,curr);
@@ -30,7 +31,7 @@ public class PalindromePartitioning {
         }
     }
 
-    private static boolean Ispalindrome(String str, int left, int right)
+    private static boolean ispalindrome(String str, int left, int right)
     {
         while (left < right)
         {

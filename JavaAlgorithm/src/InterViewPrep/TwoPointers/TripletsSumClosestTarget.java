@@ -35,24 +35,12 @@ public class TripletsSumClosestTarget {
             while (left < right)
             {
                 int targetDiff =target - arr[left] + arr[right] + arr[i];
-                if (targetDiff == 0)
-                {
-                    result.add(arr[left]);
-                    result.add(arr[right]);
-                    result.add(arr[i]);
-                    System.out.println(result);
-                    return target - targetDiff;
-                }
 
                 if (Math.abs(smallest) > Math.abs(targetDiff) ||
                         (Math.abs(smallest) == Math.abs(targetDiff) && targetDiff < smallest))
                 {
 
                     smallest = targetDiff;
-                    result.clear();
-                    result.add(arr[left]);
-                    result.add(arr[right]);
-                    result.add(arr[i]);
                 }
 
                 if (targetDiff > 0)
@@ -65,7 +53,6 @@ public class TripletsSumClosestTarget {
                 }
             }
         }
-        System.out.println(result);
         return target - smallest;
     }
 }

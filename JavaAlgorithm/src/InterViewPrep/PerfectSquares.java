@@ -1,6 +1,9 @@
 package InterViewPrep;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
 
 public class PerfectSquares {
     public static void main(String[] args) {
@@ -10,30 +13,45 @@ public class PerfectSquares {
 
     private static int Calculate(int n)
     {
-        int[] dp = new int[n+1];
-        dp[0] = 0;
-        for (int i = 1; i <= n; i++) {
-            dp[i] = Integer.MAX_VALUE;
-        }
-        int maxSquareIdx = (int)Math.sqrt(n)+1;
-        int[] squares = new int[maxSquareIdx];
+        List<Integer> squares = new ArrayList<>();
 
-        for(int i = 0; i < squares.length; i++)
+        for (int i = 1; i*i <= n; i++)
         {
-            squares[i] = i*i;
+            squares.add(i*i);
         }
 
-        for (int i = 1; i <= n; i++) {
-            for (int s = 1; s < squares.length; s++) {
-                if(i < squares[s])
+        HashSet<Integer> set = new HashSet<>();
+        set.add(n);
+
+        int level = 0;
+
+        while(set.size() > 0)
+        {
+            level++;
+            HashSet<Integer> nextSet = new HashSet<>();
+
+            for (int remainder : set)
+            {
+                for (int num: squares)
                 {
-                    break;
+                    if (remainder == num)
+                    {
+                        return level;
+                    }
+                    else if (num > remainder)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        nextSet.add(remainder - num);
+                    }
                 }
-
-                dp[i] = Math.min(dp[i], dp[i-squares[s]]+1);
             }
+
+            set = nextSet;
         }
 
-        return dp[n];
+        return level;
     }
 }

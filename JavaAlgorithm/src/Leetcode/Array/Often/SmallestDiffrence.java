@@ -1,48 +1,61 @@
 package Leetcode.Array.Often;
 
+import org.w3c.dom.Element;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.PriorityQueue;
 
 public class SmallestDiffrence {
     public static void main(String[] args) {
         int[] arr1 = {-1,5,10,20,28,3};
         int[] arr2 = {26,134,135,15,17};
-        int[] result = smallestDifference(arr1, arr2);
+        int[] result = Calculate(arr1, arr2);
         for (int item: result
              ) {
             System.out.println(item);
         }
     }
 
-    public static int[] smallestDifference(int[] arrayOne, int[] arrayTwo) {
+    // time: o(nlogn + mlogm), o(1) space
+    public static int[] Calculate(int[] arrayOne, int[] arrayTwo) {
         Arrays.sort(arrayOne);
         Arrays.sort(arrayTwo);
-        int i1 = 0, i2 = 0, smallest = Integer.MAX_VALUE;
-        int[] result = new int[2];
+        int idxOne = 0;
+        int idxTwo = 0;
 
-        while (i1 < arrayOne.length &&
-                i2 < arrayTwo.length )
+        int[] smallestPair = new int[2];
+        int smallest = Integer.MAX_VALUE;
+        int current = Integer.MAX_VALUE;
+
+        while(idxOne < arrayOne.length && idxTwo < arrayTwo.length)
         {
-            int sum = Math.abs(arrayOne[i1] - arrayTwo[i2]);
-            if (sum == 0)
+            int firstNum = arrayOne[idxOne];
+            int secondNum = arrayTwo[idxTwo];
+
+            if ( firstNum < secondNum)
             {
-                return new int[]{arrayOne[i1],arrayTwo[i2]};
+                current = secondNum - firstNum;
+                idxOne++;
             }
-            if (smallest > sum)
+            else if ( firstNum > secondNum)
             {
-                smallest = sum;
-                result[0] = arrayOne[i1];
-                result[1] = arrayTwo[i2];
+                current = firstNum - secondNum;
+                idxTwo++;
             }
-            if (arrayOne[i1] < arrayTwo[i2])
+            else
             {
-                i1++;
+                return new int[] {firstNum, secondNum};
             }
-            else if (arrayOne[i1] > arrayTwo[i2])
+
+            if (current < smallest)
             {
-                i2++;
+                smallest = current;
+                smallestPair = new int[] {firstNum, secondNum};
             }
         }
-        return result;
-    }
 
+        return smallestPair;
+    }
 }

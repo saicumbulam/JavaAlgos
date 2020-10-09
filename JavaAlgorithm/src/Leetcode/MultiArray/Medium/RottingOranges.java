@@ -2,14 +2,13 @@ package Leetcode.MultiArray.Medium;
 
 import javafx.util.Pair;
 
+import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class RottingOranges {
-    private static int[][] neigh = {{-1, 0}, {1, 0}, {0, 1}, {0, -1}};
-    private static int count = 0;
     public static void main(String[] args) {
-        int[][] arr = {{2,1,1},{1,1,0},{0,1,1}};
+        int[][] arr = {{2, 1, 1}, {1, 1, 0}, {0, 1, 1}};
         //int[][] arr = {{1,1,2,0,2,0}};
         //int[][] arr = {{2, 1, 1}, {0, 1, 1}, {1, 0, 1}};
         //int[][] arr = {{1,2,1,1,2,1,1}};
@@ -27,65 +26,43 @@ public class RottingOranges {
             this.col = col;
         }
     }
-    
-    private static int Calculate(int[][] grid) {
+    public static int Calculate(int[][] grid) {
+        Queue<Pair> queue = new LinkedList<>();
         int freshOranges = 0;
-        Queue<Pair> queue  = new LinkedList<>();
 
-        for (int i = 0; i < grid.length ; i++) {
+        for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[0].length; j++) {
-                if(grid[i][j] == 2)
-                {
-                    queue.add(new Pair(i, j));
-                }
-                if(grid[i][j] == 1)
-                {
-                    freshOranges++;
-                }
+                if (grid[i][j] == 1) freshOranges++;
+                if (grid[i][j] == 2) queue.offer(new Pair(i, j));
             }
         }
-
         queue.add(new Pair(-1, -1));
+        int minutesElapsed = -1;
+        int[][] neighbors = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
 
-        int timer = -1;
-
-        while (!queue.isEmpty())
-        {
+        while (!queue.isEmpty()) {
             Pair polled = queue.poll();
             int row = polled.row;
-            int col = polled.col;;
-
-            if(row == -1)
-            {
-                timer++;
-
-                if(!queue.isEmpty())
-                {
+            int col = polled.col;
+            if (row == -1) {
+                minutesElapsed++;
+                if (!queue.isEmpty()) {
                     queue.add(new Pair(-1, -1));
                 }
-            }
-            else
-            {
-                for (int[] d: neigh)
-                {
-                    int neighRow = row + d[0];
-                    int neighCol = col + d[1];
+            } else {
+                for (int i = 0; i < neighbors.length; i++) {
+                    int neighRow = row + neighbors[i][0];
+                    int neighCol = col + neighbors[i][1];
 
-                    if(neighCol >= 0 && neighCol < grid[0].length
-                    && neighRow >= 0 && neighRow < grid.length)
-                    {
-                        if(grid[neighRow][neighCol] == 1)
-                        {
-                            grid[neighRow][neighCol] = 2;
-                        }
+                    if (!(neighRow >=0 && neighRow < grid.length && neighCol >= 0 && neighCol < grid[0].length)) continue;
+                    if (grid[neighRow][neighCol] == 1) {
+                        grid[neighRow][neighCol] = 2;
+                        freshOranges--;
                         queue.add(new Pair(neighRow, neighCol));
                     }
                 }
             }
         }
-
-        return freshOranges == 0 ? timer : -1;
+        return freshOranges == 0? minutesElapsed: -1;
     }
-
-
 }

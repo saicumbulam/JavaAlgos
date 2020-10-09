@@ -8,54 +8,55 @@ public class SameBSTUsingArray {
     public static void main(String[] args) {
         List<Integer> arr1 = Arrays.asList(10, 15, 8, 12, 94, 81, 5, 2, 11);
         List<Integer> arr2 = Arrays.asList(10, 8, 5, 15, 2, 12, 11, 94, 81);
-        System.out.println(Calculate(arr1, arr2));
+        System.out.println(Calculate(arr1, arr2, 0,0,
+                Integer.MIN_VALUE,
+                Integer.MAX_VALUE));
     }
 
-    private static boolean Calculate(List<Integer> arr1, List<Integer> arr2)
+    private static boolean Calculate(List<Integer> arr1, List<Integer> arr2,
+                                     int arrayIdx1, int arrayIdx2,
+                                     int minValue, int maxValue)
     {
-        if (arr1.size() != arr2.size())
+        if (arrayIdx1 == -1 || arrayIdx2 == -1)
+        {
+            return arrayIdx1 == arrayIdx2;
+        }
+
+        if (arr1.get(arrayIdx1) != arr2.get(arrayIdx2))
         {
             return false;
         }
 
-        if (arr1.size() == 0 && arr2.size() == 0)
-        {
-            return true;
-        }
-        if (!arr1.get(0).equals(arr2.get(0)))
-        {
-            return false;
-        }
+        int leftRootIndex1 = GetIdxFirstSmaller(arr1, arrayIdx1, minValue);
+        int leftRootIndex2 = GetIdxFirstSmaller(arr2, arrayIdx2, minValue);
+        int rightRootIndex1 = GetIdxFirstBigger(arr1, arrayIdx1, maxValue);
+        int rightRootIndex2 = GetIdxFirstBigger(arr2, arrayIdx2, maxValue);
 
-        List<Integer> leftOne = getSmaller(arr1);
-        List<Integer> leftTwo = getSmaller(arr2);
-        List<Integer> RightOne = getBigger(arr1);
-        List<Integer> RightTwo = getBigger(arr2);
-
-        return Calculate(leftOne,leftTwo) && Calculate(RightOne,RightTwo);
+        int curr = arr1.get(arrayIdx1);
+        boolean leftAreSame = Calculate(arr1, arr2,
+                leftRootIndex1, leftRootIndex2, minValue, curr);
+        boolean rightAreSame = Calculate(arr1, arr2,
+                rightRootIndex1, rightRootIndex2, curr, maxValue);
+        return leftAreSame && rightAreSame;
     }
 
-    private static List<Integer> getSmaller(List<Integer> arr)
-    {
-        List<Integer> result = new ArrayList<>();
-        for (int i = 1; i < arr.size(); i++) {
-            if (arr.get(i) < arr.get(0))
+    private static int GetIdxFirstSmaller(List<Integer> array, int startIdx, int minValue) {
+        for (int i = startIdx+1; i < array.size(); i++) {
+            if(array.get(i) < array.get(startIdx) && array.get(i) >= minValue)
             {
-                result.add(arr.get(i));
+                return i;
             }
         }
-        return result;
+        return -1;
     }
 
-    private static List<Integer> getBigger(List<Integer> arr)
-    {
-        List<Integer> result = new ArrayList<>();
-        for (int i = 1; i < arr.size(); i++) {
-            if (arr.get(i) > arr.get(0))
+    private static int GetIdxFirstBigger(List<Integer> array, int startIdx, int maxValue) {
+        for (int i = startIdx+1; i < array.size(); i++) {
+            if(array.get(i) >= array.get(startIdx) && array.get(i) < maxValue)
             {
-                result.add(arr.get(i));
+                return i;
             }
         }
-        return result;
+        return -1;
     }
 }

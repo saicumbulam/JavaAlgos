@@ -9,16 +9,20 @@ Other than this BFS involve no recursion so overhead of passing parameters is al
 * */
 package InterViewPrep;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.List;
 
 public class RemoveInvalidParenthesis {
+    static List<String> result = new ArrayList<>();
     public static void main(String[] args) {
         //String str = "()())()";
         String str = "(a)())()";
         //String str = ")(";
         Calculate(str);
+        System.out.println(result);
     }
 
     private static void Calculate(String str)
@@ -34,6 +38,7 @@ public class RemoveInvalidParenthesis {
 
             if(isValidString(polled))
             {
+                result.add(polled);
                 System.out.println(polled);
                 level = true;
             }
@@ -60,20 +65,16 @@ public class RemoveInvalidParenthesis {
     }
     private static boolean isValidString(String str)
     {
-        int count = 0;
-
-        for (int i = 0; i < str.length(); i++) {
-            if(str.charAt(i) == '(')
-            {
-                count++;
-            }
-            else if(str.charAt(i) == ')')
-            {
-                count--;
-                if(count < 0) return false;
-            }
+        int cnt = 0;
+        for (int i = 0; i < str.length(); i++)
+        {
+            if (str.charAt(i) == '(')
+                cnt++;
+            else if (str.charAt(i) == ')')
+                cnt--;
+            if (cnt < 0)
+                return false;
         }
-
-        return count == 0;
+        return (cnt == 0);
     }
 }

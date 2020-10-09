@@ -1,48 +1,44 @@
 package InterViewPrep;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
+import java.util.LinkedList;
 
 public class WordBreak {
 
     public static void main(String[] args) {
-        //String s = "leetcode";
-        //String[] wordDict = {"leet", "code"};
-        String s = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab";
-        String[] wordDict = {"a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"};
+        String s = "leetcode";
+        String[] wordDict = {"leet", "code"};
         List<String> dict = new ArrayList<>();
         for (String word: wordDict
              ) {
             dict.add(word);
         }
-        HashMap<Integer, Boolean> map = new HashMap<>();
-        System.out.println(Calculate(s, dict, 0, map));
+        System.out.println(Calculate(s, dict));
     }
 
-    private static boolean Calculate(String str, List<String> dict, int start, HashMap<Integer, Boolean> map)
+    private static boolean Calculate(String s, List<String> dict)
     {
-        if(map.containsKey(start))
-        {
-            return map.get(start);
-        }
+        int[] visited = new int[s.length()];
+        Queue<Integer> queue = new LinkedList<>();
+        queue.add(0);
 
-        boolean result = false;
-        if(start == str.length())
+        while (!queue.isEmpty())
         {
-            result = true;
-        }
-        else
-        {
-            for (int i = start; i < str.length(); i++) {
-                String firstWord = str.substring(start, i+1); //0,1,2,3 => leet
-                if (dict.contains(firstWord) && Calculate(str, dict, i+1, map))
-                {
-                    result = true;
+            int start = queue.poll();
+            if (visited[start] == 0)
+            {
+                for (int end = start+1; end <= s.length(); end++) {
+                    if (dict.contains(s.substring(start, end)))
+                    {
+                        if (end == s.length()) return true;
+                        queue.add(end);
+                    }
                 }
+
+                visited[start] = 1;
             }
         }
-        map.put(start, result);
-        return map.get(start);
+
+        return false;
     }
 }

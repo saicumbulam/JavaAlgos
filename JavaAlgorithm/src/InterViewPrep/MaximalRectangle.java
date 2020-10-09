@@ -1,78 +1,53 @@
 package InterViewPrep;
 
+import java.util.Stack;
+
 public class MaximalRectangle {
     public static void main(String[] args) {
-        String[][] arr = {
-                {"1","0","1","0","0"},
-                {"1","0","1","1","1"},
-                {"1","1","1","1","1"},
-                {"1","0","0","1","0"}
+        char[][] arr = {
+                {'1','0','1','0','0'},
+                {'1','0','1','1','1'},
+                {'1','1','1','1','1'},
+                {'1','0','0','1','0'}
         };
         System.out.println(Calculate(arr));
     }
 
-    private static int Calculate(String[][] arr)
+    private static int Calculate(char[][] arr)
     {
-        int count = 0;
+        int[] dp = new int[arr[0].length];
+
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[0].length; j++) {
-                if (arr[i][j].equals("1"))
+                if(arr[i][j] == '1')
                 {
-                    count = Math.max(count, Dfs(arr, i, j,0));
+                    dp[j] += 1;
                 }
             }
         }
-        return count;
+
+        int maxArea = CalculateHisto(dp);
+        return maxArea;
     }
 
-    private static int Dfs(String[][] arr, int r, int c, int count)
+    private static int CalculateHisto(int[] arr)
     {
-        if(r < 0 || r >= arr.length || c < 0 || c >= arr[0].length)
+        int maxArea = 0;
+        Stack<Integer> stack = new Stack<>();
+        stack.push(-1);
+
+        for (int i = 0; i < arr.length; i++) {
+            while (stack.peek() != -1 && arr[stack.peek()] >= arr[i])
+            {
+                maxArea = Math.max(maxArea, arr[stack.pop()] * (i - stack.peek()-1));
+            }
+            stack.push(i);
+        }
+
+        while (stack.peek() != -1)
         {
-            return 0;
+            maxArea = Math.max(maxArea, arr[stack.pop()] * (arr.length - stack.peek()-1));
         }
-
-        int max = 0;
-
-        int newCol = c;
-        int newRow = r+1;
-        while (newCol < arr[0].length) {
-            if (arr[r][newCol].equals("1"))
-            {
-                max++;
-            }
-            if (newCol == arr[0].length-1)
-            {
-                break;
-            }
-            else if (arr[r][newCol].equals("0"))
-            {
-                break;
-            }
-            newCol++;
-        }
-
-        if (newCol == c+1 || newCol >= arr[0].length)
-        {
-            return 0;
-        }
-
-        if(newRow >= arr.length)
-        {
-            return 0;
-        }
-
-        for (int i = c; i <= newCol; i++) {
-            if (arr[newRow][i].equals("1"))
-            {
-                max++;
-            }
-            else
-            {
-                return 0;
-            }
-        }
-
-        return max;
+        return maxArea;
     }
 }

@@ -33,15 +33,12 @@ public class RearrangeStringKDistanceApart {
             result.append(polled.getKey());
             polled.setValue(polled.getValue()-1);
             queue.add(polled);
-            while (queue.size() >= k)
+            while (queue.size() == k)
             {
-                if (queue.peek().getValue() > 0)
+                Map.Entry<Character, Integer> item = queue.poll();
+                if (item.getValue() > 0)
                 {
-                    maxHeap.add(queue.poll());
-                }
-                else
-                {
-                    queue.poll();
+                    maxHeap.add(item);
                 }
             }
         }

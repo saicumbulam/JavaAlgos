@@ -2,29 +2,35 @@ package InterViewPrep;
 
 public class LongestPalindromicSubsequence {
     public static void main(String[] args) {
-        String str = "abdbca";
-        System.out.println(Calculate(str, 0, str.length()-1));
+        String str = "bbbab";
+        System.out.println(Calculate(str));
     }
 
-    private static int Calculate(String str, int startIdx, int endIdx) {
-        if(startIdx > endIdx)
-        {
-            return 0;
-        }
+    // time: o(n^2) | space: o(n)
+    private static int Calculate(String str) {
+        int[][] dp = new int[str.length()][str.length()];
 
-        if (startIdx == endIdx)
-        {
-            return 1;
+        // single element is itself a palindrome
+        for (int i = 0; i < str.length(); i++) {
+            dp[i][i] = 1;
         }
+        int maxLength = 1; // single element is a palindrome
 
-        if (str.charAt(startIdx) == str.charAt(endIdx))
-        {
-            return 2 +  Calculate(str, startIdx+1, endIdx-1);
+        for (int i = str.length()-1; i >= 0 ; i--) {
+            for (int j = i+1; j < str.length(); j++) {
+                if (str.charAt(i) == str.charAt(j))
+                {
+                    dp[i][j] = 2 + dp[i+1][j-1];
+                }
+                else
+                {
+                    dp[i][j] = Math.max(dp[i+1][j]
+                    , dp[i][j-1]);
+                }
+                maxLength = Math.max(maxLength, dp[i][j]);
+            }
         }
-
-        int c1 = Calculate(str, startIdx+1, endIdx);
-        int c2 = Calculate(str, startIdx, endIdx-1);
-        return Math.max(c1, c2);
+        return maxLength;
 
     }
 }

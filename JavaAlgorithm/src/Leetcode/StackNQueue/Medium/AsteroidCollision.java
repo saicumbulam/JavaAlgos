@@ -61,7 +61,6 @@ public class AsteroidCollision {
                     stack.pop();
                 }
             }
-
         }
 
         int[] result = new int[stack.size()];

@@ -55,7 +55,6 @@ public class MergeTwoSortedList {
         if (list1 != null) resultTail.next = list1;
         if (list2 != null) resultTail.next = list2;
         return resultHead;
-
     }
 
 

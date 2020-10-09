@@ -4,6 +4,8 @@ Spce complexity: O(MN)
 * */
 package Leetcode.StackNQueue.Hard;
 
+import javafx.util.Pair;
+
 import java.util.*;
 import java.util.Queue;
 
@@ -12,7 +14,7 @@ public class WordLadder {
         String beginWord = "hit";
         String endWord = "cog";
         String[] wordList = {"hot","dot","dog","lot","log","cog"};
-        //System.out.println(Calculate(beginWord, endWord, new ArrayList<>(Arrays.asList(wordList))));
+        System.out.println(Calculate(beginWord, endWord, new ArrayList<>(Arrays.asList(wordList))));
 
         HashMap<String, List<String>> map = new HashMap<>();
         CalculateStr(beginWord, endWord, new ArrayList<>(Arrays.asList(wordList)), map);
@@ -108,51 +110,55 @@ public class WordLadder {
 
     private static int Calculate(String beginWord, String endWord, List<String> wordList )
     {
-        if (!wordList.contains(endWord))
+        HashMap<String, List<String>> map = new HashMap<>();
+
+        for (String word: wordList)
         {
-            return -1;
+            for (int i = 0; i < word.length(); i++)
+            {
+                String newWord = word.substring(0,i) + '*' + word.substring(i+1);
+                if (!map.containsKey(newWord))
+                {
+                    map.put(newWord, new ArrayList<>());
+                }
+                map.get(newWord).add(word);
+            }
         }
 
-        int level = 1;
-        Queue<String> queue = new LinkedList<>();
-        queue.add(beginWord);
 
-        while (!queue.isEmpty())
+        Queue<Pair<String, Integer>> queue = new LinkedList<>();
+        HashSet<String> set = new HashSet<>();
+
+        queue.add(new Pair(beginWord, 1));
+        set.contains(beginWord);
+
+        while(!queue.isEmpty())
         {
-            int size = queue.size();
+            Pair<String, Integer> polled = queue.poll();
+            String word = polled.getKey();
+            int level = polled.getValue();
 
-            for (int i = 0; i < size; i++) {
-                String polled = queue.poll();
-                char[] wordChars = polled.toCharArray();
+            for(int i = 0; i < beginWord.length(); i++)
+            {
+                String newWord = word.substring(0, i) + '*' + word.substring(i+1);
 
-                for (int j = 0; j < wordChars.length; j++) {
-                    char Char = polled.charAt(j);
-                    for (char k = 'a'; k < 'z'; k++) {
-                        //forgot this. remember to code
-                        if (k == Char)
-                        {
-                            continue;
-                        }
-                        wordChars[j] = k;
-                        String newWord = String.valueOf(wordChars);
-                        if (newWord.equals(endWord))
-                        {
-                            return level+1;
-                        }
-                        else
-                        {
-                            if(wordList.contains(newWord))
-                            {
-                                queue.add(newWord);
-                                wordList.remove(newWord);
-                            }
-                        }
+                if (!map.containsKey(newWord)) continue;
+                for(String item : map.get(newWord))
+                {
+                    if (item.equals(endWord))
+                    {
+                        return level+1;
                     }
-                    wordChars[j] = Char;
+
+                    if (!set.contains(item))
+                    {
+                        set.add(item);
+                        queue.add(new Pair(item, level+1));
+                    }
                 }
             }
-            level++;
         }
-        return 0;
+
+        return -1;
     }
 }

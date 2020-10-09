@@ -1,5 +1,6 @@
 package InterViewPrep;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -15,27 +16,52 @@ public class SlidingWindowMaximum {
         }
     }
 
-
+    static ArrayDeque<Integer> deque = new ArrayDeque<>();
+    static int[] arr;
     private static int[] Calculate(int[] nums, int k)
     {
-        int[] result = new int[nums.length-k+1];
-        List<Integer> window = new ArrayList<>();
+        arr = nums;
 
-        for (int i = 0; i < nums.length; i++) {
-            window.add(nums[i]);
+        int n = arr.length;
 
-            if(i-k+1 >= 0)
+        if (n * k == 0) return new int[0];
+
+        if (k == 1) return nums;
+
+        int maxIdx = 0;
+
+        //process less than k in array
+        for (int i = 0; i < k; i++) {
+            cleanDeque(i, k);
+            deque.addLast(i);
+
+            if (arr[i] > maxIdx)
             {
-                int max = 0;
-                for (int item: window
-                     ) {
-                    max = Math.max(max, item);
-                }
-                result[i-k+1] = max;
-                window.remove(0);
+                maxIdx = i;
             }
         }
 
-        return result;
+        int[] output = new int[n - k +1];
+        output[0] = nums[maxIdx];
+
+        for (int i = k; i < n; i++) {
+            cleanDeque(i, k);
+            deque.addLast(i);
+            output[i-k+1] = arr[deque.getFirst()];
+        }
+        return output;
+    }
+
+    private static void cleanDeque(int i, int k)
+    {
+        if (!deque.isEmpty() && deque.getFirst() == i-k)
+        {
+            deque.removeFirst();
+        }
+
+        while (!deque.isEmpty() && arr[i] > arr[deque.getLast()])
+        {
+            deque.removeLast();
+        }
     }
 }

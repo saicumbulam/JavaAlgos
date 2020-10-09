@@ -1,8 +1,7 @@
 package InterViewPrep;
 
-import java.util.HashMap;
+import java.util.*;
 import java.util.LinkedList;
-import java.util.Map;
 
 public class DiagonalTraverse {
     public static void main(String[] args) {
@@ -11,84 +10,69 @@ public class DiagonalTraverse {
                 {4, 5, 6},
                 {7, 8, 9}
         };
+        List<List<Integer>> input = new ArrayList<>();
+        input.add(Arrays.asList(1,2,3));
+        input.add(Arrays.asList(4,5,6));
+        input.add(Arrays.asList(7,8,9));
 
-        //int[] result = Calculate(arr);
-        int[] result = Calculate2(arr);
-        for (int i = 0; i < result.length; i++) {
-            System.out.print(result[i] + ",");
-        }
+        System.out.println(Calculate(input));
     }
 
-    private static int[] Calculate(int[][] arr)
+    private static List<Integer> Calculate(List<List<Integer>> array)
     {
-        HashMap<Integer, LinkedList<Integer>> map = new HashMap<>();
+        int m = array.size()-1;
+        int n = array.get(0).size()-1;
 
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[0].length; j++) {
+        int row = 0;
+        int col = 0;
+        boolean goingDown = true;
+        List<Integer> result = new ArrayList<>();
 
-                int diagonal = i+j;
+        while(!(row < 0 || row > m || col < 0 || col > n ))
+        {
+            result.add(array.get(row).get(col));
 
-                if (!map.containsKey(diagonal))
-                {
-                    map.put(diagonal, new LinkedList<>());
-                }
-                map.get(diagonal).add(arr[i][j]);
-            }
-        }
-
-        int index = 0;
-        int[] result = new int[arr.length * arr[0].length];
-        for (Map.Entry<Integer, LinkedList<Integer>> entry: map.entrySet()) {
-            int diagonal = entry.getKey();;
-            LinkedList<Integer> list = entry.getValue();
-
-            if (diagonal % 2 == 0)
+            if(goingDown)
             {
-                while (!list.isEmpty())
+                if (row == m || col == 0)
                 {
-                    result[index++] = list.removeLast();
+                    goingDown = false;
+
+                    if(row == m)
+                    {
+                        col++;
+                    }
+                    else
+                    {
+                        row++;
+                    }
+                }
+                else
+                {
+                    row++;
+                    col--;
                 }
             }
             else
             {
-                while (!list.isEmpty())
+                if(row == 0 || col == n)
                 {
-                    result[index++] = list.removeFirst();
+                    goingDown = true;
+
+                    if(col == n)
+                    {
+                        row++;
+                    }
+                    else
+                    {
+                        col++;
+                    }
                 }
-            }
-        }
-
-        return result;
-    }
-
-    private static int[] Calculate2 (int[][] nums)
-    {
-        HashMap<Integer, LinkedList<Integer>> map = new HashMap<>();
-
-        for(int i = 0; i < nums.length; i++)
-        {
-            for (int j = 0; j < nums[0].length; j++)
-            {
-                int diagonal = i + j;
-                if (!map.containsKey(diagonal))
+                else
                 {
-                    map.put(diagonal, new LinkedList<>());
+                    row--;
+                    col++;
                 }
-                map.get(diagonal).add(nums[i][j]);
-            }
-        }
-
-        int index = 0;
-        int[] result = new int[nums.length * nums[0].length];
-
-        for(Map.Entry<Integer, LinkedList<Integer>> entry: map.entrySet())
-        {
-            int diagonal = entry.getKey();
-            LinkedList<Integer> list = entry.getValue();
-
-            while(!list.isEmpty())
-            {
-                result[index++] = list.removeLast();
             }
         }
 

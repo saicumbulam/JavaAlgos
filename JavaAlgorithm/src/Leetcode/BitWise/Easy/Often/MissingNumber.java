@@ -14,6 +14,6 @@ public class MissingNumber {
             num ^= arr[i];
         }
 
-        System.out.println("Missing number: " + num);;
+        System.out.println("Missing number: " + num);
     }
 }

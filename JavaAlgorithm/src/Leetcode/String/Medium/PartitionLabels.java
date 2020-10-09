@@ -12,7 +12,7 @@ public class PartitionLabels {
         System.out.println(Calculate("ababcbacadefegdehijhklij"));
     }
 
-    public static List<Integer> Calculate(String S) {
+    private static List<Integer> Calculate(String S) {
         List<Integer> result = new ArrayList<>();
 
         HashMap<Character, Integer> map = new HashMap<>();

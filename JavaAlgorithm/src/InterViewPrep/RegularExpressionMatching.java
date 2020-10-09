@@ -16,32 +16,26 @@ public class RegularExpressionMatching {
     }
 
     private static boolean Calculate(String s, String p) {
-        if (p.isEmpty())
-        {
-            return s.isEmpty();
+        boolean[][] dp = new boolean[s.length()+1][p.length()+1];
+
+        dp[s.length()][p.length()] = true;
+
+        for (int i = s.length(); i >= 0 ; i--) {
+            for (int j = p.length()-1; j >= 0 ; j--) {
+                boolean first_Match = ( i < s.length() &&
+                        (s.charAt(i) == p.charAt(j) || p.charAt(j) == '.'));
+
+                if(j < p.length()-1 && p.charAt(j+1) == '*')
+                {
+                    dp[i][j] = dp[i][j+2] || (first_Match && dp[i+1][j]); // j+2 and i+1j
+                }
+                else
+                {
+                    dp[i][j] = first_Match && dp[i+1][j+1];
+                }
+            }
         }
 
-        if (p.length() > 1 && p.charAt(1) == '*')
-        {
-            if (Calculate(s, p.substring(2)))
-            {
-                return true;
-            }
-
-            if (s.length() > 0 &&(p.charAt(0) == '.' || s.charAt(0) == p.charAt(0)))
-            {
-                return Calculate(s.substring(1), p);
-            }
-
-            return false;
-        }
-        else
-        {
-            if (s.length() > 0 && (p.charAt(0) == '.' || s.charAt(0) == p.charAt(0)))
-            {
-                return Calculate(s.substring(1), p.substring(1));
-            }
-            return false;
-        }
+        return dp[0][0];
     }
 }

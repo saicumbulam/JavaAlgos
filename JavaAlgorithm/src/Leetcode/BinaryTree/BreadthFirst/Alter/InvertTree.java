@@ -51,9 +51,9 @@ public class InvertTree {
             int n = queue.size();
             for (int i = 0; i < n; i++) {
                 TreeNode current = queue.poll();
-                TreeNode temp = current.getLeft();
-                current.setLeft(current.getRight());
-                current.setRight(temp);
+                TreeNode temp = current.left;
+                current.left = current.right;
+                current.right = temp;
                 if (current.getLeft() != null) queue.add(current.getLeft());
                 if (current.getRight() != null) queue.add(current.getRight());
             }

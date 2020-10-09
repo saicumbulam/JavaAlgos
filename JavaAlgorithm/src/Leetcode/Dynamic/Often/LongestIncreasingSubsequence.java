@@ -1,19 +1,33 @@
 package Leetcode.Dynamic.Often;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
 public class LongestIncreasingSubsequence {
     public static void main(String[] args) {
-        //int[] nums = {4,2,3,6,10,1,12};
-        //int[] nums = {5,7,-24,12,10,2,3,12,5,6,35};
-        //int[] nums = {1,2,3};
-        int[] nums = {100,4,200,1,3,2};
-        //System.out.println(findLISLength(nums, 0, -1));
+        int[] nums = {1,2,3,4};
         System.out.println(findLISLengthArray(nums, 0, -1,
                 new ArrayList<>()));
-        //System.out.println(findLISLengthMap(nums, 0, -1, new HashMap<>()));
+        System.out.println(Calculate(nums));
+    }
+
+    private static int Calculate(int[] nums)
+    {
+        int[] dp = new int[nums.length];
+        Arrays.fill(dp,1);
+        int maxLength = 1;
+        for (int i = 1; i < nums.length; i++) {
+            for (int j = 0; j < i; j++) {
+                if (nums[i] > nums[j] && dp[i] <= dp[j])
+                {
+                    dp[i] = dp[j] + 1;
+                }
+            }
+            maxLength = Math.max(maxLength, dp[i]);
+        }
+        return maxLength;
     }
 
     private static List<Integer> findLISLengthArray(int[] nums, int currentIdx, int prevIdx,

@@ -10,45 +10,48 @@ public class LongestSubstringAtleastKRepeatingCharacters {
         System.out.println(Calculate(str, k));
     }
 
-    private static int Calculate(String str, int k)
+    private static int Calculate(String s, int k)
     {
-        if (str == null || str.length() == 0) return 0; //prevent infinte loop, like a base case
+        if (s == null || s.length() == 0) return 0;
         HashMap<Character, Integer> hashMap = new HashMap<>();
-        for (char c: str.toCharArray()) {
-            hashMap.put(c, hashMap.getOrDefault(c,0)+1);
+
+        // record the frequency of each character
+        for (Character c: s.toCharArray()) {
+            hashMap.put(c, hashMap.getOrDefault(c, 0) + 1);
         }
 
-        boolean isRepeat = true;
+        boolean flag = true;
 
-        for (Map.Entry<Character,Integer> map: hashMap.entrySet()) {
-            if(map.getValue() < k)
-            {
-                isRepeat = false;
-                break;
+        for (Map.Entry<Character, Integer> entry: hashMap.entrySet()) {
+            // If we find any character which appears less than K times in string.
+            if (entry.getValue() < k){
+                flag = false;
             }
         }
 
-        if(isRepeat)
-        {
-            return str.length();
+        // return the length of string if this string is a valid string
+        // Valid meaning count of all characters appearing in string is greater than K
+        if (flag == true){
+            return s.length();
         }
 
-        int maxLength = 0, start = 0, curr = 0;
+        int result = 0;
+        int start = 0, cur = 0;
 
-        while (curr < str.length())
-        {
-            if(hashMap.get(str.charAt(curr)) < k)
-            {
-                maxLength = Math.max(maxLength,
-                        Calculate(str.substring(start, curr), k));
-
-                start = curr+1;
+        // otherwise we use all the infrequent elements as splits
+        while (cur < s.length()) {
+            if (hashMap.get(s.charAt(cur)) < k) {
+                // Split the string and recurse over the left part from start till current
+                // and keep the maximum count
+                result = Math.max(result, Calculate(s.substring(start, cur), k));
+                // set start to curr+1 and now process the right substring
+                start = cur + 1; // to avoid the low frequency character and move on to next
             }
-            curr++;
+            // keep incrementing the right pointer.
+            cur++;
         }
 
-        maxLength = Math.max(maxLength, Calculate(str.substring(start), k));
-
-        return maxLength;
+        result = Math.max(result, Calculate(s.substring(start), k));
+        return result;
     }
 }

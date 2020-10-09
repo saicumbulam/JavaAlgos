@@ -12,6 +12,7 @@ public class LargestRectangleHistogram {
     {
         Stack<Integer> stack = new Stack<>();
         stack.push(-1);
+
         int maxArea = 0;
 
         for (int i = 0; i < arr.length; i++) {

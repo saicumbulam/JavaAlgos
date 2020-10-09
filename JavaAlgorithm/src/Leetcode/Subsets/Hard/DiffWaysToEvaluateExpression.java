@@ -1,7 +1,9 @@
 package Leetcode.Subsets.Hard;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class DiffWaysToEvaluateExpression {
     public static void main(String[] args) {
@@ -9,45 +11,44 @@ public class DiffWaysToEvaluateExpression {
         System.out.println(Calculate(str));
     }
 
+    static Map<String, List<Integer>> map = new HashMap<String, List<Integer>>();
     private static List<Integer> Calculate(String str) {
+        System.out.println(str);
+        if (map.containsKey(str)) return map.get(str);
+
         List<Integer> result = new ArrayList<>();
-
-        // check if the string is a number alone. add to result if its true
-        if (!str.contains("+") && !str.contains("*") && !str.contains("-")) {
+        if(!str.contains("+") && !str.contains("*") && !str.contains("/"))
+        {
             result.add(Integer.parseInt(str));
+            return result;
         }
-        // Iterate the string. if character is a math, then calculate
-        // left and right parts using string substring(0,i) and (i+1)
-        // add the result for left and right part for loops
-        else {
-            for (int i = 0; i < str.length(); i++) {
-                char item = str.charAt(i);
 
-                if (!Character.isDigit(item)) {
-                    List<Integer> leftParts = Calculate(str.substring(0, i));
-                    List<Integer> rightParts = Calculate(str.substring(i + 1));
-
-                    for (int leftPart : leftParts
-                    ) {
-                        for (int rightPart : rightParts
-                        ) {
-                            switch (item) {
-                                case '+':
-                                    result.add(leftPart + rightPart);
-                                    break;
-                                case '-':
-                                    result.add(leftPart - rightPart);
-                                    break;
-                                case '*':
-                                    result.add(leftPart * rightPart);
-                                    break;
-                            }
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if(!Character.isDigit(str.charAt(i)))
+            {
+                List<Integer> left = Calculate(str.substring(0, i));
+                List<Integer> right = Calculate(str.substring(i+1));
+                for (Integer leftItem: left) {
+                    for (Integer rightItem: right) {
+                        switch (c)
+                        {
+                            case '+':
+                                result.add(leftItem + rightItem);
+                                break;
+                            case '*':
+                                result.add(leftItem * rightItem);
+                                break;
+                            case '-':
+                                result.add(leftItem - rightItem);
+                                break;
                         }
                     }
                 }
             }
         }
-
+        map.put(str, result);
         return result;
     }
+
 }

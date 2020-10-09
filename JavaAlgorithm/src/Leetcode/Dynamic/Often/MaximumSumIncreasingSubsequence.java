@@ -5,25 +5,26 @@ import java.util.HashMap;
 public class MaximumSumIncreasingSubsequence {
     public static void main(String[] args) {
         int[] nums = {4,1,2,6,10,1,12};
-        System.out.println(Calculate(nums, 0, -1, 0));
+        System.out.println(Calculate(nums));
     }
 
-    private static int Calculate(int[] nums, int currentIdx, int previousIdx, int sum)
+    private static int Calculate(int[] nums)
     {
-        if (currentIdx >= nums.length)
-        {
-            return sum;
+        int[] dp = new int[nums.length];
+        dp[0] = nums[0];
+
+        int maxSum = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            dp[i] = nums[i];
+            for (int j = 0; j < i; j++) {
+                if (nums[i] > nums[j] && dp[i] < dp[j] + nums[i])
+                {
+                    dp[i] = dp[j] + nums[i];
+                }
+            }
+            maxSum = Math.max(maxSum, dp[i]);
         }
 
-        int c1 = sum;
-        if (previousIdx == -1 || nums[currentIdx] > nums[previousIdx])
-        {
-            c1 = Calculate(nums,currentIdx+1, currentIdx,
-                    sum + nums[currentIdx]);
-        }
-
-        int c2 = Calculate(nums,currentIdx+1, previousIdx, sum);
-
-        return Math.max(c1, c2);
+        return maxSum;
     }
 }

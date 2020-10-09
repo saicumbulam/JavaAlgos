@@ -1,52 +1,95 @@
 package InterViewPrep;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class WordBreak2 {
-    static List<List<String>> result = new ArrayList<>();
-
     public static void main(String[] args) {
-        String s = "catsanddogs";
-        //String s = "catsandog";
-        //String[] wordDict = {"cat", "cats", "and", "sand", "dog"};
-        //String s = "pineapplepenapple";
-        //String[] wordDict = {"apple", "pen", "applepen", "pine", "pineapple"};
-        String[] wordDict = {"cats", "dog", "sand", "and", "cat"};
-        List<String> dict = new ArrayList<>();
+        String s = "catsanddog";
+        String[] wordDict = {"cat", "cats", "and", "sand", "dog"};
+        List<String> list = new ArrayList<>();
+
         for (String word: wordDict
-        ) {
-            dict.add(word);
+             ) {
+            list.add(word);
         }
-        HashMap<Integer, Boolean> map = new HashMap<>();
-        Calculate(s, dict, 0, new ArrayList<>());
-        System.out.println(result);
+        System.out.println(wordBreak(s,list));
     }
 
 
-    private static void Calculate(String s, List<String> dict, int startIdx, List<String> curr)
-    {
-        if (startIdx >= s.length()) return;
-        
-        if (startIdx == s.length()-1)
-        {
-            if (dict.contains(s.charAt(startIdx)))
-            {
-                curr.add(String.valueOf(s.charAt(startIdx)));
-            }
-            result.add(new ArrayList<>(curr));
+    private static TrieNode root;
+    private static List<String> result;
+    private static char[] input;
+    private static Set<Character> lookup;
+
+    public static List<String> wordBreak(String s, List<String> wordDict) {
+        result = new ArrayList<>();
+        if(s.length() == 0)
+            return result;
+
+        lookup = new HashSet<>();
+        root = new TrieNode();
+        input = s.toCharArray();
+
+        for(String word : wordDict) {
+            addWord(word.toCharArray());
+        }
+        if(isValid())
+            splitWord(new StringBuilder(), 0, root);
+        return result;
+    }
+
+    private static boolean isValid() {
+        for(int i = 0; i < input.length; i++) {
+            if(lookup.contains(input[i])) continue;
+            return false;
+        }
+        return true;
+    }
+
+    private static void splitWord(StringBuilder sb, int i, TrieNode cur) {
+        if(i == input.length) {
+            result.add(sb.toString());
             return;
         }
 
-        for (int i = startIdx; i < s.length(); i++) {
-            if (dict.contains(s.substring(startIdx, i)))
-            {
-                curr.add(s.substring(startIdx, i));
-                Calculate(s, dict, i, curr);
-                curr.remove(curr.size()-1);
+        if(sb.length() > 0) sb.append(" ");
+
+        while(i < input.length && cur != null) {
+            cur = cur.children[getIndex(input[i])];
+            sb.append(input[i]);
+            if(cur != null && cur.isEndWord) {
+                splitWord(new StringBuilder(sb), i + 1, root);
             }
+            i++;
         }
     }
+
+    static class TrieNode {
+        TrieNode[] children;
+        boolean isEndWord;
+        public TrieNode() {
+            children = new TrieNode[26];
+            isEndWord = false;
+        }
+
+        public void MarkAsLeaf(){isEndWord = true; };
+        public void UnMarkAsLeaf(){isEndWord = false; };
+    }
+
+    private static int getIndex(char c) { return c - 'a';}
+
+    private static void addWord(char[] s) {
+        TrieNode cur = root;
+        for(int i = 0; i < s.length; i++) {
+            lookup.add(s[i]);
+            int index = getIndex(s[i]);
+            if(cur.children[index] == null) {
+                cur.children[index] = new TrieNode();
+            }
+            cur = cur.children[index];
+        }
+        cur.isEndWord = true;
+    }
+
 
 }

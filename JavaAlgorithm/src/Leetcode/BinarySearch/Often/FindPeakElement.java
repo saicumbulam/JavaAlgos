@@ -10,11 +10,11 @@ package Leetcode.BinarySearch.Often;
 public class FindPeakElement {
     public static void main(String[] args) {
         int[] nums = {1,2,3,1};
-        FindPeak(nums);
+        System.out.println(FindPeak(nums));
     }
 
     private static int FindPeak(int[] nums) {
-        int start = 0, end = nums.length-1;
+        int start = 0, end = nums.length;
         while (start < end) // infinite loop will go if its a <= sign
         {
             int mid = start + (end -start)/2;

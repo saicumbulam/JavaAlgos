@@ -8,42 +8,52 @@ import java.util.List;
 public class LargestRange {
     public static void main(String[] args) {
         int[] arr = {1,11,3,0,15,5,2,4,10,7,12,6};
-        System.out.println(Calculate(arr));
+        int[] result = Calculate(arr);
+        for (int item: result
+             ) {
+            System.out.println(item);
+        }
     }
-    private static List<Integer> Calculate(int[] arr)
+    private static int[] Calculate(int[] arr)
     {
-        HashSet<Integer> set = new HashSet<>();
+        HashMap<Integer, Boolean> set = new HashMap<>();
 
         for (int item: arr
              ) {
-            set.add(item);
+            set.put(item, true); // to avoid duplicates
         }
 
-        List<Integer> result = new ArrayList<>();
+        int[] result = new int[2];
         int maxLength = 0;
 
         for (int i = 0; i < arr.length; i++) {
+            if(!set.get(arr[i]))
+            {
+                continue;
+            }
             int i1 = arr[i]-1;
             int i2 = arr[i]+1;
 
-            while (set.contains(i1))
+            int currentLength = 0;
+            while (set.containsKey(i1))
             {
+                set.put(i1, false);
+                currentLength++;
                 i1--;
             }
-            i1 +=1;
 
-            while (set.contains(i2))
+            while (set.containsKey(i2))
             {
+                set.put(i2, false);
+                currentLength++;
                 i2++;
             }
-            i2-=1;
 
-            if (maxLength < (i2 - i1))
+            if (maxLength < currentLength)
             {
-                result.clear();
-                maxLength = i2-i1;
-                result.add(0, i1);
-                result.add(0, i2);
+                maxLength = currentLength;
+                result[0] =  i1+1;
+                result[1] =  i2-1;
 
             }
 

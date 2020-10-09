@@ -31,7 +31,8 @@ public class WallsGates {
     private static void Dfs(int[][] arr, int i, int j, int count)
     {
 
-        if (i < 0 || i >= arr.length || j < 0 || j >= arr[0].length || arr[i][j] < count) // this is smarter way to avoid walls and gates
+        if (i < 0 || i >= arr.length || j < 0 || j >= arr[0].length ||
+                arr[i][j] < count) // this is smarter way to avoid walls and gates
         {
             return;
         }

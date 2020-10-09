@@ -41,7 +41,7 @@ public class StringTransformsToAnother {
             set.add(c2);
         }
 
-        if(set.size() == 26 && map.size() == 26)
+        if(set.size() == 26)
         {
             return false;
         }

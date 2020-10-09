@@ -19,7 +19,7 @@ public class NextLetter {
         }
         int left = 0, right = chars.length-1;
 
-        while (left <= right)
+        while (left < right)
         {
             int mid = left + (right - left)/2;
 

@@ -14,15 +14,16 @@ public class CountAndSay {
         String result = "1";
         for (int i = 2; i <= n ; i++) {
             String temp = "";
-            for (int j = 0; j < result.length(); j++) {
+            int j = 0;
+            while (j < result.length()) {
                 int count = 1;
-                while (j < result.length()-1 &&
-                        result.charAt(j) == result.charAt(j+1))
+                while (j < result.length()-1 && result.charAt(j) == result.charAt(j+1))
                 {
                     count++;
                     j++;
                 }
-                temp += count + String.valueOf(result.charAt(j));
+                temp += String.valueOf(count) + result.charAt(j);
+                j++;
             }
             result = temp;
         }

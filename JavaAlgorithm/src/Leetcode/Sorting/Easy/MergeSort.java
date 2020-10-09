@@ -12,11 +12,9 @@ public class MergeSort {
 
     private static void Calculate(int[] arr, int low, int high)
     {
-
-        if (high > low)
+        if (low < high)
         {
             int mid = low + (high - low)/2;
-            // mid and mid+1. right > left
             Calculate(arr, low, mid);
             Calculate(arr, mid+1, high);
             Merge(arr, low, mid, high);
@@ -25,28 +23,25 @@ public class MergeSort {
 
     private static void Merge(int[] arr, int left, int mid, int right)
     {
-        // mid-left+1 and right-mid
-        int sizeLeft = mid - left + 1;
-        int sizeRight = right - mid;
+        //mid - left + 1
+        int[] leftArray = new int[mid-left+1];
+        //right - mid
+        int[] rightArray = new int[right - mid];
 
-        int[] leftArray = new int[sizeLeft];
-        int[] rightArray = new int[sizeRight];
-
-        // left+i
-        for (int i = 0; i < sizeLeft; i++) {
+        for (int i = 0; i < leftArray.length; i++) {
             leftArray[i] = arr[left+i];
         }
 
-        // mid+i+1
-        for (int i = 0; i < sizeRight; i++) {
+        for (int i = 0; i < rightArray.length; i++) {
             rightArray[i] = arr[mid+1+i];
         }
 
-        int i =0, j=0, k=left;
+        int k = left;    // this is important. start filling from lowest
+        int i = 0, j = 0;
 
-        while (i < sizeLeft && j < sizeRight)
+        while (i < leftArray.length && j < rightArray.length)
         {
-            if(leftArray[i] <= rightArray[j])
+            if (leftArray[i] < rightArray[j])
             {
                 arr[k++] = leftArray[i++];
             }
@@ -56,14 +51,9 @@ public class MergeSort {
             }
         }
 
-        while (i < sizeLeft)
-        {
-            arr[k++] = leftArray[i++];
-        }
+        while (i < leftArray.length) arr[k++] = leftArray[i++];
 
-        while (j < sizeRight)
-        {
-            arr[k++] = rightArray[j++];
-        }
+        while (i < rightArray.length) arr[k++] = rightArray[j++];
+
     }
 }

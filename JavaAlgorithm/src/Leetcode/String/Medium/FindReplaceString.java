@@ -6,9 +6,7 @@ public class FindReplaceString {
     public static void main(String[] args) {
         String S = "abcd";
         int[] indexes = {0,2};
-        //String[] sources = {"a","cd"};
-        String[] sources = {"ab","ec"};
-        //String[] targets = {"eee","ffff"};
+        String[] sources = {"a","cd"};
         String[] targets = {"eee","ffff"};
         System.out.println(Calculate(S, indexes, sources, targets));
     }
@@ -25,17 +23,14 @@ public class FindReplaceString {
         while (i < s.length()) {
             if (map.containsKey(i))
             {
-                String[] item = map.get(i);
-                int j = i + item[0].length();
-                System.out.println(s.substring(i, j));
-                if (j <= s.length() && s.substring(i, j).equals(item[0]))
+                int j = i + map.get(i)[0].length();
+                if ( j <= s.length() && s.substring(i, j).equals(map.get(i)[0]))
                 {
-                    str.append(item[1]);
-                    i= j;
+                    str.append(map.get(i)[1]);
+                    i += map.get(i)[0].length();
                 }
                 else
                 {
-                    str.append(s.charAt(i));
                     i++;
                 }
             }

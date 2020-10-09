@@ -7,7 +7,10 @@ import java.util.List;
 
 public class PalindromePairs {
     public static void main(String[] args) {
-        System.out.println(palindromePairs(new String[] {"abcd","dcba","lls","s","sssll"}));
+        System.out.println(palindromePairs(new String[] {"abcd",
+                "dcba","lls",
+                "s",
+                "sssll"}));
     }
 
     public static List<List<Integer>> palindromePairs(String[] words) {

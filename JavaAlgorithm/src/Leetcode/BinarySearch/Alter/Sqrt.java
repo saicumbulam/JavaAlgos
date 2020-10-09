@@ -6,30 +6,30 @@ public class Sqrt {
         System.out.println(Calculate(x));
     }
 
-    private static int Calculate(int x)
+    private static int Calculate(int target)
     {
-        if(x < 2)
+        if(target < 2)
         {
-            return x;
+            return target;
         }
 
-        int pivot = 0;
-        int left = 2, right = x/2;
+        int mid = 0;
+        int left = 2, right = target/2;
         while (left <= right)
         {
-            pivot = left+(right - left)/2;
-            long num = (long) pivot*pivot;
-            if(num > x)
+            mid = left+(right - left)/2;
+            long num = (long) mid*mid;
+            if(num > target)
             {
-                right = pivot-1;
+                right = mid-1;
             }
-            else if (num < x)
+            else if (num < target)
             {
-                left = pivot+1;
+                left = mid+1;
             }
             else
             {
-                return pivot;
+                return mid;
             }
         }
 

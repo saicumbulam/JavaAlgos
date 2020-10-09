@@ -7,94 +7,54 @@ import java.util.Stack;
 
 public class BasicCalculator2 {
     public static void main(String[] args) {
-        //String expr = "3+2*2";
+        String expr = "3+2*2";
         //String expr = "3/2";
-        String expr = " 3+5 / 2 ";
-        String calculatePostFix = CalculatePostFix(expr);
-        System.out.println(EvaluateReversePolishNotation(calculatePostFix));
+        //String expr = " 3+5 / 2 ";
+        System.out.println(EvaluateReversePolishNotation(expr));
     }
 
-    private static int EvaluateReversePolishNotation(String str) {
+    private static int EvaluateReversePolishNotation(String s) {
+        if (s == null || s.length() == 0)
+        {
+            return 0;
+        }
+
+        int value = 0;
+        char sign = '+';
         Stack<Integer> stack = new Stack<>();
 
-        for (char c: str.toCharArray()
-             ) {
-            if (Character.isDigit(c))
-            {
-                stack.push(Character.getNumericValue(c));
-            }
-            else
-            {
-                int result = 0;
-                int num1 = stack.pop();
-                int num2 = stack.pop();
 
-                switch (c)
-                {
-                    case '+':
-                        result = num1+num2;
-                        break;
-                    case '-':
-                        result = num2-num1;
-                        break;
-                    case '/':
-                        result = num2/num1;
-                        break;
-                    case '*':
-                        result = num1*num2;
-                        break;
+        for (int i = 0; i < s.length(); i++)
+        {
+            char c = s.charAt(i);
+            if (c != ' ' && Character.isDigit(c))
+            {
+                value = value*10 + s.charAt(i) - '0';
+            }
+            if((!Character.isDigit(c) && c != ' ') || i == s.length() - 1) 
+                // else if should not be put here. the second condition needs to be executed at all cost
+            {
+                if(sign == '+'){
+                    stack.push(value);
                 }
-
-                stack.push(result);
-            }
-        }
-
-        return stack.peek();
-    }
-
-    private static String CalculatePostFix(String str)
-    {
-        Stack<Character> stack = new Stack<>();
-        StringBuilder strBuilder = new StringBuilder();
-
-        for (char c: str.toCharArray())
-        {
-            if (Character.isDigit(c))
-            {
-                strBuilder.append(c);
-            }
-            else if (c != ' ')
-            {
-                //* & (+,-) => pop the *
-                while (!stack.isEmpty() && precedence(stack.peek(), c))
-                {
-                    strBuilder.append(stack.pop());
+                if(sign == '-'){
+                    stack.push(-value);
                 }
-                stack.push(c);
+                if(sign == '*'){
+                    stack.push(stack.pop()*value);
+                }
+                if(sign == '/'){
+                    stack.push(stack.pop()/value);
+                }
+                sign = c;
+                value = 0;
             }
         }
 
-        while (!stack.isEmpty())
-        {
-            strBuilder.append(stack.pop());
+        int res = 0;
+        for(Integer i: stack){
+            res += i;
         }
-        return strBuilder.toString();
-    }
-
-    private static boolean precedence(Character op1, Character op2)
-    {
-        if (op1 == '*' || op1 == '/' )
-        {
-            return true;
-        }
-
-        if (op1 == '+' || op1 == '-')
-        {
-            if (op2 == '+' || op2 == '-')
-            {
-                return true;
-            }
-        }
-        return false;
+        return res;
     }
 }

@@ -5,11 +5,7 @@ import java.util.LinkedList;
 
 public class AlienDictionary {
     public static void main(String[] args) {
-        String[] str = {
-        "z",
-                "x",
-                "z"
-    };
+        String[] str = { "wrt", "wrf", "er", "ett", "rftt" };
         System.out.println(Calculate(str));
     }
 

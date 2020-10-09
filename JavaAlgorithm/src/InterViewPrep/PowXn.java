@@ -6,8 +6,8 @@ package InterViewPrep;
 
 public class PowXn {
     public static void main(String[] args) {
-        double x = 2.00000;
-        int n = 10;
+        double x = 5.00000;
+        int n = 4;
         System.out.println(Calculate(x, n));
     }
 

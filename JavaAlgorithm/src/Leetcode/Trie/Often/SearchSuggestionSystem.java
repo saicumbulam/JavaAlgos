@@ -8,6 +8,7 @@ public class SearchSuggestionSystem {
     {
         public TrieNode[] children;
         public boolean isEndWord;
+        String word = null;
 
         public TrieNode()
         {
@@ -55,57 +56,7 @@ public class SearchSuggestionSystem {
             }
 
             currentNode.MarkAsLeaf();
-        }
-
-        public List<String> getList(String str)
-        {
-            List<String> result = new ArrayList<>();
-            char[] chars = new char[26];
-            StringBuilder prefix = new StringBuilder();
-            TrieNode mod = Searcher(str, root, prefix);
-            GetWords(prefix.toString(), result, chars, 0, mod);
-            return result;
-        }
-
-        private TrieNode Searcher (String str, TrieNode root, StringBuilder prefix)
-        {
-            TrieNode currentNode = root;
-            str = str.toLowerCase();
-
-            for (int i = 0; i < str.length(); i++)
-            {
-                int index = getIndex(str.charAt(i));
-                if (currentNode.children[index] == null)
-                {
-                    break;
-                }
-                currentNode = currentNode.children[index];
-                prefix.append(str.charAt(i));
-            }
-
-            return currentNode;
-        }
-
-        private void GetWords(String str, List<String> result, char[] chars, int level, TrieNode root)
-        {
-            if (root.isEndWord)
-            {
-                StringBuilder temp = new StringBuilder();
-                for (int x = 0; x < level; x++)
-                {
-                    temp.append(String.valueOf(chars[x]));
-                }
-                result.add(str + temp.toString());
-            }
-
-            for (int i = 0; i< 26; i++)
-            {
-                if (root.children[i] != null)
-                {
-                    chars[level] = (char)(i + 'a');
-                    GetWords(str, result, chars, level+1, root.children[i]);
-                }
-            }
+            currentNode.word = str;
         }
     }
 
@@ -119,20 +70,48 @@ public class SearchSuggestionSystem {
             trie.insert(item);
         }
 
-        for (int i = 0; i< searchWord.length(); i++)
-        {
-            List<String> subList = trie.getList(searchWord.substring(0, i+1));
-            if (subList.size() > 3)
-            {
-                result.add(subList.subList(0,3));
-            }
-            else
-            {
-                result.add(subList);
-            }
+        TrieNode root = trie.root;
+        List<TrieNode> roots = new ArrayList<>();
 
+        // O(L): where L == searchWord length
+        // Space O(L)
+        for (int i=0; i< searchWord.length(); i++) {
+            root = root.children[searchWord.charAt(i) - 'a'];
+            if (root == null) break;
+            roots.add(root);
+        }
+
+        // O(L * m * l): where L == searchWord length
+        //             : m == products array length
+        //             : l == max length of products
+        // Space O(m * l)
+        for (TrieNode child: roots) {
+            List<String> subList = new ArrayList<>();
+            search(child, subList);
+            result.add(subList);
+        }
+
+        // O(L): where L == searchWord length
+        while (result.size() < searchWord.length())
+        {
+            result.add(new ArrayList<>());
         }
         return result;
+    }
+
+    private static void search(TrieNode root, List<String> curr) {
+        if (curr.size() >= 3) return;
+
+        if (root.isEndWord)
+        {
+            curr.add(root.word);
+        }
+
+        for (TrieNode child: root.children) {
+            if (child != null) {
+                search (child, curr);
+            }
+        }
     }
 
     public static void main(String[] args) {

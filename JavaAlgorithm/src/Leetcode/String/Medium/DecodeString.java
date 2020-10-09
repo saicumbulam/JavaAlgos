@@ -8,42 +8,31 @@ import java.util.Stack;
 public class DecodeString {
     public static void main(String[] args) {
         String str = "3[a]2[bc]";
-        System.out.println(Calculate(str));
+        System.out.println(decodeString(str));
     }
+    static int index = 0;
 
-    private static String Calculate(String str)
+    private static String decodeString(String s)
     {
-        Stack<StringBuilder> builder = new Stack<>();
-        builder.push(new StringBuilder());
-        Stack<Integer> timer = new Stack<>();
-        int times = 0;
-
-        for (int i = 0; i < str.length(); i++) {
-            char curr = str.charAt(i);
-            if (curr == '[')
-            {
-                timer.push(times);
-                builder.push(new StringBuilder());
-                times = 0;
-            }
-            else if (curr == ']')
-            {
-                String ctr = builder.pop().toString();
-                int n = timer.pop();
-                StringBuilder sb = builder.peek();
-                for (int j = 0; j < n; j++) {
-                    sb.append(ctr);
-                }
-            }
-            else if (Character.isDigit(curr))
-            {
-                times = times*10 + Character.getNumericValue(curr);
-            }
-            else
-            {
-                builder.peek().append(curr);
+        StringBuilder result = new StringBuilder();
+        while (index < s.length() && s.charAt(index) != ']') {
+            if (!Character.isDigit(s.charAt(index)))
+                result.append(s.charAt(index++));
+            else {
+                int k = 0;
+                // build k until next character is a digit
+                while (index < s.length() && Character.isDigit(s.charAt(index)))
+                    k = k * 10 + s.charAt(index++) - '0';
+                // ignore the opening bracket '['
+                index++;
+                String decodedString = decodeString(s);
+                // ignore the closing bracket ']'
+                index++;
+                // build k[decodedString] and append to the result
+                while (k-- > 0)
+                    result.append(decodedString);
             }
         }
-        return builder.peek().toString();
+        return new String(result);
     }
 }
