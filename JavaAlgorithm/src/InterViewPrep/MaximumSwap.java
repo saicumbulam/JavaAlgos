@@ -1,29 +1,37 @@
 package InterViewPrep;
 
+import java.util.HashMap;
+
 public class MaximumSwap {
     public static void main(String[] args) {
         System.out.println(Calculate(2736));
     }
 
     public static int Calculate(int num) {
-        char[] A = Integer.toString(num).toCharArray();
-        int[] last = new int[10];
+        char[] digits = String.valueOf(num).toCharArray();
 
-        for (int i = 0; i < A.length; i++) {
-            System.out.println(A[i] - '0');
-            last[A[i] - '0'] = i;
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for(int i = 0; i < digits.length; i++)
+        {
+            map.put(Character.getNumericValue(digits[i]), i);
         }
 
-        for (int i = 0; i < A.length; i++) {
-            for (int d = 9; d > A[i] - '0'; d--) {
-                if (last[d] > i) {
-                    char tmp = A[i];
-                    A[i] = A[last[d]];
-                    A[last[d]] = tmp;
-                    return Integer.valueOf(new String(A));
+        for(int i = 0; i < digits.length; i++)
+        {
+            for(int k = 9; k > digits[i] - '0'; k--)
+            {
+                if(map.containsKey(k) && map.get(k) > i)
+                {
+                    char temp = digits[i];
+                    digits[i] = digits[map.get(k)];
+                    digits[map.get(k)] = temp;
+
+                    return Integer.parseInt(String.valueOf(digits));
                 }
             }
         }
+
         return num;
     }
 }

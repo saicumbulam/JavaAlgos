@@ -2,32 +2,52 @@ package InterViewPrep;
 
 public class WildCardMatching {
     public static void main(String[] args) {
-        String s = "aa";
-        String p = "*";
+        String s = "abc";
+        String p = "ab*";
 
         System.out.println(Calculate(s, p));
     }
 
     private static boolean Calculate(String s, String p)
     {
-        if(p.isEmpty())
+        int m = s.length();
+        int n= p.length();
+        boolean[][] dp = new boolean[m+1][n+1];
+        dp[0][0] = true;
+        for (int j = 1; j <= n; j++)
         {
-            return s.isEmpty();
+            if(p.charAt(j-1) == '*')
+            {
+                dp[0][j] = dp[0][j-1];
+            }
         }
 
-        if(p.charAt(0) == '*')
-        {
-            return Calculate(s, p.substring(1)) ||
-                    (s.length() > 0 && Calculate(s.substring(1), p));
+
+        for (int i = 0; i <= m; i++) {
+            for (int j = 0; j <= n ; j++) {
+                System.out.print(dp[i][j] + ", ");
+            }
         }
-        else if (p.charAt(0) == '?')
+        System.out.println();
+
+        for (int i = 1; i <= m; i++)
         {
-            return s.length() > 0 && Calculate(s.substring(1), p.substring(1));
+            for (int j = 1; j <= n; j++)
+            {
+                if (p.charAt(j-1) == '*')
+                {
+                    dp[i][j] = dp[i][j-1] || dp[i-1][j];
+                }
+                else
+                {
+                    if (p.charAt(j-1) == '?' || s.charAt(i-1) == p.charAt(j-1))
+                    {
+                        dp[i][j] = dp[i-1][j-1];
+                    }
+                }
+                System.out.println("i:" + i + " j:" + j + " " + dp[i][j]);
+            }
         }
-        else
-        {
-            return s.length() > 0 && s.charAt(0) == p.charAt(0) &&
-                    Calculate(s.substring(1), p.substring(1));
-        }
+        return dp[m][n];
     }
 }

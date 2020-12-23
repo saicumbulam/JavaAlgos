@@ -15,7 +15,7 @@ public class MinimumJumpsReachEnd {
         }
 
         for (int start = 0; start < arr.length-1; start++) {
-            for (int end = start+1; end <= start + arr[start+1] && end < arr.length; end++) {
+            for (int end = start+1; end <= start + arr[start] && end < arr.length; end++) {
                 dp[end] = Math.min(dp[end], dp[start]+1); // add the previous start results
             }
         }

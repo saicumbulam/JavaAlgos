@@ -12,30 +12,40 @@ package InterViewPrep;
 
 public class RegularExpressionMatching {
     public static void main(String[] args) {
+
         System.out.println(Calculate("aa", "a*"));
     }
 
     private static boolean Calculate(String s, String p) {
-        boolean[][] dp = new boolean[s.length()+1][p.length()+1];
+        if (p == null || p.length() == 0)
+            return (s == null || s.length() == 0);
+        int m = s.length();
+        int n = p.length();
 
-        dp[s.length()][p.length()] = true;
-
-        for (int i = s.length(); i >= 0 ; i--) {
-            for (int j = p.length()-1; j >= 0 ; j--) {
-                boolean first_Match = ( i < s.length() &&
-                        (s.charAt(i) == p.charAt(j) || p.charAt(j) == '.'));
-
-                if(j < p.length()-1 && p.charAt(j+1) == '*')
-                {
-                    dp[i][j] = dp[i][j+2] || (first_Match && dp[i+1][j]); // j+2 and i+1j
-                }
-                else
-                {
-                    dp[i][j] = first_Match && dp[i+1][j+1];
-                }
-            }
+        boolean dp[][] = new boolean[m+1][n+1];
+        dp[0][0] = true;
+        for (int j=2; j<=n; j++) {
+            dp[0][j] = p.charAt(j-1) == '*' && dp[0][j-2];
         }
 
-        return dp[0][0];
+//        for (int i = 0; i <= m; i++) {
+//            for (int j = 0; j <= n ; j++) {
+//                System.out.println("i:" + i + " j:" + j + " " + dp[i][j]);
+//            }
+//        }
+//        System.out.println();
+
+        for (int j=1; j<=m; j++) {
+            for (int i=1; i<=n; i++) {
+                if (p.charAt(j-1) == s.charAt(i-1) || p.charAt(j-1) == '.')
+                    dp[i][j] = dp[i-1][j-1];
+                else if(p.charAt(j-1) == '*')
+                    dp[i][j] = dp[i][j-2] ||
+                            ((s.charAt(i-1) == p.charAt(j-2) || p.charAt(j-2) == '.') && dp[i-1][j]);
+
+                System.out.println("i:" + i + " j:" + j + " " + dp[i][j]);
+            }
+        }
+        return dp[m][n];
     }
 }

@@ -10,68 +10,59 @@ public class DiagonalTraverse {
                 {4, 5, 6},
                 {7, 8, 9}
         };
-        List<List<Integer>> input = new ArrayList<>();
-        input.add(Arrays.asList(1,2,3));
-        input.add(Arrays.asList(4,5,6));
-        input.add(Arrays.asList(7,8,9));
 
-        System.out.println(Calculate(input));
+        int[] result = Calculate(arr);
+        for (int item: result
+             ) {
+            System.out.println(item);
+        }
     }
 
-    private static List<Integer> Calculate(List<List<Integer>> array)
+    private static int[] Calculate(int[][] matrix)
     {
-        int m = array.size()-1;
-        int n = array.get(0).size()-1;
+        if(matrix.length == 0) return new int[] {};
 
+        int m = matrix.length;
+        int n = matrix[0].length;
         int row = 0;
         int col = 0;
-        boolean goingDown = true;
-        List<Integer> result = new ArrayList<>();
 
-        while(!(row < 0 || row > m || col < 0 || col > n ))
+        int[] result = new int[m*n];
+
+        for(int i = 0; i < result.length; i++)
         {
-            result.add(array.get(row).get(col));
+            result[i] = matrix[row][col];
 
-            if(goingDown)
+            if((row + col) %2 == 0)
             {
-                if (row == m || col == 0)
-                {
-                    goingDown = false;
-
-                    if(row == m)
-                    {
-                        col++;
-                    }
-                    else
-                    {
-                        row++;
-                    }
-                }
-                else
+                if (col == n-1)
                 {
                     row++;
-                    col--;
                 }
-            }
-            else
-            {
-                if(row == 0 || col == n)
+                else if (row == 0)
                 {
-                    goingDown = true;
-
-                    if(col == n)
-                    {
-                        row++;
-                    }
-                    else
-                    {
-                        col++;
-                    }
+                    col++;
                 }
                 else
                 {
                     row--;
                     col++;
+                }
+            }
+            else
+            {
+                if(row == m-1)
+                {
+                    col++;
+                }
+                else if (col == 0)
+                {
+                    row++;
+                }
+                else
+                {
+                    row++;
+                    col--;
                 }
             }
         }
